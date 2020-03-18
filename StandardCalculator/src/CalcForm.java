@@ -67,6 +67,8 @@ public class CalcForm extends javax.swing.JFrame {
         LogButton = new javax.swing.JButton();
         PanelLayar = new javax.swing.JPanel();
         Layar = new javax.swing.JLabel();
+        Num00 = new javax.swing.JButton();
+        LnButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculator");
@@ -76,6 +78,7 @@ public class CalcForm extends javax.swing.JFrame {
         setResizable(false);
 
         MainPanel.setBackground(new java.awt.Color(51, 51, 51));
+        MainPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         MainPanel.setPreferredSize(new java.awt.Dimension(348, 452));
 
         ModeButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
@@ -85,6 +88,7 @@ public class CalcForm extends javax.swing.JFrame {
         ModeButton.setToolTipText("");
         ModeButton.setContentAreaFilled(false);
         ModeButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ModeButton.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         ModeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ModeButtonActionPerformed(evt);
@@ -103,7 +107,7 @@ public class CalcForm extends javax.swing.JFrame {
             }
         });
 
-        MCButton.setBackground(new java.awt.Color(102, 102, 102));
+        MCButton.setBackground(new java.awt.Color(0, 153, 255));
         MCButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
         MCButton.setForeground(new java.awt.Color(255, 255, 255));
         MCButton.setText("MC");
@@ -115,7 +119,7 @@ public class CalcForm extends javax.swing.JFrame {
             }
         });
 
-        MRButton.setBackground(new java.awt.Color(102, 102, 102));
+        MRButton.setBackground(new java.awt.Color(0, 153, 255));
         MRButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
         MRButton.setForeground(new java.awt.Color(255, 255, 255));
         MRButton.setText("MR");
@@ -319,7 +323,7 @@ public class CalcForm extends javax.swing.JFrame {
             }
         });
 
-        CosButton.setBackground(new java.awt.Color(0, 153, 153));
+        CosButton.setBackground(new java.awt.Color(0, 102, 51));
         CosButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
         CosButton.setForeground(new java.awt.Color(255, 255, 255));
         CosButton.setText("cos");
@@ -332,7 +336,7 @@ public class CalcForm extends javax.swing.JFrame {
             }
         });
 
-        TanButton.setBackground(new java.awt.Color(0, 153, 153));
+        TanButton.setBackground(new java.awt.Color(0, 102, 51));
         TanButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
         TanButton.setForeground(new java.awt.Color(255, 255, 255));
         TanButton.setText("tan");
@@ -358,7 +362,7 @@ public class CalcForm extends javax.swing.JFrame {
             }
         });
 
-        LBracketButton.setBackground(new java.awt.Color(0, 51, 153));
+        LBracketButton.setBackground(new java.awt.Color(0, 153, 153));
         LBracketButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
         LBracketButton.setForeground(new java.awt.Color(255, 255, 255));
         LBracketButton.setText("(");
@@ -371,7 +375,7 @@ public class CalcForm extends javax.swing.JFrame {
             }
         });
 
-        RBracketButton.setBackground(new java.awt.Color(0, 51, 153));
+        RBracketButton.setBackground(new java.awt.Color(0, 153, 153));
         RBracketButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
         RBracketButton.setForeground(new java.awt.Color(255, 255, 255));
         RBracketButton.setText(")");
@@ -384,7 +388,7 @@ public class CalcForm extends javax.swing.JFrame {
             }
         });
 
-        SqrtButton.setBackground(new java.awt.Color(0, 51, 153));
+        SqrtButton.setBackground(new java.awt.Color(0, 153, 153));
         SqrtButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
         SqrtButton.setForeground(new java.awt.Color(255, 255, 255));
         SqrtButton.setText("sqrt");
@@ -432,7 +436,7 @@ public class CalcForm extends javax.swing.JFrame {
             }
         });
 
-        AnsButton.setBackground(new java.awt.Color(0, 51, 153));
+        AnsButton.setBackground(new java.awt.Color(102, 102, 102));
         AnsButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
         AnsButton.setForeground(new java.awt.Color(255, 255, 255));
         AnsButton.setText("ans");
@@ -445,7 +449,7 @@ public class CalcForm extends javax.swing.JFrame {
             }
         });
 
-        Sin1Button.setBackground(new java.awt.Color(0, 153, 153));
+        Sin1Button.setBackground(new java.awt.Color(0, 102, 51));
         Sin1Button.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
         Sin1Button.setForeground(new java.awt.Color(255, 255, 255));
         Sin1Button.setText("<html>sin<sup>-1</sup></html>");
@@ -458,7 +462,7 @@ public class CalcForm extends javax.swing.JFrame {
             }
         });
 
-        SinButton.setBackground(new java.awt.Color(0, 153, 153));
+        SinButton.setBackground(new java.awt.Color(0, 102, 51));
         SinButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
         SinButton.setForeground(new java.awt.Color(255, 255, 255));
         SinButton.setText("sin");
@@ -474,7 +478,7 @@ public class CalcForm extends javax.swing.JFrame {
             }
         });
 
-        Cos1Button.setBackground(new java.awt.Color(0, 153, 153));
+        Cos1Button.setBackground(new java.awt.Color(0, 102, 51));
         Cos1Button.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
         Cos1Button.setForeground(new java.awt.Color(255, 255, 255));
         Cos1Button.setToolTipText("");
@@ -487,7 +491,7 @@ public class CalcForm extends javax.swing.JFrame {
             }
         });
 
-        Tan1Button.setBackground(new java.awt.Color(0, 153, 153));
+        Tan1Button.setBackground(new java.awt.Color(0, 102, 51));
         Tan1Button.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
         Tan1Button.setForeground(new java.awt.Color(255, 255, 255));
         Tan1Button.setToolTipText("");
@@ -500,7 +504,7 @@ public class CalcForm extends javax.swing.JFrame {
             }
         });
 
-        DelButton.setBackground(new java.awt.Color(51, 51, 51));
+        DelButton.setBackground(new java.awt.Color(102, 102, 102));
         DelButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
         DelButton.setForeground(new java.awt.Color(255, 255, 255));
         DelButton.setText("del");
@@ -512,7 +516,7 @@ public class CalcForm extends javax.swing.JFrame {
             }
         });
 
-        LogButton.setBackground(new java.awt.Color(0, 51, 153));
+        LogButton.setBackground(new java.awt.Color(0, 153, 153));
         LogButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
         LogButton.setForeground(new java.awt.Color(255, 255, 255));
         LogButton.setText("log");
@@ -525,10 +529,11 @@ public class CalcForm extends javax.swing.JFrame {
             }
         });
 
-        Layar.setFont(new java.awt.Font("Segoe UI Semilight", 0, 18)); // NOI18N
+        Layar.setFont(new java.awt.Font("Segoe UI Semilight", 0, 36)); // NOI18N
         Layar.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         Layar.setText("sdadsasda");
         Layar.setToolTipText("");
+        Layar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         javax.swing.GroupLayout PanelLayarLayout = new javax.swing.GroupLayout(PanelLayar);
         PanelLayar.setLayout(PanelLayarLayout);
@@ -543,6 +548,31 @@ public class CalcForm extends javax.swing.JFrame {
                 .addComponent(Layar, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        Num00.setBackground(new java.awt.Color(51, 51, 51));
+        Num00.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        Num00.setForeground(new java.awt.Color(255, 255, 255));
+        Num00.setText("00");
+        Num00.setBorderPainted(false);
+        Num00.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Num00.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Num00ActionPerformed(evt);
+            }
+        });
+
+        LnButton.setBackground(new java.awt.Color(0, 153, 153));
+        LnButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        LnButton.setForeground(new java.awt.Color(255, 255, 255));
+        LnButton.setText("ln");
+        LnButton.setToolTipText("");
+        LnButton.setBorderPainted(false);
+        LnButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        LnButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LnButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout MainPanelLayout = new javax.swing.GroupLayout(MainPanel);
         MainPanel.setLayout(MainPanelLayout);
         MainPanelLayout.setHorizontalGroup(
@@ -550,21 +580,20 @@ public class CalcForm extends javax.swing.JFrame {
             .addGroup(MainPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(ModeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(MainPanelLayout.createSequentialGroup()
                         .addComponent(DotButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Num0, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(DelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Num00, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ModButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(RBracketButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(SqrtButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(EvaluateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(MainPanelLayout.createSequentialGroup()
-                        .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(MainPanelLayout.createSequentialGroup()
                                 .addComponent(Num7, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -573,8 +602,8 @@ public class CalcForm extends javax.swing.JFrame {
                                 .addComponent(Num9, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(MulButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(SqrtButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(RBracketButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(MainPanelLayout.createSequentialGroup()
                                 .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(MainPanelLayout.createSequentialGroup()
@@ -595,8 +624,8 @@ public class CalcForm extends javax.swing.JFrame {
                                         .addComponent(NegButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(LBracketButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(LogButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(LogButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(LnButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(MainPanelLayout.createSequentialGroup()
@@ -611,22 +640,30 @@ public class CalcForm extends javax.swing.JFrame {
                                 .addComponent(SquareButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(PowerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(PanelLayar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(MainPanelLayout.createSequentialGroup()
-                        .addComponent(ClearButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(MainPanelLayout.createSequentialGroup()
+                                .addComponent(ClearButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(AnsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(DelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(DivButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(MainPanelLayout.createSequentialGroup()
+                                .addComponent(ModeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(MCButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(MRButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(MCButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(MRButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(DivButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(AnsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(LBracketButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(SinButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Sin1Button, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(PanelLayar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(8, 8, 8))
+                        .addComponent(Sin1Button, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(42, 42, 42))
         );
         MainPanelLayout.setVerticalGroup(
             MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -634,16 +671,19 @@ public class CalcForm extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addComponent(PanelLayar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(ModeButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(MCButton)
+                    .addComponent(MRButton)
+                    .addComponent(ModeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(4, 4, 4)
                 .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(ClearButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(MCButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(MRButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(DivButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(AnsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(SinButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(SinButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(DelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(LBracketButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(Sin1Button, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -652,8 +692,8 @@ public class CalcForm extends javax.swing.JFrame {
                         .addComponent(MulButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(Num8, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(Num7, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(SqrtButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(CosButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(CosButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(RBracketButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(Cos1Button, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -676,17 +716,17 @@ public class CalcForm extends javax.swing.JFrame {
                                 .addComponent(Num3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(Num2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(Num1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(LBracketButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(LnButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(SquareButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(DotButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Num0, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ModButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(DelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(RBracketButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(EvaluateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(EvaluateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Num00, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SqrtButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         Num1.getAccessibleContext().setAccessibleDescription("");
@@ -695,16 +735,13 @@ public class CalcForm extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                 .addGap(0, 0, 0)
-                .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 474, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+                .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 473, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 463, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(MainPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 469, Short.MAX_VALUE)
         );
 
         pack();
@@ -867,14 +904,15 @@ public class CalcForm extends javax.swing.JFrame {
             NegButton.setVisible(true);
             super.setSize(getPreferredSize());
             EvaluateButton.setLocation(getLocation());
-
+            Num00.setVisible(true);
+            LnButton.setVisible(true);
         }else{
             SinButton.setVisible(false);
             super.setSize(285, getHeight());
-            DelButton.setVisible(false);
+            Num00.setVisible(false);
             ModButton.setVisible(false);
             RBracketButton.setVisible(false);
-            AnsButton.setVisible(false);
+            LnButton.setVisible(false);
             SqrtButton.setVisible(false);
             LogButton.setVisible(false);
             RBracketButton.setVisible(false);
@@ -887,9 +925,16 @@ public class CalcForm extends javax.swing.JFrame {
             SquareButton.setVisible(false);
             PowerButton.setVisible(false);
             LBracketButton.setVisible(false);
-
         }
     }//GEN-LAST:event_ModeButtonActionPerformed
+
+    private void Num00ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Num00ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Num00ActionPerformed
+
+    private void LnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LnButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LnButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -937,6 +982,7 @@ public class CalcForm extends javax.swing.JFrame {
     private javax.swing.JButton EvaluateButton;
     private javax.swing.JButton LBracketButton;
     private javax.swing.JLabel Layar;
+    private javax.swing.JButton LnButton;
     private javax.swing.JButton LogButton;
     private javax.swing.JButton MCButton;
     private javax.swing.JButton MRButton;
@@ -946,6 +992,7 @@ public class CalcForm extends javax.swing.JFrame {
     private javax.swing.JButton MulButton;
     private javax.swing.JButton NegButton;
     private javax.swing.JButton Num0;
+    private javax.swing.JButton Num00;
     private javax.swing.JButton Num1;
     private javax.swing.JButton Num2;
     private javax.swing.JButton Num3;
