@@ -1,151 +1,149 @@
 using java.util;
 
-public class memoryButton extends javax.swing.JButton{
-    public void storage(){};
+abstract class memoryButton extends javax.swing.JButton{
+    abstract public void storage();
 }
 
-public class numberButton extends javax.swing.JButton{
-    public void number(){};
+abstract class numberButton extends javax.swing.JButton{
+    abstract public void number();
 }
 
-public class operandButton extends javax.swing.JButton{
-    public void operand(){};
+abstract class operandButton extends javax.swing.JButton{
+    abstract public void operand();
 }
 
-public class oneButton extends numberButton{
+class oneButton extends numberButton{
     public void number(){
         stack.push(1);
     }
 }
 
-public class twoButton extends numberButton{
+class twoButton extends numberButton{
     public void number(){
         stack.push(2);
     }
 }
 
-public class threeButton extends numberButton{
+class threeButton extends numberButton{
     public void number(){
         stack.push(3);
     }
 }
 
-public class fourButton extends numberButton{
+class fourButton extends numberButton{
     public void number(){
         stack.push(4);
     }
 }
 
-public class fiveButton extends numberButton{
+class fiveButton extends numberButton{
     public void number(){
         stack.push(5);
     }
 }
 
-public class sixButton extends numberButton{
+class sixButton extends numberButton{
     public void number(){
         stack.push(6);
     }
 }
 
-public class sevenButton extends numberButton{
+class sevenButton extends numberButton{
     public void number(){
         stack.push(7);
     }
 }
 
-public class eightButton extends numberButton{
+class eightButton extends numberButton{
     public void number(){
         stack.push(8);
     }
 }
 
-public class nineButton extends numberButton{
+class nineButton extends numberButton{
     public void number(){
         stack.push(9);
     }
 }
 
-public class zeroButton extends numberButton{
+class zeroButton extends numberButton{
     public void number(){
         stack.push(0);
     }
 }
 
-public class plusButton extends operandButton{
+class plusButton extends operandButton{
     public void operand(){
         stack.push("+");
     }
 }
 
-public class minusButton extends operandButton{
+class minusButton extends operandButton{
     public void operand(){
         stack.push("-");
     }
 }
 
-public class timesButton extends operandButton{
+class timesButton extends operandButton{
     public void operand(){
         stack.push("x");
     }
 }
 
-public class plusButton extends operandButton{
+class plusButton extends operandButton{
     public void operand(){  
         stack.push("+");
     }
 }
 
-public class cosButton extends operandButton{
+class cosButton extends operandButton{
     public void operand(){  
         stack.push("+");
     }
 }
 
-public class sineButton extends operandButton{
+class sineButton extends operandButton{
     public void operand(){  
         stack.push("+");
     }
 }
 
-public class tanButton extends operandButton{
+class tanButton extends operandButton{
     public void operand(){  
         stack.push("+");
     }
 }
 
-public class logButton extends operandButton{
+class logButton extends operandButton{
+    public void operand(){  
+        stack.push();
+    }
+}
+class rootButton extends operandButton{
     public void operand(){  
         stack.push();
     }
 }
 
-public class rootButton extends operandButton{
-    public void operand(){  
-        stack.push();
-    }
-}
 
 
 
 
 
-
-
-public class mrButton extends memoryButton{
+class mrButton extends memoryButton{
     public void store(){
         queue1.add();
     }
 }
 
-public class mcButton extends memoryButton{
+class mcButton extends memoryButton{
     public void store(){
         int temp = queue1.remove();
         stack.push(temp);
     }
 }
 
-public class ansButton extends memoryButton{
+class ansButton extends memoryButton{
     public void store(){
         solve();
     }
