@@ -1,155 +1,173 @@
 // using java.util;
 
-// public class memoryButton extends javax.swing.JButton{
-//     public void storage(){};
+// abstract class memoryButton extends javax.swing.JButton{
+//     abstract public void storage();
 // }
 
-// public class numberButton extends javax.swing.JButton{
-//     public void number(){};
+// abstract class numberButton extends javax.swing.JButton{
+//     abstract public void number();
 // }
 
-// public class operandButton extends javax.swing.JButton{
-//     public void operand(){};
+// abstract class operandButton extends javax.swing.JButton{
+//     abstract public void operand();
 // }
 
-// public class oneButton extends numberButton{
+// class oneButton extends numberButton{
 //     public void number(){
-//         stack.push(1);
+//         stack.push("1");
 //     }
 // }
 
-// public class twoButton extends numberButton{
+// class twoButton extends numberButton{
 //     public void number(){
-//         stack.push(2);
+//         stack.push("2");
 //     }
 // }
 
-// public class threeButton extends numberButton{
+// class threeButton extends numberButton{
 //     public void number(){
-//         stack.push(3);
+//         stack.push("3");
 //     }
 // }
 
-// public class fourButton extends numberButton{
+// class fourButton extends numberButton{
 //     public void number(){
-//         stack.push(4);
+//         stack.push("4");
 //     }
 // }
 
-// public class fiveButton extends numberButton{
+// class fiveButton extends numberButton{
 //     public void number(){
-//         stack.push(5);
+//         stack.push("5");
 //     }
 // }
 
-// public class sixButton extends numberButton{
+// class sixButton extends numberButton{
 //     public void number(){
-//         stack.push(6);
+//         stack.push("6");
 //     }
 // }
 
-// public class sevenButton extends numberButton{
+// class sevenButton extends numberButton{
 //     public void number(){
-//         stack.push(7);
+//         stack.push("7");
 //     }
 // }
 
-// public class eightButton extends numberButton{
+// class eightButton extends numberButton{
 //     public void number(){
-//         stack.push(8);
+//         stack.push("8");
 //     }
 // }
 
-// public class nineButton extends numberButton{
+// class nineButton extends numberButton{
 //     public void number(){
-//         stack.push(9);
+//         stack.push("9");
 //     }
 // }
 
-// public class zeroButton extends numberButton{
+// class zeroButton extends numberButton{
 //     public void number(){
-//         stack.push(0);
+//         stack.push("0");
 //     }
 // }
 
-// public class plusButton extends operandButton{
+// class plusButton extends operandButton{
 //     public void operand(){
 //         stack.push("+");
 //     }
 // }
 
-// public class minusButton extends operandButton{
+// class minusButton extends operandButton{
 //     public void operand(){
 //         stack.push("-");
 //     }
 // }
 
-// public class timesButton extends operandButton{
+// class timesButton extends operandButton{
 //     public void operand(){
-//         stack.push("x");
+//         stack.push("*");
 //     }
 // }
 
-// public class plusButton extends operandButton{
+// class divisionButton extends operandButton{
 //     public void operand(){  
-//         stack.push("+");
+//         stack.push("/");
 //     }
 // }
 
-// public class cosButton extends operandButton{
+// class powerToButton extends operandButton{
 //     public void operand(){  
-//         stack.push("+");
+//         stack.push("^");
 //     }
 // }
 
-// public class sineButton extends operandButton{
+// class sinButton extends operandButton{
 //     public void operand(){  
-//         stack.push("+");
+//         stack.push("sin");
 //     }
 // }
 
-// public class tanButton extends operandButton{
+// class cosButton extends operandButton{
 //     public void operand(){  
-//         stack.push("+");
+//         stack.push("cos");
 //     }
 // }
 
-// public class logButton extends operandButton{
+// class tanButton extends operandButton{
 //     public void operand(){  
-//         stack.push();
+//         stack.push("tan");
 //     }
 // }
-
-// public class rootButton extends operandButton{
+// class ACosButton extends operandButton{
 //     public void operand(){  
-//         stack.push();
+//         stack.push("acos");
 //     }
 // }
 
+// class ASinButton extends operandButton{
+//     public void operand(){  
+//         stack.push("asin");
+//     }
+// }
 
+// class ATanButton extends operandButton{
+//     public void operand(){  
+//         stack.push("tan");
+//     }
+// }
 
+// class logButton extends operandButton{
+//     public void operand(){  
+//         stack.push("log");
+//     }
+// }
+// class rootButton extends operandButton{
+//     public void operand(){  
+//         stack.push("sqrt");
+//     }
+// }
 
+// class ansButton extends operandButton{
+//     public void store(string form){
+//         form.solve();
+//     }
+// }
 
-
-
-// public class mrButton extends memoryButton{
+// class mrButton extends memoryButton{
 //     public void store(){
 //         queue1.add();
 //     }
 // }
 
-// public class mcButton extends memoryButton{
+// class mcButton extends memoryButton{
 //     public void store(){
 //         int temp = queue1.remove();
 //         stack.push(temp);
 //     }
 // }
 
-// public class ansButton extends memoryButton{
-//     public void store(){
-//         solve();
-//     }
-// }
+
 
 
 
