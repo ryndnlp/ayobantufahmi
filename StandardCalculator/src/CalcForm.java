@@ -1,6 +1,7 @@
-
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
 import java.awt.Dimension;
-
+import java.awt.event.ActionEvent;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -27,47 +28,49 @@ public class CalcForm extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-
-        MainPanel = new javax.swing.JPanel();
-        ModeButton = new javax.swing.JCheckBox();
-        ClearButton = new MemoryButton("AC");
-        MCButton = new MemoryButton("MC");
-        MRButton = new MemoryButton("MR");
-        MulButton = new OperandButton("x");
-        Num7 = new NumButton("7");
-        Num8 = new NumButton("8");
-        Num9 = new NumButton("9");
-        DivButton = new OperandButton(":");
-        Num4 = new NumButton("4");
-        Num5 = new NumButton("5");
-        Num6 = new NumButton("6");
-        NegButton = new OperandButton("-");
-        Num1 = new NumButton("1");
-        Num2 = new NumButton("2");
-        Num3 = new NumButton("3");
-        PlusButton = new OperandButton("+");
-        DotButton = new javax.swing.JButton();
-        Num0 = new NumButton("0");
-        EvaluateButton = new javax.swing.JButton();//TODO
-        CosButton = new OperandButton("cos");
-        TanButton = new OperandButton("tan");
-        ModButton = new OperandButton("%");
-        LBracketButton = new OperandButton("(");
-        RBracketButton = new OperandButton(")");
-        SqrtButton = new OperandButton("sqrt");
-        SquareButton = new OperandButton("<html>x<sup>2</sup></html>");        
-        PowerButton = new OperandButton("<html>x<sup>y</sup></html>");
-        AnsButton = new MemoryButton("ans");
-        Sin1Button = new OperandButton("<html>sin<sup>-1</sup></html>");
-        SinButton = new OperandButton("sin");
-        Cos1Button = new OperandButton("<html>cos<sup>-1</sup></html>");
-        Tan1Button = new OperandButton("<html>tan<sup>-1</sup></html>");
-        DelButton = new javax.swing.JButton();
-        LogButton = new OperandButton("log");
+        //Calc button
         PanelLayar = new javax.swing.JPanel();
+        MainPanel = new javax.swing.JPanel();
         Layar = new javax.swing.JLabel();
-        Num00 = new NumButton("00");
-        LnButton = new OperandButton("ln");
+        DotButton = new javax.swing.JButton();//TODO
+        EvaluateButton = new javax.swing.JButton();//TODO
+        //Memory Button
+        MemoryButton DelButton = new MemoryButton("del");
+        MemoryButton ClearButton = new MemoryButton("AC");
+        MemoryButton MCButton = new MemoryButton("MC");
+        MemoryButton AnsButton = new MemoryButton("ans");
+        MemoryButton MRButton = new MemoryButton("MR");
+        //Num Button
+        JButton Num00 = new NumButton("00", 0);
+        NumButton Num0 = new NumButton("0", 0);
+        NumButton Num1 = new NumButton("1", 1);
+        NumButton Num2 = new NumButton("2", 2);
+        NumButton Num3 = new NumButton("3", 3);
+        NumButton Num4 = new NumButton("4", 4);
+        NumButton Num5 = new NumButton("5", 5);
+        NumButton Num6 = new NumButton("6", 6);
+        NumButton Num7 = new NumButton("7", 7);
+        NumButton Num8 = new NumButton("8", 8);
+        NumButton Num9 = new NumButton("9", 9);
+        //Operand Button
+        OperandButton MulButton = new OperandButton("x");
+        OperandButton DivButton = new OperandButton(":");
+        OperandButton NegButton = new OperandButton("-");
+        OperandButton PlusButton = new OperandButton("+");
+        OperandButton CosButton = new OperandButton("cos");
+        OperandButton TanButton = new OperandButton("tan");
+        OperandButton ModButton = new OperandButton("%");
+        OperandButton LBracketButton = new OperandButton("(");
+        OperandButton RBracketButton = new OperandButton(")");
+        OperandButton SqrtButton = new OperandButton("sqrt");
+        OperandButton  SquareButton = new OperandButton("<html>x<sup>2</sup></html>");        
+        OperandButton PowerButton = new OperandButton("<html>x<sup>y</sup></html>");
+        OperandButton  Sin1Button = new OperandButton("<html>sin<sup>-1</sup></html>");
+        OperandButton SinButton = new OperandButton("sin");
+        OperandButton Cos1Button = new OperandButton("<html>cos<sup>-1</sup></html>");
+        OperandButton Tan1Button = new OperandButton("<html>tan<sup>-1</sup></html>");
+        OperandButton LogButton = new OperandButton("log");
+        OperandButton LnButton = new OperandButton("ln");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculator");
@@ -80,27 +83,13 @@ public class CalcForm extends javax.swing.JFrame {
         MainPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         MainPanel.setPreferredSize(new java.awt.Dimension(348, 452));
 
-        ModeButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
-        ModeButton.setForeground(new java.awt.Color(255, 255, 255));
-        ModeButton.setSelected(true);
-        ModeButton.setText("Scientific");
-        ModeButton.setToolTipText("");
-        ModeButton.setContentAreaFilled(false);
-        ModeButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        ModeButton.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        ModeButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ModeButtonActionPerformed(evt);
-            }
-        });
-
         ClearButton.setBackground(new java.awt.Color(102, 102, 102));
         ClearButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
         ClearButton.setForeground(new java.awt.Color(255, 255, 255));
         ClearButton.setBorderPainted(false);
         ClearButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        ClearButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        ClearButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 ClearButtonActionPerformed(evt);
             }
         });
@@ -110,8 +99,8 @@ public class CalcForm extends javax.swing.JFrame {
         MCButton.setForeground(new java.awt.Color(255, 255, 255));
         MCButton.setToolTipText("");
         MCButton.setBorderPainted(false);
-        MCButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        MCButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 MCButtonActionPerformed(evt);
             }
         });
@@ -121,8 +110,8 @@ public class CalcForm extends javax.swing.JFrame {
         MRButton.setForeground(new java.awt.Color(255, 255, 255));
         MRButton.setToolTipText("");
         MRButton.setBorderPainted(false);
-        MRButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        MRButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 MRButtonActionPerformed(evt);
             }
         });
@@ -133,8 +122,8 @@ public class CalcForm extends javax.swing.JFrame {
         MulButton.setToolTipText("");
         MulButton.setBorderPainted(false);
         MulButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        MulButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        MulButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 MulButtonActionPerformed(evt);
             }
         });
@@ -145,9 +134,10 @@ public class CalcForm extends javax.swing.JFrame {
         Num7.setToolTipText("");
         Num7.setBorderPainted(false);
         Num7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Num7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Num7ActionPerformed(evt);
+        Num7.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                Num7.setActionCommand(Num7.text);
+                NumButtonActionPerformed(evt);
             }
         });
 
@@ -157,9 +147,10 @@ public class CalcForm extends javax.swing.JFrame {
         Num8.setToolTipText("");
         Num8.setBorderPainted(false);
         Num8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Num8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Num8ActionPerformed(evt);
+        Num8.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                Num8.setActionCommand(Num8.text);
+                NumButtonActionPerformed(evt);
             }
         });
 
@@ -169,9 +160,10 @@ public class CalcForm extends javax.swing.JFrame {
         Num9.setToolTipText("");
         Num9.setBorderPainted(false);
         Num9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Num9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Num9ActionPerformed(evt);
+        Num9.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                Num9.setActionCommand(Num9.text);
+                NumButtonActionPerformed(evt);
             }
         });
 
@@ -180,8 +172,8 @@ public class CalcForm extends javax.swing.JFrame {
         DivButton.setForeground(new java.awt.Color(255, 255, 255));
         DivButton.setToolTipText("");
         DivButton.setBorderPainted(false);
-        DivButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        DivButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 DivButtonActionPerformed(evt);
             }
         });
@@ -191,9 +183,10 @@ public class CalcForm extends javax.swing.JFrame {
         Num4.setForeground(new java.awt.Color(255, 255, 255));
         Num4.setBorderPainted(false);
         Num4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Num4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Num4ActionPerformed(evt);
+        Num4.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                Num4.setActionCommand(Num4.text);
+                NumButtonActionPerformed(evt);
             }
         });
 
@@ -202,9 +195,10 @@ public class CalcForm extends javax.swing.JFrame {
         Num5.setForeground(new java.awt.Color(255, 255, 255));
         Num5.setBorderPainted(false);
         Num5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Num5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Num5ActionPerformed(evt);
+        Num5.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                Num5.setActionCommand(Num5.text);
+                NumButtonActionPerformed(evt);
             }
         });
 
@@ -213,9 +207,10 @@ public class CalcForm extends javax.swing.JFrame {
         Num6.setForeground(new java.awt.Color(255, 255, 255));
         Num6.setBorderPainted(false);
         Num6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Num6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Num6ActionPerformed(evt);
+        Num6.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                Num6.setActionCommand(Num6.text);
+                NumButtonActionPerformed(evt);
             }
         });
 
@@ -224,8 +219,8 @@ public class CalcForm extends javax.swing.JFrame {
         NegButton.setForeground(new java.awt.Color(255, 255, 255));
         NegButton.setToolTipText("");
         NegButton.setBorderPainted(false);
-        NegButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        NegButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 NegButtonActionPerformed(evt);
             }
         });
@@ -235,9 +230,10 @@ public class CalcForm extends javax.swing.JFrame {
         Num1.setForeground(new java.awt.Color(255, 255, 255));
         Num1.setBorderPainted(false);
         Num1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Num1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Num1ActionPerformed(evt);
+        Num1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                Num1.setActionCommand(Num1.text);
+                NumButtonActionPerformed(evt);
             }
         });
 
@@ -246,15 +242,22 @@ public class CalcForm extends javax.swing.JFrame {
         Num2.setForeground(new java.awt.Color(255, 255, 255));
         Num2.setBorderPainted(false);
         Num2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Num2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                Num2.setActionCommand(Num2.text);
+                NumButtonActionPerformed(evt);
+            }
+        });
 
         Num3.setBackground(new java.awt.Color(51, 51, 51));
         Num3.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
         Num3.setForeground(new java.awt.Color(255, 255, 255));
         Num3.setBorderPainted(false);
         Num3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Num3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Num3ActionPerformed(evt);
+        Num3.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                Num3.setActionCommand(Num3.text);
+                NumButtonActionPerformed(evt);
             }
         });
 
@@ -265,8 +268,8 @@ public class CalcForm extends javax.swing.JFrame {
         PlusButton.setToolTipText("");
         PlusButton.setBorderPainted(false);
         PlusButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        PlusButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        PlusButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 PlusButtonActionPerformed(evt);
             }
         });
@@ -276,8 +279,8 @@ public class CalcForm extends javax.swing.JFrame {
         DotButton.setForeground(new java.awt.Color(255, 255, 255));
         DotButton.setBorderPainted(false);
         DotButton.setPreferredSize(new java.awt.Dimension(39, 29));
-        DotButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        DotButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 DotButtonActionPerformed(evt);
             }
         });
@@ -287,9 +290,10 @@ public class CalcForm extends javax.swing.JFrame {
         Num0.setForeground(new java.awt.Color(255, 255, 255));
         Num0.setBorderPainted(false);
         Num0.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Num0.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Num0ActionPerformed(evt);
+        Num0.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                Num0.setActionCommand(Num0.text);
+                NumButtonActionPerformed(evt);
             }
         });
 
@@ -298,8 +302,8 @@ public class CalcForm extends javax.swing.JFrame {
         EvaluateButton.setForeground(new java.awt.Color(255, 255, 255));
         EvaluateButton.setBorderPainted(false);
         EvaluateButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        EvaluateButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        EvaluateButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 EvaluateButtonActionPerformed(evt);
             }
         });
@@ -310,8 +314,8 @@ public class CalcForm extends javax.swing.JFrame {
         CosButton.setToolTipText("");
         CosButton.setBorderPainted(false);
         CosButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        CosButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        CosButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 CosButtonActionPerformed(evt);
             }
         });
@@ -322,8 +326,8 @@ public class CalcForm extends javax.swing.JFrame {
         TanButton.setToolTipText("");
         TanButton.setBorderPainted(false);
         TanButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        TanButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        TanButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 TanButtonActionPerformed(evt);
             }
         });
@@ -334,8 +338,8 @@ public class CalcForm extends javax.swing.JFrame {
         ModButton.setToolTipText("");
         ModButton.setBorderPainted(false);
         ModButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        ModButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        ModButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 ModButtonActionPerformed(evt);
             }
         });
@@ -346,8 +350,8 @@ public class CalcForm extends javax.swing.JFrame {
         LBracketButton.setToolTipText("");
         LBracketButton.setBorderPainted(false);
         LBracketButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        LBracketButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        LBracketButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 LBracketButtonActionPerformed(evt);
             }
         });
@@ -358,8 +362,8 @@ public class CalcForm extends javax.swing.JFrame {
         RBracketButton.setToolTipText("");
         RBracketButton.setBorderPainted(false);
         RBracketButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        RBracketButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        RBracketButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 RBracketButtonActionPerformed(evt);
             }
         });
@@ -373,8 +377,8 @@ public class CalcForm extends javax.swing.JFrame {
         SqrtButton.setMaximumSize(new java.awt.Dimension(53, 33));
         SqrtButton.setMinimumSize(new java.awt.Dimension(53, 33));
         SqrtButton.setPreferredSize(new java.awt.Dimension(53, 33));
-        SqrtButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        SqrtButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 SqrtButtonActionPerformed(evt);
             }
         });
@@ -388,8 +392,8 @@ public class CalcForm extends javax.swing.JFrame {
         SquareButton.setMaximumSize(new java.awt.Dimension(53, 33));
         SquareButton.setMinimumSize(new java.awt.Dimension(53, 33));
         SquareButton.setPreferredSize(new java.awt.Dimension(53, 33));
-        SquareButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        SquareButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 SquareButtonActionPerformed(evt);
             }
         });
@@ -403,8 +407,8 @@ public class CalcForm extends javax.swing.JFrame {
         PowerButton.setMaximumSize(new java.awt.Dimension(53, 33));
         PowerButton.setMinimumSize(new java.awt.Dimension(53, 33));
         PowerButton.setPreferredSize(new java.awt.Dimension(53, 33));
-        PowerButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        PowerButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 PowerButtonActionPerformed(evt);
             }
         });
@@ -415,8 +419,8 @@ public class CalcForm extends javax.swing.JFrame {
         AnsButton.setToolTipText("");
         AnsButton.setBorderPainted(false);
         AnsButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        AnsButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        AnsButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 AnsButtonActionPerformed(evt);
             }
         });
@@ -427,8 +431,8 @@ public class CalcForm extends javax.swing.JFrame {
         Sin1Button.setToolTipText("");
         Sin1Button.setBorderPainted(false);
         Sin1Button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Sin1Button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        Sin1Button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 Sin1ButtonActionPerformed(evt);
             }
         });
@@ -442,8 +446,8 @@ public class CalcForm extends javax.swing.JFrame {
         SinButton.setMaximumSize(new java.awt.Dimension(53, 33));
         SinButton.setMinimumSize(new java.awt.Dimension(53, 33));
         SinButton.setPreferredSize(new java.awt.Dimension(53, 33));
-        SinButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        SinButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 SinButtonActionPerformed(evt);
             }
         });
@@ -454,8 +458,8 @@ public class CalcForm extends javax.swing.JFrame {
         Cos1Button.setToolTipText("");
         Cos1Button.setBorderPainted(false);
         Cos1Button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Cos1Button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        Cos1Button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 Cos1ButtonActionPerformed(evt);
             }
         });
@@ -466,8 +470,8 @@ public class CalcForm extends javax.swing.JFrame {
         Tan1Button.setToolTipText("");
         Tan1Button.setBorderPainted(false);
         Tan1Button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Tan1Button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        Tan1Button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 Tan1ButtonActionPerformed(evt);
             }
         });
@@ -477,8 +481,8 @@ public class CalcForm extends javax.swing.JFrame {
         DelButton.setForeground(new java.awt.Color(255, 255, 255));
         DelButton.setBorderPainted(false);
         DelButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        DelButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        DelButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 DelButtonActionPerformed(evt);
             }
         });
@@ -489,8 +493,8 @@ public class CalcForm extends javax.swing.JFrame {
         LogButton.setToolTipText("");
         LogButton.setBorderPainted(false);
         LogButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        LogButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        LogButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 LogButtonActionPerformed(evt);
             }
         });
@@ -520,9 +524,10 @@ public class CalcForm extends javax.swing.JFrame {
         
         Num00.setBorderPainted(false);
         Num00.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Num00.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Num00ActionPerformed(evt);
+        Num00.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                //Num00.setActionCommand(Num00.text);
+                NumButtonActionPerformed(evt);
             }
         });
 
@@ -533,8 +538,8 @@ public class CalcForm extends javax.swing.JFrame {
         LnButton.setToolTipText("");
         LnButton.setBorderPainted(false);
         LnButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        LnButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        LnButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 LnButtonActionPerformed(evt);
             }
         });
@@ -618,8 +623,6 @@ public class CalcForm extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(DivButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(MainPanelLayout.createSequentialGroup()
-                                .addComponent(ModeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
                                 .addComponent(MCButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(MRButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -639,8 +642,7 @@ public class CalcForm extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(MCButton)
-                    .addComponent(MRButton)
-                    .addComponent(ModeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(MRButton))
                 .addGap(4, 4, 4)
                 .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -713,192 +715,109 @@ public class CalcForm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void LogButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogButtonActionPerformed
+    private void LogButtonActionPerformed(ActionEvent evt) {//GEN-FIRST:event_LogButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_LogButtonActionPerformed
 
-    private void DelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DelButtonActionPerformed
+    private void DelButtonActionPerformed(ActionEvent evt) {//GEN-FIRST:event_DelButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_DelButtonActionPerformed
 
-    private void Tan1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tan1ButtonActionPerformed
+    private void Tan1ButtonActionPerformed(ActionEvent evt) {//GEN-FIRST:event_Tan1ButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Tan1ButtonActionPerformed
 
-    private void Cos1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cos1ButtonActionPerformed
+    private void Cos1ButtonActionPerformed(ActionEvent evt) {//GEN-FIRST:event_Cos1ButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Cos1ButtonActionPerformed
 
-    private void SinButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SinButtonActionPerformed
+    private void SinButtonActionPerformed(ActionEvent evt) {//GEN-FIRST:event_SinButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_SinButtonActionPerformed
 
-    private void Sin1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sin1ButtonActionPerformed
+    private void Sin1ButtonActionPerformed(ActionEvent evt) {//GEN-FIRST:event_Sin1ButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Sin1ButtonActionPerformed
 
-    private void AnsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnsButtonActionPerformed
+    private void AnsButtonActionPerformed(ActionEvent evt) {//GEN-FIRST:event_AnsButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_AnsButtonActionPerformed
 
-    private void PowerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PowerButtonActionPerformed
+    private void PowerButtonActionPerformed(ActionEvent evt) {//GEN-FIRST:event_PowerButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_PowerButtonActionPerformed
 
-    private void SquareButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SquareButtonActionPerformed
+    private void SquareButtonActionPerformed(ActionEvent evt) {//GEN-FIRST:event_SquareButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_SquareButtonActionPerformed
 
-    private void SqrtButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SqrtButtonActionPerformed
+    private void SqrtButtonActionPerformed(ActionEvent evt) {//GEN-FIRST:event_SqrtButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_SqrtButtonActionPerformed
 
-    private void RBracketButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RBracketButtonActionPerformed
+    private void RBracketButtonActionPerformed(ActionEvent evt) {//GEN-FIRST:event_RBracketButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_RBracketButtonActionPerformed
 
-    private void LBracketButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LBracketButtonActionPerformed
+    private void LBracketButtonActionPerformed(ActionEvent evt) {//GEN-FIRST:event_LBracketButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_LBracketButtonActionPerformed
 
-    private void ModButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModButtonActionPerformed
+    private void ModButtonActionPerformed(ActionEvent evt) {//GEN-FIRST:event_ModButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ModButtonActionPerformed
 
-    private void TanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TanButtonActionPerformed
+    private void TanButtonActionPerformed(ActionEvent evt) {//GEN-FIRST:event_TanButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TanButtonActionPerformed
 
-    private void CosButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CosButtonActionPerformed
+    private void CosButtonActionPerformed(ActionEvent evt) {//GEN-FIRST:event_CosButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CosButtonActionPerformed
 
-    private void EvaluateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EvaluateButtonActionPerformed
+    private void EvaluateButtonActionPerformed(ActionEvent evt) {//GEN-FIRST:event_EvaluateButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_EvaluateButtonActionPerformed
 
-    private void Num0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Num0ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Num0ActionPerformed
-
-    private void DotButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DotButtonActionPerformed
+    private void DotButtonActionPerformed(ActionEvent evt) {//GEN-FIRST:event_DotButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_DotButtonActionPerformed
 
-    private void PlusButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusButtonActionPerformed
+    private void PlusButtonActionPerformed(ActionEvent evt) {//GEN-FIRST:event_PlusButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_PlusButtonActionPerformed
 
-    private void Num3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Num3ActionPerformed
+    private void NumButtonActionPerformed(ActionEvent evt) {//GEN-FIRST:event_Num1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Num3ActionPerformed
-
-    private void Num1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Num1ActionPerformed
-        // TODO add your handling code here:
+        Layar.setText(Layar.getText() + evt.getActionCommand());
     }//GEN-LAST:event_Num1ActionPerformed
 
-    private void NegButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NegButtonActionPerformed
+    private void NegButtonActionPerformed(ActionEvent evt) {//GEN-FIRST:event_NegButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_NegButtonActionPerformed
 
-    private void Num6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Num6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Num6ActionPerformed
-
-    private void Num5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Num5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Num5ActionPerformed
-
-    private void Num4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Num4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Num4ActionPerformed
-
-    private void DivButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DivButtonActionPerformed
+    private void DivButtonActionPerformed(ActionEvent evt) {//GEN-FIRST:event_DivButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_DivButtonActionPerformed
 
-    private void Num9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Num9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Num9ActionPerformed
-
-    private void Num8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Num8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Num8ActionPerformed
-
-    private void Num7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Num7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Num7ActionPerformed
-
-    private void MulButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MulButtonActionPerformed
+    private void MulButtonActionPerformed(ActionEvent evt) {//GEN-FIRST:event_MulButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_MulButtonActionPerformed
 
-    private void MRButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MRButtonActionPerformed
+    private void MRButtonActionPerformed(ActionEvent evt) {//GEN-FIRST:event_MRButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_MRButtonActionPerformed
 
-    private void MCButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MCButtonActionPerformed
+    private void MCButtonActionPerformed(ActionEvent evt) {//GEN-FIRST:event_MCButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_MCButtonActionPerformed
 
-    private void ClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClearButtonActionPerformed
+    private void ClearButtonActionPerformed(ActionEvent evt) {//GEN-FIRST:event_ClearButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ClearButtonActionPerformed
 
-    private void ModeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModeButtonActionPerformed
-        if(ModeButton.isSelected()){
-            SinButton.setVisible(true);
-            LBracketButton.setVisible(true);
-            DelButton.setVisible(true);
-            ModButton.setVisible(true);
-            RBracketButton.setVisible(true);
-            AnsButton.setVisible(true);
-            SqrtButton.setVisible(true);
-            LogButton.setVisible(true);
-            RBracketButton.setVisible(true);
-            SinButton.setVisible(true);
-            Sin1Button.setVisible(true);
-            CosButton.setVisible(true);
-            Cos1Button.setVisible(true);
-            TanButton.setVisible(true);
-            Tan1Button.setVisible(true);
-            SquareButton.setVisible(true);
-            PowerButton.setVisible(true);
-            PlusButton.setVisible(true);
-            MulButton.setVisible(true);
-            DivButton.setVisible(true);
-            NegButton.setVisible(true);
-            super.setSize(getPreferredSize());
-            EvaluateButton.setLocation(getLocation());
-            Num00.setVisible(true);
-            LnButton.setVisible(true);
-        }else{
-            SinButton.setVisible(false);
-            super.setSize(285, getHeight());
-            Num00.setVisible(false);
-            ModButton.setVisible(false);
-            RBracketButton.setVisible(false);
-            LnButton.setVisible(false);
-            SqrtButton.setVisible(false);
-            LogButton.setVisible(false);
-            RBracketButton.setVisible(false);
-            SinButton.setVisible(false);
-            Sin1Button.setVisible(false);
-            CosButton.setVisible(false);
-            Cos1Button.setVisible(false);
-            TanButton.setVisible(false);
-            Tan1Button.setVisible(false);
-            SquareButton.setVisible(false);
-            PowerButton.setVisible(false);
-            LBracketButton.setVisible(false);
-        }
-    }//GEN-LAST:event_ModeButtonActionPerformed
-
-    private void Num00ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Num00ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Num00ActionPerformed
-
-    private void LnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LnButtonActionPerformed
+   
+    private void LnButtonActionPerformed(ActionEvent evt) {//GEN-FIRST:event_LnButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_LnButtonActionPerformed
 
@@ -939,7 +858,6 @@ public class CalcForm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AnsButton;
-    private javax.swing.JButton ClearButton;
     private javax.swing.JButton Cos1Button;
     private javax.swing.JButton CosButton;
     private javax.swing.JButton DelButton;
@@ -950,24 +868,10 @@ public class CalcForm extends javax.swing.JFrame {
     private javax.swing.JLabel Layar;
     private javax.swing.JButton LnButton;
     private javax.swing.JButton LogButton;
-    private javax.swing.JButton MCButton;
-    private javax.swing.JButton MRButton;
     private javax.swing.JPanel MainPanel;
     private javax.swing.JButton ModButton;
-    private javax.swing.JCheckBox ModeButton;
     private javax.swing.JButton MulButton;
     private javax.swing.JButton NegButton;
-    private javax.swing.JButton Num0;
-    private javax.swing.JButton Num00;
-    private javax.swing.JButton Num1;
-    private javax.swing.JButton Num2;
-    private javax.swing.JButton Num3;
-    private javax.swing.JButton Num4;
-    private javax.swing.JButton Num5;
-    private javax.swing.JButton Num6;
-    private javax.swing.JButton Num7;
-    private javax.swing.JButton Num8;
-    private javax.swing.JButton Num9;
     private javax.swing.JPanel PanelLayar;
     private javax.swing.JButton PlusButton;
     private javax.swing.JButton PowerButton;
