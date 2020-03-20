@@ -137,7 +137,7 @@ public class CalcForm extends javax.swing.JFrame {
         Num7.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Num7.setActionCommand(Num7.text);
-                NumButtonActionPerformed(evt);
+                onClick(evt);
             }
         });
 
@@ -150,7 +150,7 @@ public class CalcForm extends javax.swing.JFrame {
         Num8.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Num8.setActionCommand(Num8.text);
-                NumButtonActionPerformed(evt);
+                onClick(evt);
             }
         });
 
@@ -163,7 +163,7 @@ public class CalcForm extends javax.swing.JFrame {
         Num9.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Num9.setActionCommand(Num9.text);
-                NumButtonActionPerformed(evt);
+                onClick(evt);
             }
         });
 
@@ -186,7 +186,7 @@ public class CalcForm extends javax.swing.JFrame {
         Num4.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Num4.setActionCommand(Num4.text);
-                NumButtonActionPerformed(evt);
+                onClick(evt);
             }
         });
 
@@ -198,7 +198,7 @@ public class CalcForm extends javax.swing.JFrame {
         Num5.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Num5.setActionCommand(Num5.text);
-                NumButtonActionPerformed(evt);
+                onClick(evt);
             }
         });
 
@@ -210,7 +210,7 @@ public class CalcForm extends javax.swing.JFrame {
         Num6.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Num6.setActionCommand(Num6.text);
-                NumButtonActionPerformed(evt);
+                onClick(evt);
             }
         });
 
@@ -233,7 +233,7 @@ public class CalcForm extends javax.swing.JFrame {
         Num1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Num1.setActionCommand(Num1.text);
-                NumButtonActionPerformed(evt);
+                onClick(evt);
             }
         });
 
@@ -245,7 +245,7 @@ public class CalcForm extends javax.swing.JFrame {
         Num2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Num2.setActionCommand(Num2.text);
-                NumButtonActionPerformed(evt);
+                onClick(evt);
             }
         });
 
@@ -257,7 +257,7 @@ public class CalcForm extends javax.swing.JFrame {
         Num3.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Num3.setActionCommand(Num3.text);
-                NumButtonActionPerformed(evt);
+                onClick(evt);
             }
         });
 
@@ -293,7 +293,7 @@ public class CalcForm extends javax.swing.JFrame {
         Num0.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Num0.setActionCommand(Num0.text);
-                NumButtonActionPerformed(evt);
+                onClick(evt);
             }
         });
 
@@ -527,7 +527,7 @@ public class CalcForm extends javax.swing.JFrame {
         Num00.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 //Num00.setActionCommand(Num00.text);
-                NumButtonActionPerformed(evt);
+                onClick(evt);
             }
         });
 
@@ -787,7 +787,7 @@ public class CalcForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_PlusButtonActionPerformed
 
-    private void NumButtonActionPerformed(ActionEvent evt) {//GEN-FIRST:event_Num1ActionPerformed
+    private void onClick(ActionEvent evt) {//GEN-FIRST:event_Num1ActionPerformed
         // TODO add your handling code here:
         Layar.setText(Layar.getText() + evt.getActionCommand());
     }//GEN-LAST:event_Num1ActionPerformed
