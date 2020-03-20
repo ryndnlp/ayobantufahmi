@@ -11,16 +11,28 @@ class TerminalExpression implements Expression {
     }
 
     public boolean checkSymbol(String inputString) {
-        inputString.replaceFirst(".", "");
+        //System.out.println("    TermExp check 1 string : " + inputString);
+        String testString = inputString.replaceFirst("\\.", "");
+        //System.out.println("    TermExp check 2 string : " + testString);
 
         for (String string : symbol) {
-            inputString.replaceAll(string, "");
+            testString = testString.replaceAll(string, "");
+            //System.out.println("    TermExp check " + string + " string : " + testString);
         }
 
-        return inputString.equals("") ? true : false;
+        //System.out.println("    TermExp check last string : " + testString);
+        
+
+        return testString.trim().equals("");
     }
 
     public float solve() {
         return this.x;
+    }
+
+    @Override
+    public String toString() {
+        System.out.println("Called terminal to string");
+        return String.valueOf(x);
     }
 }

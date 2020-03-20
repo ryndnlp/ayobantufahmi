@@ -1,6 +1,6 @@
 class LogarithmicExpression extends UnaryExpression {
     //protected String symbol = "-";
-    protected Expression x;
+    //protected Expression x;
 
     public LogarithmicExpression(Expression x) {
         symbol = "log";
