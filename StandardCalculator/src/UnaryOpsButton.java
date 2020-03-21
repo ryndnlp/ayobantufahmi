@@ -1,7 +1,7 @@
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 
-class UnaryOpsButton extends Button implements PrintButton{
+class UnaryOpsButton extends PrintButton{
     
     public UnaryOpsButton(String text) {
         super(text);

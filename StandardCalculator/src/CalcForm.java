@@ -100,7 +100,7 @@ public class CalcForm extends javax.swing.JFrame {
         ClearButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ClearButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                //TODO
+                AnsButton.onClick(evt, Layar);
             }
         });
 

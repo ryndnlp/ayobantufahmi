@@ -1,7 +1,7 @@
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 
-public class NumButton extends Button implements PrintButton {
+public class NumButton extends PrintButton {
 
     public NumButton(String text) {
         super(text);

@@ -1,7 +1,7 @@
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 
-public class MemoryButton extends Button {
+public class MemoryButton extends DelAllButton {
    
     public MemoryButton(String text) {
         super(text);
@@ -9,5 +9,6 @@ public class MemoryButton extends Button {
         
     public void onClick(ActionEvent e, JLabel Layar) {
         //TODO
+        super.onClick(e, Layar);
     }
 }
