@@ -20,9 +20,9 @@ public class Token {
         String text = "";
         for (int i = 0; i < idx; i++){
             text += text_set[i];
-            if (i != idx - 1){
-                text += " ";
-            }
+            // if (i != idx - 1){
+            //     text += " ";
+            // }
         }
         return text;
     }
