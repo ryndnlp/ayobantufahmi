@@ -10,7 +10,7 @@ public class CosExpression extends UnaryExpression {
         this.x = x;
     }
 
-    public float solve() {
-        return (float) Math.cos(x.solve());
+    public double solve() {
+        return (double) Math.cos(x.solve());
     }
 }

@@ -7,7 +7,7 @@ public abstract class BinaryExpression extends NonTerminalExpression {
     protected Expression y;
 
     //abstract public Boolean checkSymbol();
-    abstract public float solve();
+    abstract public double solve();
 
     public void setX(Expression expression) {
         this.x = expression;

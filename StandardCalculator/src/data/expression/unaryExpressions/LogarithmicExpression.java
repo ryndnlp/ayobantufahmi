@@ -11,7 +11,7 @@ public class LogarithmicExpression extends UnaryExpression {
         this.x = x;
     }
 
-    public float solve() {
-        return (float) Math.log(x.solve());
+    public double solve() {
+        return (double) Math.log(x.solve());
     }
 }

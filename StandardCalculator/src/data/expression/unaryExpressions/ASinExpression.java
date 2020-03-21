@@ -10,7 +10,7 @@ public class ASinExpression extends UnaryExpression {
         this.x = x;
     }
 
-    public float solve() {
-        return (float) Math.asin(x.solve());
+    public double solve() {
+        return (double) Math.asin(x.solve());
     }
 }

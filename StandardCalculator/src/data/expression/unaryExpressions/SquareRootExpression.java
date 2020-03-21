@@ -11,7 +11,7 @@ public class SquareRootExpression extends UnaryExpression {
         this.x = x;
     }
 
-    public float solve() {
-        return (float) Math.sqrt(x.solve());
+    public double solve() {
+        return (double) Math.sqrt(x.solve());
     }
 }

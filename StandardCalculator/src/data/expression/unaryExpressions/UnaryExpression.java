@@ -6,7 +6,7 @@ public abstract class UnaryExpression extends NonTerminalExpression {
     protected Expression x;
 
     //abstract public Boolean checksSymbol();
-    abstract public float solve();
+    abstract public double solve();
 
     public void setX(Expression expression) {
         this.x = expression;

@@ -9,5 +9,8 @@ public abstract class NonTerminalExpression implements Expression {
         inputString.replaceAll(" ", "");
         return inputString.equals(symbol) ? true : false;
     }
-    abstract public float solve();
+    public String getSymbol() {
+        return symbol;
+    }
+    abstract public double solve();
 }

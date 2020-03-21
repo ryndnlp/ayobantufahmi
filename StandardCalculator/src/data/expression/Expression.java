@@ -3,7 +3,8 @@ package data.expression;
 
 public interface Expression {
     public boolean checkSymbol(String inputString);
-    public float solve();
+    public String getSymbol();
+    public double solve();
 
     @Override
     public String toString();
