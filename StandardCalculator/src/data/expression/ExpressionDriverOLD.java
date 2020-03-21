@@ -605,7 +605,7 @@ public class ExpressionDriverOLD {
          * System.out.println(exp + " " + " to " + string + " is : " +
          * exp.checkSymbol(string)); } System.out.println("====="); }
          */
-        String inString = "3 * 2 + (5 * (19 + 1)) * (11 % 2) + 1";
+        String inString = "--3 * 2 + (5 * (19 -- 1)) * (11 % 2) + 1";
         //inString = "sin 90";
 
         /*
@@ -625,7 +625,7 @@ public class ExpressionDriverOLD {
         System.out.println("===");
         System.out.println("===");
         */
-        inString = "-3 * 2 + (5 * (19 + 1)) * (11 % 2) + 1 - 10";
+        inString = "-3 * 2 + (5 * (19 -- 1)) * (11 % 2) + 1 - 10";
         Expression outExp = null;
         try {
             // outExp = parse("5+2*3/2-3.9");
@@ -651,7 +651,7 @@ public class ExpressionDriverOLD {
                 + (new AddExpression(new PowerToExpression(new TerminalExpression(5), new TerminalExpression(2)),
                         new SquareRootExpression(new TerminalExpression(4))).solve()));
 
-        System.out.println("Sin(30) = " + new SinExpression(new TerminalExpression(30)) + "|| Asin (0.872) = "
+        System.out.println("Sin(3..0) = " + new SinExpression(new TerminalExpression(30)) + "|| Asin (0.872) = "
                 + new ASinExpression(new TerminalExpression((double) 0.872)).solve());
         System.out.println("Cos(30) = " + new CosExpression(new TerminalExpression(30)) + "|| Acos (0.872) = "
                 + new ACosExpression(new TerminalExpression((double) 0.872)).solve());

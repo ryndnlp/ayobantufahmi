@@ -6,15 +6,20 @@ public class Token {
         text_set = new String[100];
         int idx = 0;
     }
+    public boolean isEmpty(){
+        return (idx==0);
+    }
     public void addToToken(String s){
         text_set[idx] = s;
         idx++;
     }
     public String deleteFromBack(){
         String T;
-        T = text_set[idx];
-        if (idx > 0){
+        if (!isEmpty()){
+            T = text_set[idx-1];
             idx--;    
+        } else {
+            T = "";
         }
         return T;
     }
@@ -38,9 +43,9 @@ public class Token {
         }
     }
     public void deleteAll(){
-        for (int i = 0; i < text_set.length ; i++){
-            this.text_set[i] = null;
+        String T;
+        while (!this.isEmpty()){
+            T = this.deleteFromBack();
         }
-        idx = 0;
     }
 }

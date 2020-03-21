@@ -15,9 +15,9 @@ class UnaryOpsButton extends PrintButton{
         if(Layar.getText().length()<24){
             Layar.setText(token.convertToString());
             if(this.text != "(" && this.text != ")"){
+                token.addToToken("(");
                 Layar.setText(Layar.getText() + "(");
             }
         }
-        
     }
 }

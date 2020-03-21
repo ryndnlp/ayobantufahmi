@@ -9,12 +9,13 @@ class SupButton extends UnaryOpsButton{
         this.printed = printed;
     }
         
-    public void onClick(ActionEvent e, JLabel Layar) {
+    public void onClick(ActionEvent e, JLabel Layar, Token token) {
         //TODO
+        token.addToToken(e.getActionCommand());
         if(Layar.getText().length()<24){
-            Layar.setText(Layar.getText() + this.printed + "(");
+            Layar.setText(token.convertToString() + this.printed + "(");
             if(this.printed == "^2"){
-                Layar.setText(Layar.getText() + ")");
+                Layar.setText(token.convertToString() + ")");
             }
         }
     }
