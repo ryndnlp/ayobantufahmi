@@ -9,6 +9,8 @@ class BinaryOpsButton extends PrintButton {
         
     public void onClick(ActionEvent e, JLabel Layar) {
         //TODO
-        Layar.setText(Layar.getText() + " " + this.text + " ");
+        if(Layar.getText().length()<24){
+            Layar.setText(Layar.getText() + " " + this.text + " ");
+        }
     }
 }

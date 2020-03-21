@@ -25,7 +25,6 @@ public class CalcForm extends javax.swing.JFrame {
         //Calc button
         JPanel PanelLayar = new JPanel();
         JPanel MainPanel = new JPanel();
-        ModeButton ModeButton = new ModeButton();
         JLabel Layar = new JLabel();
         NumButton DotButton = new NumButton(".");//TODO
         DelAllButton EvaluateButton = new DelAllButton("=");//TODO
@@ -58,14 +57,15 @@ public class CalcForm extends javax.swing.JFrame {
         UnaryOpsButton LBracketButton = new UnaryOpsButton("(");
         UnaryOpsButton RBracketButton = new UnaryOpsButton(")");
         UnaryOpsButton SqrtButton = new UnaryOpsButton("sqrt");
-        UnaryOpsButton SquareButton = new UnaryOpsButton("<html>x<sup>2</sup></html>");        
-        UnaryOpsButton PowerButton = new UnaryOpsButton("<html>x<sup>y</sup></html>");
-        UnaryOpsButton Sin1Button = new UnaryOpsButton("<html>sin<sup>-1</sup></html>");
-        UnaryOpsButton Cos1Button = new UnaryOpsButton("<html>cos<sup>-1</sup></html>");
-        UnaryOpsButton Tan1Button = new UnaryOpsButton("<html>tan<sup>-1</sup></html>");
+        SupButton SquareButton = new SupButton("<html>x<sup>2</sup></html>", "^2");        
+        SupButton PowerButton = new SupButton("<html>x<sup>y</sup></html>", "^");
+        SupButton Sin1Button = new SupButton("<html>sin<sup>-1</sup></html>", "arcsin");
+        SupButton Cos1Button = new SupButton("<html>cos<sup>-1</sup></html>", "arccos");
+        SupButton Tan1Button = new SupButton("<html>tan<sup>-1</sup></html>", "arctan");
         UnaryOpsButton SinButton = new UnaryOpsButton("sin");
         UnaryOpsButton LogButton = new UnaryOpsButton("log");
         UnaryOpsButton LnButton = new UnaryOpsButton("ln");
+        Boolean status;
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculator");
@@ -77,21 +77,6 @@ public class CalcForm extends javax.swing.JFrame {
         MainPanel.setBackground(new java.awt.Color(51, 51, 51));
         MainPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         MainPanel.setPreferredSize(new java.awt.Dimension(348, 452));
-        
-        ModeButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
-        ModeButton.setForeground(new java.awt.Color(255, 255, 255));
-        ModeButton.setSelected(true);
-        ModeButton.setText("Scientific");
-        ModeButton.setToolTipText("");
-        ModeButton.setContentAreaFilled(false);
-        ModeButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        ModeButton.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        ModeButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
-                Button[] B ={Num00, ModButton, RBracketButton, LBracketButton, LogButton, LnButton, SqrtButton, Sin1Button, Cos1Button, Tan1Button, SinButton, CosButton, TanButton, SquareButton, PowerButton};
-                ModeButton.onClick(B, Layar, MainPanel);
-            }
-        });
 
         ClearButton.setBackground(new java.awt.Color(102, 102, 102));
         ClearButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
@@ -499,28 +484,9 @@ public class CalcForm extends javax.swing.JFrame {
             }
         });
 
-        Layar.setFont(new java.awt.Font("Segoe UI Semilight", 0, 36)); // NOI18N
-        Layar.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        Layar.setToolTipText("");
-        Layar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-
-        javax.swing.GroupLayout PanelLayarLayout = new javax.swing.GroupLayout(PanelLayar);
-        PanelLayar.setLayout(PanelLayarLayout);
-        PanelLayarLayout.setHorizontalGroup(
-            PanelLayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Layar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        PanelLayarLayout.setVerticalGroup(
-            PanelLayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelLayarLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(Layar, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
         Num00.setBackground(new java.awt.Color(51, 51, 51));
         Num00.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
         Num00.setForeground(new java.awt.Color(255, 255, 255));
-        
         Num00.setBorderPainted(false);
         Num00.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Num00.addActionListener(new ActionListener() {
@@ -541,6 +507,24 @@ public class CalcForm extends javax.swing.JFrame {
                 LnButton.onClick(evt, Layar);
             }
         });
+
+        Layar.setFont(new java.awt.Font("Segoe UI Semilight", 0, 36)); // NOI18N
+        Layar.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        Layar.setToolTipText("");
+        Layar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        javax.swing.GroupLayout PanelLayarLayout = new javax.swing.GroupLayout(PanelLayar);
+        PanelLayar.setLayout(PanelLayarLayout);
+        PanelLayarLayout.setHorizontalGroup(
+            PanelLayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Layar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        PanelLayarLayout.setVerticalGroup(
+            PanelLayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelLayarLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(Layar, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         javax.swing.GroupLayout MainPanelLayout = new javax.swing.GroupLayout(MainPanel);
         MainPanel.setLayout(MainPanelLayout);
@@ -621,8 +605,6 @@ public class CalcForm extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(DivButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(MainPanelLayout.createSequentialGroup()
-                                .addComponent(ModeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
                                 .addComponent(MCButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(MRButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -642,8 +624,7 @@ public class CalcForm extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(MCButton)
-                    .addComponent(MRButton)
-                    .addComponent(ModeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(MRButton))
                 .addGap(4, 4, 4)
                 .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
