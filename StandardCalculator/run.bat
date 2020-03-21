@@ -1,3 +1,3 @@
 cd ./src
-javac CalcForm.java NumButton.java
+javac *.java
 java CalcForm

@@ -1,7 +1,7 @@
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 
-class BinaryOpsButton extends Button implements PrintButton {
+class BinaryOpsButton extends PrintButton {
     
     public BinaryOpsButton(String text) {
         super(text);
@@ -9,6 +9,8 @@ class BinaryOpsButton extends Button implements PrintButton {
         
     public void onClick(ActionEvent e, JLabel Layar) {
         //TODO
-        Layar.setText(Layar.getText() + " " + this.text + " ");
+        if(Layar.getText().length()<24){
+            Layar.setText(Layar.getText() + " " + this.text + " ");
+        }
     }
 }
