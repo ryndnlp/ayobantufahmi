@@ -1,5 +1,4 @@
 import java.awt.event.ActionListener;
-import javax.swing.JButton;
 import javax.swing.JPanel;
 import java.awt.event.ActionEvent;
 import javax.swing.*;
@@ -30,8 +29,8 @@ public class CalcForm extends javax.swing.JFrame {
         JLabel Layar = new JLabel();
         NumButton DotButton = new NumButton(".");//TODO
         DelAllButton EvaluateButton = new DelAllButton("=");//TODO
-        //Memory Button
         Del1Button DelButton = new Del1Button("del");
+        //Memory Button
         MemoryButton ClearButton = new MemoryButton("AC");
         MemoryButton MCButton = new MemoryButton("MC");
         MemoryButton AnsButton = new MemoryButton("ans");

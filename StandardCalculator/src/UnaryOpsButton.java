@@ -1,6 +1,5 @@
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
-import java.awt.event.ActionEvent;
 
 class UnaryOpsButton extends Button implements PrintButton{
     

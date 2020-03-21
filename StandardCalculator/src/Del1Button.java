@@ -13,7 +13,5 @@ public class Del1Button extends Button{
         String s = Layar.getText();
         System.out.println(s.length());
         Layar.setText(s.substring(0, s.length() - 1));
-        
-        System.out.println(s.length());
     }
 }
