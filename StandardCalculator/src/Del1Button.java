@@ -1,16 +1,18 @@
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 
-public class NumButton extends PrintButton {
+public class Del1Button extends Button{
 
-    public NumButton(String text) {
+    public Del1Button(String text) {
         super(text);
     }
         
     public void onClick(ActionEvent e, JLabel Layar,Token token) {
         //TODO
-        token.addToToken(e.getActionCommand());
-        if(Layar.getText().length()<24){
+        String T;
+        T = token.deleteFromBack();
+        String s = Layar.getText();
+        if(s.length()>0){
             Layar.setText(token.convertToString());
         }
     }

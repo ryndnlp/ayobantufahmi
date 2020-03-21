@@ -1,14 +1,14 @@
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.JButton;
+import javax.swing.JLabel;
 
-public class MemoryButton extends JButton implements ActionListener {
-    public String text;
+public class MemoryButton extends DelAllButton {
+   
     public MemoryButton(String text) {
         super(text);
     }
         
-    public void actionPerformed(ActionEvent e) {
+    public void onClick(ActionEvent e, JLabel Layar,Token token) {
         //TODO
+        // super.onClick(e, Layar, token);
     }
 }
