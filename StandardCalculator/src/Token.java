@@ -13,7 +13,9 @@ public class Token {
     public String deleteFromBack(){
         String T;
         T = text_set[idx];
-        idx--;
+        if (idx > 0){
+            idx--;    
+        }
         return T;
     }
     public String convertToString(){

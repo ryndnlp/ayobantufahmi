@@ -299,7 +299,7 @@ public class CalcForm extends javax.swing.JFrame {
                 String inString;
                 inString = token.convertToString();
                 Expression outExp = null;
-                ExpressionDriver ed = new ExpressionDriver();
+                ExpressionParser ed = new ExpressionParser();
                 try {
                     // outExp = parse("5+2*3/2-3.9");
                     outExp = ed.parse(inString);
