@@ -306,7 +306,7 @@ public class CalcForm extends javax.swing.JFrame {
                     if (outExp.solve() - (int)outExp.solve() == 0){
                         T.addToToken(Integer.toString((int)outExp.solve()));
                     } else{
-                        T.addToToken(Float.toString(outExp.solve()));
+                        T.addToToken(Double.toString(outExp.solve()));
                     }
                     token.setToken(T);
                     Layar.setText(token.convertToString());
