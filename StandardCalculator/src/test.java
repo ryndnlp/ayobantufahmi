@@ -4,6 +4,7 @@ class test {
     public static void main(String[] args) {
         String inString = "-3 * 2 + (5 * (19 + 1)) * (11 % 2) + 1 - 10";
         //inString = "-10";
+        //inString = "1+-5";
 
         Expression outExp = null;
         try {

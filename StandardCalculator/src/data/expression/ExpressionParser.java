@@ -81,6 +81,9 @@ public class ExpressionParser {
                     if (rootExpression == null) {
                         rootExpression = new NegativeExpression(emptyExp);
                         lastExp = rootExpression;
+                    } else if (lastExp instanceof BinaryExpression) {
+                        putUnaryInTree(new NegativeExpression(emptyExp));
+                    
                     } else {
                         putSimpleBinaryInTree(new SubtractExpression(emptyExp, emptyExp));
                     }
@@ -279,6 +282,10 @@ public class ExpressionParser {
                                                                                             // determine its priority)
         if (rootExpression == null) { // Binary expressions must be in the middle, since we use infix notations
             throw new Exception("Binary expression has no expression on left hand side");
+        }
+        
+        if (lastExp instanceof BinaryExpression) {
+            throw new Exception("Cannot chain binary operators");
         }
         binaryExp.setX(rootExpression);
         rootExpression = binaryExp;
