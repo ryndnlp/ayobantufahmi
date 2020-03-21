@@ -2,7 +2,6 @@ import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 
 public class DelAllButton extends Button{
-    public String text;
 
     public DelAllButton(String text) {
         super(text);

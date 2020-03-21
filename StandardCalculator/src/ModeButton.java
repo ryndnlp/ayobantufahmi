@@ -3,15 +3,11 @@ import javax.swing.JPanel;
 import javax.swing.JCheckBox;
 
 public class ModeButton extends JCheckBox {
-    String label;
 
-    public ModeButton(String label) {
-        super(label);  // Explicitly Invoking the parent parameterized constructor 
-        this.label = label;
-    }
     public ModeButton() {
-        super();  // Explicitly Invoking the parent parameterized constructor     
+        super();
     }
+    
     public void onClick(Button B[], JLabel Layar, JPanel MainPanel) {
         if(!this.isSelected()){
             for(int i=0; i<B.length;i++){
