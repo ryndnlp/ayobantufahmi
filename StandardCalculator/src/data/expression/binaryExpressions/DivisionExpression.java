@@ -17,7 +17,7 @@ public class DivisionExpression extends BinaryExpression {
         return inputString.equals(symbol) ? true : false;
     }*/
 
-    public float solve() {
+    public double solve() {
         return this.x.solve() / this.y.solve();
     }
 }

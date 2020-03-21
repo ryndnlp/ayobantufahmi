@@ -10,7 +10,7 @@ public class ACosExpression extends UnaryExpression {
         this.x = x;
     }
 
-    public float solve() {
-        return (float) Math.acos(x.solve());
+    public double solve() {
+        return (double) Math.acos(x.solve());
     }
 }

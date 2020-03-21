@@ -11,7 +11,7 @@ public class PowerToExpression extends BinaryExpression {
         this.y = y;
     }
 
-    public float solve() {
-        return (float) Math.pow(x.solve(), y.solve());
+    public double solve() {
+        return (double) Math.pow(x.solve(), y.solve());
     }
 }

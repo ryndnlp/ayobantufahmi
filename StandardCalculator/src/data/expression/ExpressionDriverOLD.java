@@ -1,14 +1,10 @@
 package data.expression;
 
-import data.expression.*;
 import data.expression.binaryExpressions.*;
 import data.expression.unaryExpressions.*;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
 
-public class ExpressionDriver {
+public class ExpressionDriverOLD {
     static Expression emptyExp = new TerminalExpression(0);
     static Expression[] expressions = { new AddExpression(emptyExp, emptyExp),
             new SubtractExpression(emptyExp, emptyExp), new MultiplyExpression(emptyExp, emptyExp) };
@@ -610,7 +606,9 @@ public class ExpressionDriver {
          * exp.checkSymbol(string)); } System.out.println("====="); }
          */
         String inString = "3 * 2 + (5 * (19 + 1)) * (11 % 2) + 1";
+        //inString = "sin 90";
 
+        /*
         TerminalExpression tExpression = new TerminalExpression(50);
         System.out.println("===");
         System.out.println("tExpression = " + tExpression);
@@ -626,6 +624,8 @@ public class ExpressionDriver {
         System.out.println("===");
         System.out.println("===");
         System.out.println("===");
+        */
+        inString = "-3 * 2 + (5 * (19 + 1)) * (11 % 2) + 1 - 10";
         Expression outExp = null;
         try {
             // outExp = parse("5+2*3/2-3.9");
@@ -652,11 +652,11 @@ public class ExpressionDriver {
                         new SquareRootExpression(new TerminalExpression(4))).solve()));
 
         System.out.println("Sin(30) = " + new SinExpression(new TerminalExpression(30)) + "|| Asin (0.872) = "
-                + new ASinExpression(new TerminalExpression((float) 0.872)).solve());
+                + new ASinExpression(new TerminalExpression((double) 0.872)).solve());
         System.out.println("Cos(30) = " + new CosExpression(new TerminalExpression(30)) + "|| Acos (0.872) = "
-                + new ACosExpression(new TerminalExpression((float) 0.872)).solve());
+                + new ACosExpression(new TerminalExpression((double) 0.872)).solve());
         System.out.println("Tan(30) = " + new TanExpression(new TerminalExpression(30)) + "|| Atan (0.872) = "
-                + new ATanExpression(new TerminalExpression((float) 0.872)).solve());
+                + new ATanExpression(new TerminalExpression((double) 0.872)).solve());
 
         System.out.println("Log(100) = " + new LogarithmicExpression(new TerminalExpression(100)).solve());
     }

@@ -11,7 +11,7 @@ public class TanExpression extends UnaryExpression {
         this.x = x;
     }
 
-    public float solve() {
-        return (float) Math.tan(x.solve());
+    public double solve() {
+        return (double) Math.tan(x.solve());
     }
 }

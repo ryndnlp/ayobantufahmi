@@ -11,7 +11,7 @@ public class NegativeExpression extends UnaryExpression {
         this.x = x;
     }
 
-    public float solve() {
+    public double solve() {
         return -1 * this.x.solve();
     }
 }

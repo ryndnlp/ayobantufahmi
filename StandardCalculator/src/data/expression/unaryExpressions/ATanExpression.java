@@ -11,7 +11,7 @@ public class ATanExpression extends UnaryExpression {
         this.x = x;
     }
 
-    public float solve() {
-        return (float) Math.atan(x.solve());
+    public double solve() {
+        return (double) Math.atan(x.solve());
     }
 }
