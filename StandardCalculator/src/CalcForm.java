@@ -60,7 +60,7 @@ public class CalcForm extends javax.swing.JFrame {
         UnaryOpsButton SqrtButton = new UnaryOpsButton("sqrt");
         UnaryOpsButton SquareButton = new UnaryOpsButton("<html>x<sup>2</sup></html>");        
         UnaryOpsButton PowerButton = new UnaryOpsButton("<html>x<sup>y</sup></html>");
-        NumButton Sin1Button = new NumButton("<html>sin<sup>-1</sup></html>");
+        UnaryOpsButton Sin1Button = new UnaryOpsButton("<html>sin<sup>-1</sup></html>");
         UnaryOpsButton Cos1Button = new UnaryOpsButton("<html>cos<sup>-1</sup></html>");
         UnaryOpsButton Tan1Button = new UnaryOpsButton("<html>tan<sup>-1</sup></html>");
         UnaryOpsButton SinButton = new UnaryOpsButton("sin");

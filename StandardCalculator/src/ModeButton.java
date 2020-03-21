@@ -1,7 +1,7 @@
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JCheckBox;
-import java.awt.event.ActionEvent;
+
 public class ModeButton extends JCheckBox {
     String label;
 

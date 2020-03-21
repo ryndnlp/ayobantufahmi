@@ -13,5 +13,8 @@ class UnaryOpsButton extends Button implements PrintButton{
         if(this.text != "(" && this.text != ")"){
             Layar.setText(Layar.getText() + "(");
         }
+        if(this.getText() == "Sin1Button"){
+
+        }
     }
 }

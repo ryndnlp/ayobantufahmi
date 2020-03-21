@@ -1,7 +1,6 @@
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionEvent;
 
 abstract class Button extends JButton {
     String text;
