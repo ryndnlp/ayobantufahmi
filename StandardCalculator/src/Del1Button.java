@@ -11,7 +11,8 @@ public class Del1Button extends Button{
     public void onClick(ActionEvent e, JLabel Layar) {
         //TODO
         String s = Layar.getText();
-        System.out.println(s.length());
-        Layar.setText(s.substring(0, s.length() - 1));
+        if(s.length()>0){
+            Layar.setText(s.substring(0, s.length() - 1));
+        }
     }
 }
