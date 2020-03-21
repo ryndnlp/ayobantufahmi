@@ -1,4 +1,8 @@
-abstract class BinaryExpression extends NonTerminalExpression {
+package data.expression.binaryExpressions;
+
+import data.expression.*;
+
+public abstract class BinaryExpression extends NonTerminalExpression {
     protected Expression x;
     protected Expression y;
 
@@ -23,18 +27,6 @@ abstract class BinaryExpression extends NonTerminalExpression {
 
     @Override
     public String toString() {
-        String s = "";
-        System.out.println("Called binary to string");
-        //if(x instanceof TerminalExpression) {
-            s += x;
-        //}
-        s+= " " + symbol + " ";
-        //String s = x.toString();
-        //s += symbol;
-        //s += y.toString();
-        //if(y instanceof TerminalExpression) {
-            s += y;
-        //}
-        return s;
+        return x + " " + symbol + " " + y;
     }
 }

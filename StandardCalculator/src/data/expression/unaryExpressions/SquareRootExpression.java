@@ -1,4 +1,8 @@
-class SquareRootExpression extends UnaryExpression {
+package data.expression.unaryExpressions;
+
+import data.expression.Expression;
+
+public class SquareRootExpression extends UnaryExpression {
     //protected String symbol = "-";
     //protected Expression x;
 

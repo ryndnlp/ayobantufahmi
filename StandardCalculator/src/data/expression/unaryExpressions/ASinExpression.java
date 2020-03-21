@@ -1,4 +1,8 @@
-class ASinExpression extends UnaryExpression {
+package data.expression.unaryExpressions;
+
+import data.expression.Expression;
+
+public class ASinExpression extends UnaryExpression {
     //protected String symbol = "-";
 
     public ASinExpression(Expression x) {

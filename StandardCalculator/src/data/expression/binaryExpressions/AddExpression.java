@@ -1,4 +1,8 @@
-class AddExpression extends BinaryExpression {
+package data.expression.binaryExpressions;
+
+import data.expression.Expression;
+
+public class AddExpression extends BinaryExpression {
     //static private String symbol = "+";
     //String symbol = "+";
 

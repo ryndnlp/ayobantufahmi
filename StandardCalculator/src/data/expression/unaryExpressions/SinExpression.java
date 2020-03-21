@@ -1,4 +1,8 @@
-class SinExpression extends UnaryExpression {
+package data.expression.unaryExpressions;
+
+import data.expression.Expression;
+
+public class SinExpression extends UnaryExpression {
     //protected String symbol = "-";
 
     public SinExpression(Expression x) {

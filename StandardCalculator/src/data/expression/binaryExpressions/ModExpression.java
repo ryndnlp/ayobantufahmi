@@ -1,9 +1,13 @@
-class MultiplyExpression extends BinaryExpression {
+package data.expression.binaryExpressions;
+
+import data.expression.Expression;
+
+public class ModExpression extends BinaryExpression {
     //static private String symbol = "*";
     //String symbol = "-";
 
-    public MultiplyExpression(Expression x, Expression y) {
-        symbol = "*";
+    public ModExpression(Expression x, Expression y) {
+        symbol = "%";
         this.x = x;
         this.y = y;
     }
@@ -14,6 +18,6 @@ class MultiplyExpression extends BinaryExpression {
     }*/
 
     public float solve() {
-        return this.x.solve() * this.y.solve();
+        return this.x.solve() % this.y.solve();
     }
 }

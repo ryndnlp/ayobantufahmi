@@ -1,7 +1,11 @@
-abstract class UnaryExpression extends NonTerminalExpression {
+package data.expression.unaryExpressions;
+
+import data.expression.*;
+
+public abstract class UnaryExpression extends NonTerminalExpression {
     protected Expression x;
 
-    //abstract public Boolean checkSymbol();
+    //abstract public Boolean checksSymbol();
     abstract public float solve();
 
     public void setX(Expression expression) {
@@ -14,7 +18,6 @@ abstract class UnaryExpression extends NonTerminalExpression {
 
     @Override
     public String toString() {
-        System.out.println("Called unary to string");
-        return new String(symbol + x);
+        return symbol + " " + x;
     }
 }

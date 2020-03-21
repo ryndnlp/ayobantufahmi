@@ -1,3 +1,9 @@
+package data.expression;
+
+import data.expression.*;
+import data.expression.binaryExpressions.*;
+import data.expression.unaryExpressions.*;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -51,32 +57,32 @@ class ExpressionDriver {
         int subEnd = 0;
 
         while (!stringLeft.equals("")) {
-            System.out.println("Stringleft is : " + stringLeft);
+            //System.out.println("Stringleft is : " + stringLeft);
             int checkCharIdx = 0;
             // String checkChar = String.valueOf(stringLeft.charAt(checkCharIdx));
             String checkChar = stringLeft.substring(checkCharIdx, checkCharIdx + 1);
 
             // checks for terminals
-            System.out.println("Outer check char : " + checkChar);
+            //System.out.println("Outer check char : " + checkChar);
             while ((emptyTerminal.checkSymbol(checkChar)) && checkCharIdx < stringLeft.length()) {
                 checkCharIdx++;
                 if (checkCharIdx < stringLeft.length()) {
                     checkChar = stringLeft.substring(checkCharIdx, checkCharIdx + 1);
                 }
-                System.out.println("Outer check char : " + checkChar);
+                //System.out.println("Outer check char : " + checkChar);
             }
 
             subEnd = checkCharIdx;
 
             checkSub = stringLeft.substring(subStart, subEnd);
 
-            System.out.println("CheckSub is : " + checkSub);
+            //System.out.println("CheckSub is : " + checkSub);
 
             if (subStart != subEnd) { // There's at least a terminal in the beginning
-                System.out.println("Opening substring is a terminal");
+                //System.out.println("Opening substring is a terminal");
                 if (!emptyTerminal.checkSymbol(checkSub)) {
-                    System.out.println(checkSub + " was supposed to be a terminal, but it failed.");
-                    throw new Exception();
+                    //System.out.println(checkSub + " was supposed to be a terminal, but it failed.");
+                    throw new Exception("Unknown terminal symbol");
                 }
 
                 if (rootExpression == null) { // This is the first expression
@@ -116,7 +122,7 @@ class ExpressionDriver {
 
                 // Loop until a terminal is got
                 checkChar = stringLeft.substring(checkCharIdx, checkCharIdx + 1);
-                System.out.println("NonTerm check char : " + checkChar);
+                //System.out.println("NonTerm check char : " + checkChar);
                 while ((!emptyTerminal.checkSymbol(checkChar)) && checkCharIdx < stringLeft.length()) {
                     if (emptyTerminal.checkSymbol(checkChar)) {
                         break;
@@ -125,7 +131,7 @@ class ExpressionDriver {
                     if (checkCharIdx < stringLeft.length()) {
                         checkChar = stringLeft.substring(checkCharIdx, checkCharIdx + 1);
                     }
-                    System.out.println("NonTerm check char : " + checkChar);
+                    //System.out.println("NonTerm check char : " + checkChar);
                 }
                 subEnd = checkCharIdx;
                 checkSub = stringLeft.substring(subStart, subEnd);
@@ -136,14 +142,14 @@ class ExpressionDriver {
 
                 if (checkSub.substring(0, 1).matches("[\\*|\\+|\\-|/|\\^]*")
                         && !checkSub.replace("[\\*|\\+|\\-|/|\\^]+", "").equals("")) {
-                    System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+                    //System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
                     subEnd -= (checkSub.length() - 1);
                     checkSub = checkSub.substring(0, 1);
                 }
 
-                System.out.println("NonTerminal CheckSub is : " + checkSub);
+                //System.out.println("NonTerminal CheckSub is : " + checkSub);
 
-                System.out.println("Opening substring is a nonterminal");
+                //System.out.println("Opening substring is a nonterminal");
                 if (checkSub.replaceFirst("\\(", "").replaceFirst("\\)", "").equals("")) { // The first substring is
                     // parentheses
                     /*
@@ -172,7 +178,7 @@ class ExpressionDriver {
                     subEnd = checkCharIdx + 1;
                     checkSub = stringLeft.substring(subStart + 1, subEnd - 1);
                     
-                    System.out.println("MAKING SUB EXPRESSION");
+                    //System.out.println("MAKING SUB EXPRESSION");
                     Expression subExpression = new TerminalExpression(parse(checkSub).solve());
 
                     if (rootExpression == null) { // This is the first expression
@@ -423,11 +429,11 @@ class ExpressionDriver {
                                     BinaryExpression tempRoot = (BinaryExpression) rootExpression;
                                     if (tempRoot.getY() != emptyTerminal) {
                                         tempExp.setX(tempRoot.getY());
-                                        System.out.println("Root Y : " + tempRoot.getY());
-                                        System.out.println("Neo X : " + tempExp.getX());
-                                        System.out.println("X of mult is Y");
+                                        //System.out.println("Root Y : " + tempRoot.getY());
+                                        //System.out.println("Neo X : " + tempExp.getX());
+                                        //System.out.println("X of mult is Y");
                                     }
-                                    System.out.println("Making mult a child of...");
+                                    //System.out.println("Making mult a child of...");
                                     tempRoot.setY(tempExp);
                                 } else {
                                     // BinaryExpression tempRoot = (BinaryExpression) rootExpression;
@@ -460,7 +466,7 @@ class ExpressionDriver {
                                     // System.out.println("Neo X : " + tempExp.getX());
                                     // System.out.println("X of mult is Y");
                                 }
-                                System.out.println("Making mult a child of...");
+                                //System.out.println("Making mult a child of...");
                                 tempRoot.setY(tempExp);
                             }
                             break;
@@ -488,7 +494,41 @@ class ExpressionDriver {
                                         // System.out.println("Neo X : " + tempExp.getX());
                                         // System.out.println("X of mult is Y");
                                     }
-                                    System.out.println("Making mult a child of...");
+                                    //System.out.println("Making mult a child of...");
+                                    tempRoot.setY(tempExp);
+                                } else {
+                                    // BinaryExpression tempRoot = (BinaryExpression) rootExpression;
+                                    tempExp.setX(rootExpression);
+                                    rootExpression = tempExp;
+
+                                }
+                            }
+                            break;
+                        }
+
+                        case "%": {
+                            ModExpression tempExp = new ModExpression(emptyTerminal, emptyTerminal);
+                            lastExp = tempExp;
+
+                            if (rootExpression == null) {
+                                throw new Exception("Binary expression has no expression on left hand side");
+                                // rootExpression = tempExp;
+                            } else if (rootExpression instanceof TerminalExpression) {
+                                tempExp.setX(rootExpression);
+                                rootExpression = tempExp;
+                            } else if (rootExpression instanceof UnaryExpression) {
+                                tempExp.setX(rootExpression);
+                                rootExpression = tempExp;
+                            } else if (rootExpression instanceof BinaryExpression) {
+                                if (rootExpression.checkSymbol("+") || rootExpression.checkSymbol("-")) {
+                                    BinaryExpression tempRoot = (BinaryExpression) rootExpression;
+                                    if (tempRoot.getY() != emptyTerminal) {
+                                        tempExp.setX(tempRoot.getY());
+                                        // System.out.println("Root Y : " + tempRoot.getY());
+                                        // System.out.println("Neo X : " + tempExp.getX());
+                                        // System.out.println("X of mult is Y");
+                                    }
+                                    //System.out.println("Making mult a child of...");
                                     tempRoot.setY(tempExp);
                                 } else {
                                     // BinaryExpression tempRoot = (BinaryExpression) rootExpression;
@@ -569,7 +609,7 @@ class ExpressionDriver {
          * System.out.println(exp + " " + " to " + string + " is : " +
          * exp.checkSymbol(string)); } System.out.println("====="); }
          */
-        String inString = "3 * 2 + (5 * (19 + 1)) * 2";
+        String inString = "3 * 2 + (5 * (19 + 1)) * (11 % 2) + 1";
 
         TerminalExpression tExpression = new TerminalExpression(50);
         System.out.println("===");
