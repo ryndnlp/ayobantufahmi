@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-class ExpressionDriver {
+public class ExpressionDriver {
     static Expression emptyExp = new TerminalExpression(0);
     static Expression[] expressions = { new AddExpression(emptyExp, emptyExp),
             new SubtractExpression(emptyExp, emptyExp), new MultiplyExpression(emptyExp, emptyExp) };

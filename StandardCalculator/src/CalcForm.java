@@ -20,7 +20,6 @@ public class CalcForm extends javax.swing.JFrame {
     public CalcForm() {
         initComponents();
     }
-
     private void initComponents() {
         //Calc button
         JPanel PanelLayar = new JPanel();
@@ -48,8 +47,8 @@ public class CalcForm extends javax.swing.JFrame {
         NumButton Num8 = new NumButton("8");
         NumButton Num9 = new NumButton("9");
         //Operand Button
-        BinaryOpsButton MulButton = new BinaryOpsButton("x");
-        BinaryOpsButton DivButton = new BinaryOpsButton(":");
+        BinaryOpsButton MulButton = new BinaryOpsButton("*");
+        BinaryOpsButton DivButton = new BinaryOpsButton("/");
         BinaryOpsButton NegButton = new BinaryOpsButton("-");
         BinaryOpsButton PlusButton = new BinaryOpsButton("+");
         BinaryOpsButton ModButton = new BinaryOpsButton("%");
