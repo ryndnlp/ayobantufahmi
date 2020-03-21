@@ -1,4 +1,8 @@
-class PowerToExpression extends BinaryExpression {
+package data.expression.binaryExpressions;
+
+import data.expression.Expression;
+
+public class PowerToExpression extends BinaryExpression {
     //protected String symbol = "-";
 
     public PowerToExpression(Expression x, Expression y) {

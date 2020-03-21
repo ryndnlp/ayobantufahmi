@@ -1,4 +1,6 @@
-abstract class NonTerminalExpression implements Expression {
+package data.expression;
+
+public abstract class NonTerminalExpression implements Expression {
     //static private String symbol;
     protected String symbol;
     

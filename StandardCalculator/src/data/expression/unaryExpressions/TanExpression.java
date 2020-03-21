@@ -1,4 +1,8 @@
-class TanExpression extends UnaryExpression {
+package data.expression.unaryExpressions;
+
+import data.expression.Expression;
+
+public class TanExpression extends UnaryExpression {
     //protected String symbol = "-";
 
 

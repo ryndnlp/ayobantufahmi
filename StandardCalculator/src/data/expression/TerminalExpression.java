@@ -1,4 +1,6 @@
-class TerminalExpression implements Expression {
+package data.expression;
+
+public class TerminalExpression implements Expression {
     protected String[] symbol = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
     protected float x;
 
@@ -11,16 +13,21 @@ class TerminalExpression implements Expression {
     }
 
     public boolean checkSymbol(String inputString) {
-        inputString.replaceFirst(".", "");
+        String testString = inputString.replaceFirst("\\.", "");
 
         for (String string : symbol) {
-            inputString.replaceAll(string, "");
+            testString = testString.replaceAll(string, "");
         }
-
-        return inputString.equals("") ? true : false;
+        
+        return testString.trim().equals("");
     }
 
     public float solve() {
         return this.x;
+    }
+
+    @Override
+    public String toString() {
+        return String.valueOf(x);
     }
 }

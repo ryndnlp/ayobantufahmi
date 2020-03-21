@@ -1,4 +1,8 @@
-class CosExpression extends UnaryExpression {
+package data.expression.unaryExpressions;
+
+import data.expression.Expression;
+
+public class CosExpression extends UnaryExpression {
     //protected String symbol = "-";
 
     public CosExpression(Expression x) {

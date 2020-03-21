@@ -1,4 +1,8 @@
-class SubtractExpression extends BinaryExpression {
+package data.expression.binaryExpressions;
+
+import data.expression.Expression;
+
+public class SubtractExpression extends BinaryExpression {
     //static protected String symbol = "-";
     //String symbol = "-";
 

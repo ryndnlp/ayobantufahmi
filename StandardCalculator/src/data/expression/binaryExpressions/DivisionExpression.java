@@ -1,4 +1,8 @@
-class DivisionExpression extends BinaryExpression {
+package data.expression.binaryExpressions;
+
+import data.expression.Expression;
+
+public class DivisionExpression extends BinaryExpression {
     //static private String symbol = "*";
     //String symbol = "-";
 
