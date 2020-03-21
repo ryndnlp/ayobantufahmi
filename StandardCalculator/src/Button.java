@@ -8,5 +8,5 @@ abstract class Button extends JButton {
         super(text);
         this.text = text;
     }
-    abstract public void onClick(ActionEvent evt, JLabel Layar);
+    abstract public void onClick(ActionEvent evt, JLabel Layar, Token token);
 }

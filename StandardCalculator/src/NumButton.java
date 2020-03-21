@@ -7,10 +7,11 @@ public class NumButton extends PrintButton {
         super(text);
     }
         
-    public void onClick(ActionEvent e, JLabel Layar) {
+    public void onClick(ActionEvent e, JLabel Layar,Token token) {
         //TODO
+        token.addToToken(e.getActionCommand());
         if(Layar.getText().length()<24){
-            Layar.setText(Layar.getText() + e.getActionCommand());
+            Layar.setText(token.convertToString());
         }
     }
 }

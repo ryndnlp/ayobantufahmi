@@ -7,8 +7,8 @@ public class MemoryButton extends DelAllButton {
         super(text);
     }
         
-    public void onClick(ActionEvent e, JLabel Layar) {
+    public void onClick(ActionEvent e, JLabel Layar,Token token) {
         //TODO
-        super.onClick(e, Layar);
+        // super.onClick(e, Layar, token);
     }
 }
