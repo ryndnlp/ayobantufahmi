@@ -28,7 +28,7 @@ Relatif dari folder repository, semua source code terdapat dalam folder `Standar
    ```
 2. Compile seluruh file .java dalam project:
    ```sh
-   find . -name "*.java" -print | xargs javac"
+   find . -name "*.java" -print | xargs javac
    ```
 3. Jalankan program:
    ```sh
