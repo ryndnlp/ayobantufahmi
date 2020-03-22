@@ -10,6 +10,10 @@ public class NegativeExpression extends UnaryExpression<Double> {
     }
 
     public Double solve() throws Exception {
+        if (this.x.solve() == 0) {
+            return (double) 0;
+        }
+
         return -1 * this.x.solve();
     }
 }

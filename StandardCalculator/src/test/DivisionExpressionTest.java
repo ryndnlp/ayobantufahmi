@@ -2,9 +2,7 @@ package test;
 
 import java.util.Scanner;
 import data.expression.*;
-import data.expression.unaryExpressions.*;
 import data.expression.binaryExpressions.*;
-import data.exception.*;
 
 public class DivisionExpressionTest{
     public static void main(final String args[]) {
@@ -22,5 +20,6 @@ public class DivisionExpressionTest{
         }catch (Exception err) {
             err.printStackTrace();
         }
+        in.close();
     }
 }

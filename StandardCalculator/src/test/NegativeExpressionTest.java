@@ -3,8 +3,6 @@ package test;
 import java.util.Scanner;
 import data.expression.*;
 import data.expression.unaryExpressions.*;
-import data.expression.binaryExpressions.*;
-import data.exception.*;
 
 public class NegativeExpressionTest{
     public static void main(final String args[]) {
@@ -16,13 +14,10 @@ public class NegativeExpressionTest{
         NegativeExpression ae = new NegativeExpression(xt);
         try{        
             System.out.println(ae + " = "+ae.solve());
-        }catch(InvalidOperandException err){
-            String error = err.PrintMessage();
-        }catch(NotANumberException err){
-            String error = err.PrintMessage();
         }catch (Exception err) {
-            // TODO Auto-generated catch block
-            // err.printStackTrace();
+            err.printStackTrace();
         }
+
+        in.close();
     }
 }

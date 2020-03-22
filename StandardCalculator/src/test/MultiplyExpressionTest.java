@@ -2,9 +2,7 @@ package test;
 
 import java.util.Scanner;
 import data.expression.*;
-import data.expression.unaryExpressions.*;
 import data.expression.binaryExpressions.*;
-import data.exception.*;
 
 public class MultiplyExpressionTest{
     public static void main(final String args[]) {
@@ -19,13 +17,10 @@ public class MultiplyExpressionTest{
         MultiplyExpression ae = new MultiplyExpression(xt,yt);
         try{        
             System.out.println("x*y = " + ae + " = "+ae.solve());
-        }catch(InvalidOperandException err){
-            String error = err.PrintMessage();
-        }catch(NotANumberException err){
-            String error = err.PrintMessage();
         }catch (Exception err) {
-            // TODO Auto-generated catch block
-            // err.printStackTrace();
+            err.printStackTrace();
         }
+
+        in.close();
     }
 }

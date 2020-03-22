@@ -24,5 +24,7 @@ class TokenTest{
         // } else
         
         }
+
+        in.close();
     }
 }

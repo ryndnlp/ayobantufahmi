@@ -3,8 +3,6 @@ package test;
 import java.util.Scanner;
 import data.expression.*;
 import data.expression.unaryExpressions.*;
-import data.expression.binaryExpressions.*;
-import data.exception.*;
 
 public class CosExpressionTest{
     public static void main(final String args[]) {
@@ -19,5 +17,7 @@ public class CosExpressionTest{
         }catch (Exception err) {
             err.printStackTrace();
         }
+
+        in.close();
     }
 }
