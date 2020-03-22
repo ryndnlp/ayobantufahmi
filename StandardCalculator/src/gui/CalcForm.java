@@ -1,6 +1,5 @@
 package gui;
 
-
 import java.awt.event.*;
 import java.awt.*;
 
@@ -12,16 +11,6 @@ import data.expression.*;
 import data.exception.*;
 import token.*;
 import gui.button.*;
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author ASUS
- */
 
 public class CalcForm extends JFrame {
 
