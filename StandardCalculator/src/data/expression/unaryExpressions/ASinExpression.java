@@ -5,7 +5,7 @@ import data.expression.Expression;
 public class ASinExpression extends UnaryExpression<Double> {
 
     public ASinExpression(Expression<Double> x) {
-        symbol = "asin";
+        symbol = "arcsin";
         this.x = x;
     }
 

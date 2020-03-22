@@ -5,7 +5,7 @@ import data.expression.Expression;
 public class ATanExpression extends UnaryExpression<Double> {
 
     public ATanExpression(Expression<Double> x) {
-        symbol = "atan";
+        symbol = "arctan";
         this.x = x;
     }
 

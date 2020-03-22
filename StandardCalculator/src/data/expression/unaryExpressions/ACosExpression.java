@@ -5,7 +5,7 @@ import data.expression.Expression;
 public class ACosExpression extends UnaryExpression<Double> {
 
     public ACosExpression(Expression<Double> x) {
-        symbol = "acos";
+        symbol = "arccos";
         this.x = x;
     }
 

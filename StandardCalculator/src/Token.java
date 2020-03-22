@@ -17,11 +17,11 @@ public class Token {
         } else if (s.equals("<html>x<sup>y</sup></html>")){
             text_set[idx] = "^";
         } else if (s.equals("<html>sin<sup>-1</sup></html>")){
-            text_set[idx] = "asin";
+            text_set[idx] = "arcsin";
         } else if (s.equals("<html>cos<sup>-1</sup></html>")){
-            text_set[idx] = "acos";
+            text_set[idx] = "arccos";
         } else if (s.equals("<html>tan<sup>-1</sup></html>")){
-            text_set[idx] = "atan";
+            text_set[idx] = "arctan";
         } else{
             text_set[idx] = s;
         }
