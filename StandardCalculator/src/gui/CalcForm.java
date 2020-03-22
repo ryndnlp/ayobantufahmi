@@ -770,18 +770,15 @@ public class CalcForm extends JFrame {
                     .addComponent(EvaluateButton, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
                     .addComponent(Num00, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
                     .addComponent(SqrtButton, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(13, Short.MAX_VALUE))
+                )
         );
-
-        Num1.getAccessibleContext().setAccessibleDescription("");
 
         GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-            .addGroup(GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addComponent(MainPanel, GroupLayout.PREFERRED_SIZE, 473, GroupLayout.PREFERRED_SIZE))
+            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addGroup(GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(MainPanel, GroupLayout.PREFERRED_SIZE, 469, GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(GroupLayout.Alignment.LEADING)
@@ -808,14 +805,5 @@ public class CalcForm extends JFrame {
         } catch (UnsupportedLookAndFeelException ex) {
             Logger.getLogger(CalcForm.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-        ///* Create and display the form */
-        /*
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new CalcForm().setVisible(true);
-            }
-        });
-        */
     }
 }
