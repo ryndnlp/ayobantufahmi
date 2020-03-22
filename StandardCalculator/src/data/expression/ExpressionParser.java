@@ -2,6 +2,7 @@ package data.expression;
 
 import data.exception.ChainedOpsException;
 import data.exception.InvalidOperandException;
+import data.exception.LackOperatorException;
 
 //import java.util.function.Predicate;
 
@@ -284,7 +285,7 @@ public class ExpressionParser {
                                                                                             // when it occurs to
                                                                                             // determine its priority)
         if (rootExpression == null) { // Binary expressions must be in the middle, since we use infix notations
-            throw new Exception("Binary Expression<Double> has no Expression<Double> on left hand side");
+            throw new LackOperatorException();
         }
         
         if (lastExp instanceof BinaryExpression) {

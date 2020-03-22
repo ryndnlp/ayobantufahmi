@@ -1,7 +1,6 @@
 package data.exception;
 public class NotANumberException extends BaseException{
     
-
     public NotANumberException(){
         super();
     }
