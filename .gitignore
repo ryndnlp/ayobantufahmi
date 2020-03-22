@@ -27,3 +27,4 @@ hs_err_pid*
 /StandardCalculator/build/
 /StandardCalculator/dist/
 /JavaCalculator/nbproject/private/
+.kate-swp

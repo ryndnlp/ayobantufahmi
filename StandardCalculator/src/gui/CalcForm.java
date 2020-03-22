@@ -32,12 +32,13 @@ public class CalcForm extends JFrame {
         initComponents();
     }
     private String delqueue;
-    // private Token token;
-    // private Token ans;
+    private Token token;
+    private Token ans;
+
     private Queue<String> MCqueue = new LinkedList<>();
     private void initComponents() {
-        Token token = new Token();
-        Token ans = new Token();
+        token = new Token();
+        ans = new Token();
         //Calc acc
         JPanel PanelLayar = new JPanel();
         JPanel MainPanel = new JPanel();
@@ -336,39 +337,8 @@ public class CalcForm extends JFrame {
         EvaluateButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 EvaluateButton.onClick(evt, Layar, token);
-                Token T = new Token();
-                String inString;
-                inString = token.convertToString();
-                Expression<Double> outExp = null;
-                ExpressionParser ed = new ExpressionParser();
-                try {
-                    outExp = ed.parse(inString);
-                    if (outExp.solve() - (int)Math.round(outExp.solve()) == 0){
-                        T.addToToken(Integer.toString((int)Math.round(outExp.solve())));
-                    }else{
-                        T.addToToken(Double.toString(outExp.solve()));
-                    }
-                    token.setToken(T);
-                    
-                    Layar.setText(token.convertToString());
-                }catch(InvalidOperandException err){
-                    Layar.setText(err.PrintMessage());
-                }catch(NotANumberException err){
-                    Layar.setText(err.PrintMessage());
-                }catch(ChainedOpsException err){
-                    Layar.setText(err.PrintMessage());
-                }catch(LackOperandException err){
-                    Layar.setText(err.PrintMessage());
-                }catch(BracketException err){
-                    Layar.setText(err.PrintMessage());
-                }catch (Exception err) {
-                    // TODO Auto-generated catch block
-                    // err.printStackTrace();
-                }
-                ans.deleteAll();
-                String answer;
-                answer = token.deleteFromBack();
-                ans.addToToken(answer);
+
+                Evaluate(Layar);
             }
         });
 
@@ -781,6 +751,42 @@ public class CalcForm extends JFrame {
         );
 
         pack();
+    }
+
+    private void Evaluate(JLabel Layar) {
+        Token T = new Token();
+        String inString;
+        inString = token.convertToString();
+        Expression<Double> outExp = null;
+        ExpressionParser ed = new ExpressionParser();
+        try {
+            outExp = ed.parse(inString);
+            if (outExp.solve() - (int)Math.round(outExp.solve()) == 0){
+                T.addToToken(Integer.toString((int)Math.round(outExp.solve())));
+            }else{
+                T.addToToken(Double.toString(outExp.solve()));
+            }
+            token.setToken(T);
+            
+            Layar.setText(token.convertToString());
+        }catch(InvalidOperandException err){
+            Layar.setText(err.PrintMessage());
+        }catch(NotANumberException err){
+            Layar.setText(err.PrintMessage());
+        }catch(ChainedOpsException err){
+            Layar.setText(err.PrintMessage());
+        }catch(LackOperandException err){
+            Layar.setText(err.PrintMessage());
+        }catch(BracketException err){
+            Layar.setText(err.PrintMessage());
+        }catch (Exception err) {
+            // TODO Auto-generated catch block
+            // err.printStackTrace();
+        }
+        ans.deleteAll();
+        String answer;
+        answer = token.deleteFromBack();
+        ans.addToToken(answer);
     }
 
     public static void setUITheme() {
