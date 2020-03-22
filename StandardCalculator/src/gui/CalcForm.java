@@ -122,7 +122,7 @@ public class CalcForm extends JFrame {
             public void actionPerformed(ActionEvent evt) {
                 MCButton.onClick(evt, Layar,token);
                 Evaluate(Layar);
-                if(Layar.getText().equals("Error: Lack of operand")){
+                if(!Layar.getText().equals("Error: Lack of operand")){
                     MCqueue.add(ans.convertToString());
                 }
                 
@@ -145,6 +145,7 @@ public class CalcForm extends JFrame {
                     }
                     token.addToToken(delqueue);
                     Layar.setText(token.convertToString());
+                    
                 }catch(StackException err){
                     Layar.setText(err.PrintMessage());
                 }
@@ -779,6 +780,8 @@ public class CalcForm extends JFrame {
         }catch(LackOperandException err){
             Layar.setText(err.PrintMessage());
         }catch(BracketException err){
+            Layar.setText(err.PrintMessage());
+        }catch(NullExpression err){
             Layar.setText(err.PrintMessage());
         }catch (Exception err) {
             // TODO Auto-generated catch block

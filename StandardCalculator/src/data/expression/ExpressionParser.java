@@ -4,6 +4,7 @@ import data.exception.BracketException;
 import data.exception.ChainedOpsException;
 import data.exception.InvalidOperandException;
 import data.exception.LackOperandException;
+import data.exception.NullExpression;
 
 //import java.util.function.Predicate;
 
@@ -136,8 +137,8 @@ public class ExpressionParser {
         }
 
         if (rootExpression == null) {
-            // TODO JANGAN RETURN NULL, BAPAK
-            throw new Exception("BAPAK GAK BOLEH NGASIH NULL");
+        
+            throw new NullExpression();
         }
 
         return rootExpression;
