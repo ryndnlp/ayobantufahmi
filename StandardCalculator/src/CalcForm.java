@@ -69,11 +69,11 @@ public class CalcForm extends JFrame {
         UnaryOpsButton LBracketButton = new UnaryOpsButton("(");
         UnaryOpsButton RBracketButton = new UnaryOpsButton(")");
         UnaryOpsButton SqrtButton = new UnaryOpsButton("sqrt");
-        SupButton SquareButton = new SupButton("<html>x<sup>2</sup></html>", "^2");        
-        SupButton PowerButton = new SupButton("<html>x<sup>y</sup></html>", "^");
-        SupButton Sin1Button = new SupButton("<html>sin<sup>-1</sup></html>", "arcsin");
-        SupButton Cos1Button = new SupButton("<html>cos<sup>-1</sup></html>", "arccos");
-        SupButton Tan1Button = new SupButton("<html>tan<sup>-1</sup></html>", "arctan");
+        SupButton SquareButton = new SupButton("<html>x<sup>2</sup></html>");        
+        SupButton PowerButton = new SupButton("<html>x<sup>y</sup></html>");
+        SupButton Sin1Button = new SupButton("<html>sin<sup>-1</sup></html>");
+        SupButton Cos1Button = new SupButton("<html>cos<sup>-1</sup></html>");
+        SupButton Tan1Button = new SupButton("<html>tan<sup>-1</sup></html>");
         UnaryOpsButton SinButton = new UnaryOpsButton("sin");
         UnaryOpsButton LogButton = new UnaryOpsButton("log");
         UnaryOpsButton LnButton = new UnaryOpsButton("ln");
@@ -97,6 +97,7 @@ public class CalcForm extends JFrame {
         ClearButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 ClearButton.onClick(evt, Layar, token);
+                ans.deleteAll();
                 token.deleteAll();
                 while(!MCqueue.isEmpty()){
                     delqueue = MCqueue.poll();
@@ -391,6 +392,9 @@ public class CalcForm extends JFrame {
         ModButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
         ModButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
+                if (token.isEmpty() && !ans.isEmpty()){
+                    token.addToToken(ans.convertToString());
+                }
                 ModButton.onClick(evt, Layar, token);
             }
         });
@@ -445,6 +449,9 @@ public class CalcForm extends JFrame {
         SquareButton.setPreferredSize(new Dimension(53, 33));
         SquareButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
+                if (token.isEmpty() && !ans.isEmpty()){
+                    token.addToToken(ans.convertToString());
+                }
                 SquareButton.onClick(evt, Layar, token);
             }
         });
@@ -460,6 +467,9 @@ public class CalcForm extends JFrame {
         PowerButton.setPreferredSize(new Dimension(53, 33));
         PowerButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
+                if (token.isEmpty() && !ans.isEmpty()){
+                    token.addToToken(ans.convertToString());
+                }
                 PowerButton.onClick(evt, Layar, token);
             }
         });
@@ -537,6 +547,9 @@ public class CalcForm extends JFrame {
         DelButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 DelButton.onClick(evt, Layar, token);
+                if (token.isEmpty()){
+                    ans.deleteFromBack();
+                }
             }
         });
 
