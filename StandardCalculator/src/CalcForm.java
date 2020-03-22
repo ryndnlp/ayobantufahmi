@@ -4,9 +4,8 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
 
-import java.util.LinkedList; 
-import java.util.Queue; 
-
+import java.util.*; 
+import java.util.logging.*;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -772,13 +771,13 @@ public class CalcForm extends JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CalcForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            Logger.getLogger(CalcForm.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CalcForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            Logger.getLogger(CalcForm.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CalcForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            Logger.getLogger(CalcForm.class.getName()).log(Level.SEVERE, null, ex);
         } catch (UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CalcForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            Logger.getLogger(CalcForm.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         /* Create and display the form */
