@@ -1,5 +1,6 @@
 package data.expression;
 
+import data.exception.ChainedOpsException;
 import data.exception.InvalidOperandException;
 
 //import java.util.function.Predicate;
@@ -287,7 +288,7 @@ public class ExpressionParser {
         }
         
         if (lastExp instanceof BinaryExpression) {
-            throw new Exception("Cannot chain binary operators");
+            throw new ChainedOpsException();
         }
         binaryExp.setX(rootExpression);
         rootExpression = binaryExp;
