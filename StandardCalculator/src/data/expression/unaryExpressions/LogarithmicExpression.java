@@ -10,6 +10,6 @@ public class LogarithmicExpression extends UnaryExpression<Double> {
     }
 
     public Double solve() throws Exception {
-        return (double) Math.log(x.solve());
+        return (double) Math.log10(x.solve());
     }
 }
