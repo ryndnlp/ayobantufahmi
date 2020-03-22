@@ -784,8 +784,8 @@ public class CalcForm extends JFrame {
         }catch(NullExpression err){
             Layar.setText(err.printMessage());
         }catch (Exception err) {
-            // TODO Auto-generated catch block
-            
+            //Harusnya ga masuk ke sini
+            Layar.setText("Uncaught exception");
         }
         ans.deleteAll();
         String answer;

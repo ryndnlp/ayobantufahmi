@@ -11,10 +11,7 @@ public class Del1Button extends Button{
         super(text);
     }
         
-    public void onClick(ActionEvent e, JLabel Layar,Token token) {
-        //TODO
-        String T;
-        T = token.deleteFromBack();
+    public void onClick(ActionEvent e, JLabel Layar, Token token) {
         String s = Layar.getText();
         if(s.length()>0){
             Layar.setText(token.convertToString());
