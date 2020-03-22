@@ -58,9 +58,9 @@ public class Token {
         }
     }
     public void deleteAll(){
-        String T;
+        
         while (!this.isEmpty()){
-            T = this.deleteFromBack();
+            this.deleteFromBack();
         }
     }
 }
