@@ -4,7 +4,7 @@ public class NullExpression extends BaseException{
     public NullExpression(){
         super();
     }
-    public String PrintMessage(){
+    public String printMessage(){
         this.msg += "NullExpression";
         return this.msg;
     }

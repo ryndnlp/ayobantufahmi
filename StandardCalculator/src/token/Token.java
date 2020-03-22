@@ -6,12 +6,13 @@ public class Token {
 
     public Token(){
         text_set = new String[100];
-        int idx = 0;
+        idx = 0;
     }
     public boolean isEmpty(){
         return (idx==0);
     }
     public void addToToken(String s){
+        //Text with <html> cannot be concat with another stirng
         if (s.equals("<html>x<sup>2</sup></html>")){
             text_set[idx] = "^";
             idx++;

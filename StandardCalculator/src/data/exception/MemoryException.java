@@ -5,7 +5,7 @@ public class MemoryException extends BaseException{
         super();
         
     }
-    public String PrintMessage(){
+    public String printMessage(){
         this.msg += "Empty memory";
         return this.msg;
     }

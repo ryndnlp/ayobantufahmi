@@ -4,7 +4,7 @@ public class LackOperandException extends BaseException{
     public LackOperandException(){
         super();
     }
-    public String PrintMessage(){
+    public String printMessage(){
         this.msg += "Lack of operand";
         return this.msg;
     }

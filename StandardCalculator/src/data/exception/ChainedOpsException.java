@@ -5,7 +5,7 @@ public class ChainedOpsException extends BaseException{
         super();
         
     }
-    public String PrintMessage(){
+    public String printMessage(){
         this.msg += "Chained operators";
         return this.msg;
     }

@@ -4,7 +4,7 @@ public class StackException extends BaseException{
     public StackException(){
         super();
     }
-    public String PrintMessage(){
+    public String printMessage(){
         this.msg += "Empty stack";
         return this.msg;
     }

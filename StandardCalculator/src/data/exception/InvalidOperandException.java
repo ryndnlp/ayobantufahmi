@@ -5,7 +5,7 @@ public class InvalidOperandException extends BaseException{
     public InvalidOperandException(){
         super();
     }
-    public String PrintMessage(){
+    public String printMessage(){
         this.msg += "Invalid operand";
         return this.msg;
     }

@@ -12,9 +12,9 @@ public class ModExpression extends BinaryExpression<Double> {
     }
 
     public Double solve() throws Exception {
-        if(this.y.solve() == 0){
-            throw new NotANumberException();
-        }
-        return this.x.solve() % this.y.solve();
+    if(this.y.solve() == 0){
+        throw new NotANumberException();
+    }
+    return this.x.solve() % this.y.solve();
     }
 }

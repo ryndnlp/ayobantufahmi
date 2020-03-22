@@ -15,7 +15,5 @@ public class DivisionExpression extends BinaryExpression<Double> {
             throw new NotANumberException();
         }
         return this.x.solve() / this.y.solve();
-        
-        
     }
 }
