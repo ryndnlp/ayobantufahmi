@@ -39,10 +39,10 @@ public class CalcForm extends JFrame {
         JLabel Layar = new JLabel();
         //Del1
         Del1Button DelButton = new Del1Button("del");
-
+        //DellAll
+        DelAllButton ClearButton = new DelAllButton("AC");
         //Do Nothing
         NoPrintButton EvaluateButton = new NoPrintButton("=");
-        NoPrintButton ClearButton = new NoPrintButton("AC");
         NoPrintButton MCButton = new NoPrintButton("MC");
         NoPrintButton AnsButton = new NoPrintButton("ans");
         NoPrintButton MRButton = new NoPrintButton("MR");
@@ -103,7 +103,6 @@ public class CalcForm extends JFrame {
                 while(!MCqueue.isEmpty()){
                     delqueue = MCqueue.poll();
                 }
-                Layar.setText("");
             }
         });
 
