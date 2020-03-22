@@ -2,17 +2,16 @@ package data.expression.unaryExpressions;
 
 import data.expression.*;
 
-public abstract class UnaryExpression extends NonTerminalExpression {
-    protected Expression x;
+public abstract class UnaryExpression<T extends Number> extends NonTerminalExpression<T> {
+    protected Expression<T> x;
 
-    //abstract public Boolean checksSymbol();
-    abstract public double solve();
+    abstract public T solve();
 
-    public void setX(Expression expression) {
+    public void setX(Expression<T> expression) {
         this.x = expression;
     }
 
-    public Expression getX() {
+    public Expression<T> getX() {
         return this.x;
     }
 

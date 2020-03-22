@@ -2,15 +2,14 @@ package data.expression.unaryExpressions;
 
 import data.expression.Expression;
 
-public class CosExpression extends UnaryExpression {
-    //protected String symbol = "-";
+public class CosExpression extends UnaryExpression<Double> {
 
-    public CosExpression(Expression x) {
+    public CosExpression(Expression<Double> x) {
         symbol = "cos";
         this.x = x;
     }
 
-    public double solve() {
+    public Double solve() {
         return (double) Math.cos(x.solve());
     }
 }

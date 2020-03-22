@@ -2,16 +2,15 @@ package data.expression.binaryExpressions;
 
 import data.expression.Expression;
 
-public class PowerToExpression extends BinaryExpression {
-    //protected String symbol = "-";
+public class PowerToExpression extends BinaryExpression<Double> {
 
-    public PowerToExpression(Expression x, Expression y) {
+    public PowerToExpression(Expression<Double> x, Expression<Double> y) {
         symbol = "^";
         this.x = x;
         this.y = y;
     }
 
-    public double solve() {
+    public Double solve() {
         return (double) Math.pow(x.solve(), y.solve());
     }
 }

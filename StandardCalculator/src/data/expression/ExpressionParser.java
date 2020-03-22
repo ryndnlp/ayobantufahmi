@@ -8,16 +8,16 @@ import data.expression.binaryExpressions.*;
 import data.expression.unaryExpressions.*;
 
 public class ExpressionParser {
-    static Expression emptyExp = new TerminalExpression(0);
+    static Expression<Double> emptyExp = new TerminalExpression(0);
 
-    Expression rootExpression = null; // The value that will be returned
-    Expression lastExp = null; // The last operator expression that was created
+    Expression<Double> rootExpression = null; // The value that will be returned
+    Expression<Double> lastExp = null; // The last operator Expression<Double> that was created
 
     int subStart = 0; // the substring begins here
     int subEnd = 0; // The substring for checking ends here, will be used to determine the strings
                     // left that need to be processed
 
-    public Expression parse(final String inputString) throws Exception {
+    public Expression<Double> parse(final String inputString) throws Exception {
 
         String stringLeft = inputString.trim().replaceAll(" ", ""); // Removes whitespaces and such
         String checkSub = ""; // Temporary substring holder, used to determine the current expression
@@ -36,13 +36,13 @@ public class ExpressionParser {
             } else if (stringLeft.substring(0, 1).equals("(") || stringLeft.substring(0, 1).equals(")")) { // The next
                                                                                                            // substring
                                                                                                            // is a sub
-                // expression (in parentheses)
-                checkSub = findSubExpressionString(stringLeft.substring(1), subStart); // Gets the sub expression in
+                // Expression<Double> (in parentheses)
+                checkSub = findSubExpressionString(stringLeft.substring(1), subStart); // Gets the sub Expression<Double> in
                                                                                        // parentheses WITHOUT the outer
                                                                                        // parentheses (allows for
                                                                                        // recursive sub expression)
 
-                final Expression subExpression = new TerminalExpression(new ExpressionParser().parse(checkSub).solve()); // Gets
+                final Expression<Double> subExpression = new TerminalExpression(new ExpressionParser().parse(checkSub).solve()); // Gets
                                                                                                                          // the
                                                                                                                          // expression
                                                                                                                          // of
@@ -65,7 +65,7 @@ public class ExpressionParser {
                 putTerminalInTree(subExpression); // Puts the subexpression in the tree
                 lastExp = subExpression;
 
-                subEnd = checkSub.length() + 2; // Will skip through the whole sub expression as it was processed
+                subEnd = checkSub.length() + 2; // Will skip through the whole sub Expression<Double> as it was processed
                                                 // separately, added 2 for the opening and closing brackets
 
             } else { // It's one of the operator symbols
@@ -74,7 +74,7 @@ public class ExpressionParser {
                  * Checks the negative and substraction operators
                  */
 
-                if (checkFirstSubSymbol(stringLeft, new NegativeExpression(emptyExp))) { // The negative expression is a
+                if (checkFirstSubSymbol(stringLeft, new NegativeExpression(emptyExp))) { // The negative Expression<Double> is a
                                                                                          // special case, as it can
                                                                                          // become a subtraction
                                                                                          // expression
@@ -136,7 +136,7 @@ public class ExpressionParser {
         return rootExpression;
     }
 
-    private void findSubstring(final String inString, final Integer idxStart, final Expression testExpression,
+    private void findSubstring(final String inString, final Integer idxStart, final Expression<Double> testExpression,
             final Boolean match) { // Finds the substring that matches the testExpression's symbol, or one that
                                    // doesn't
         subStart = idxStart;
@@ -152,21 +152,21 @@ public class ExpressionParser {
         }
     }
 
-    private void putTerminalInTree(final Expression termExp) throws Exception {
+    private void putTerminalInTree(final Expression<Double> termExp) throws Exception {
         if (rootExpression == null) { // This is the first expression
             rootExpression = termExp;
-        } else if (lastExp instanceof UnaryExpression && (((UnaryExpression) lastExp).getX() == emptyExp)) { // The last
+        } else if (lastExp instanceof UnaryExpression && (((UnaryExpression<Double>) lastExp).getX() == emptyExp)) { // The last
                                                                                                              // expression
                                                                                                              // is
                                                                                                              // empty,
                                                                                                              // might
                                                                                                              // not be
                                                                                                              // the root
-            ((UnaryExpression) lastExp).setX(termExp);
-        } else if (lastExp instanceof BinaryExpression && ((((BinaryExpression) lastExp).getX() == emptyExp)
-                || (((BinaryExpression) lastExp).getY() == emptyExp))) { // The last expression has an empty "arm",
+            ((UnaryExpression<Double>) lastExp).setX(termExp);
+        } else if (lastExp instanceof BinaryExpression && ((((BinaryExpression<Double>) lastExp).getX() == emptyExp)
+                || (((BinaryExpression<Double>) lastExp).getY() == emptyExp))) { // The last Expression<Double> has an empty "arm",
                                                                          // might not be the root
-            final BinaryExpression tempLast = (BinaryExpression) lastExp;
+            final BinaryExpression<Double> tempLast = (BinaryExpression<Double>) lastExp;
             if (tempLast.getX() == emptyExp) {
                 tempLast.setX(termExp);
             } else {
@@ -174,7 +174,7 @@ public class ExpressionParser {
             }
         } else if (rootExpression instanceof BinaryExpression) { // The Root is a binary operator expression, one of
                                                                  // them must be empty otherwise...
-            final BinaryExpression tempRoot = (BinaryExpression) rootExpression;
+            final BinaryExpression<Double> tempRoot = (BinaryExpression<Double>) rootExpression;
             if (tempRoot.getX() == emptyExp) {
                 tempRoot.setX(termExp);
             } else {
@@ -182,7 +182,7 @@ public class ExpressionParser {
             }
         } else if (rootExpression instanceof UnaryExpression) { // The Root be a unary operator expression, it must be
                                                                 // empty... otherwise...
-            final UnaryExpression tempRoot = (UnaryExpression) rootExpression;
+            final UnaryExpression<Double> tempRoot = (UnaryExpression<Double>) rootExpression;
             tempRoot.setX(termExp);
         } else {
             throw new Exception("Uncaught status");
@@ -245,7 +245,7 @@ public class ExpressionParser {
         return inString.substring(subStart, subEnd - 1);
     }
 
-    private boolean checkFirstSubSymbol(final String inString, final Expression expression) { // gets the first
+    private boolean checkFirstSubSymbol(final String inString, final Expression<Double> expression) { // gets the first
                                                                                               // substring that matches
                                                                                               // the expression's symbol
         int expSymbolLen = expression.getSymbol().length();
@@ -255,7 +255,7 @@ public class ExpressionParser {
         return expression.checkSymbol(inString.substring(0, expSymbolLen));
     }
 
-    private void putUnaryInTree(final UnaryExpression unaryExp) { // puts the unary in the tree
+    private void putUnaryInTree(final UnaryExpression<Double> unaryExp) { // puts the unary in the tree
 
         if (rootExpression == null) { // This is the first expression
             rootExpression = unaryExp;
@@ -263,7 +263,7 @@ public class ExpressionParser {
             unaryExp.setX(rootExpression);
             rootExpression = unaryExp;
         } else if (rootExpression instanceof BinaryExpression) { // if root is a binary, find a corresponding place
-            final BinaryExpression tempRoot = (BinaryExpression) rootExpression;
+            final BinaryExpression<Double> tempRoot = (BinaryExpression<Double>) rootExpression;
             if (tempRoot.getX() == emptyExp) {
                 tempRoot.setX(unaryExp);
             } else {
@@ -273,15 +273,15 @@ public class ExpressionParser {
         lastExp = unaryExp;
     }
 
-    private void putSimpleBinaryInTree(final BinaryExpression binaryExp) throws Exception { // Puts a simple binary
-                                                                                            // expression in the tree
+    private void putSimpleBinaryInTree(final BinaryExpression<Double> binaryExp) throws Exception { // Puts a simple binary
+                                                                                            // Expression<Double> in the tree
                                                                                             // (simpe as in... it
                                                                                             // doesn't need to be done
                                                                                             // first, just need to see
                                                                                             // when it occurs to
                                                                                             // determine its priority)
         if (rootExpression == null) { // Binary expressions must be in the middle, since we use infix notations
-            throw new Exception("Binary expression has no expression on left hand side");
+            throw new Exception("Binary Expression<Double> has no Expression<Double> on left hand side");
         }
         
         if (lastExp instanceof BinaryExpression) {
@@ -292,13 +292,13 @@ public class ExpressionParser {
         lastExp = binaryExp;
     }
 
-    private void putStrongBinaryInTree(final BinaryExpression binaryExp) throws Exception { // Puts a strong binary
-                                                                                            // expression in the tree
+    private void putStrongBinaryInTree(final BinaryExpression<Double> binaryExp) throws Exception { // Puts a strong binary
+                                                                                            // Expression<Double> in the tree
                                                                                             // (strong as in... it needs
                                                                                             // to be done first before
                                                                                             // the "simple" ones)
         if (rootExpression == null) { // Binary expressions must be in the middle, since we use infix notations
-            throw new Exception("Binary expression has no expression on left hand side");
+            throw new Exception("Binary Expression<Double> has no Expression<Double> on left hand side");
         } else if (rootExpression instanceof TerminalExpression || rootExpression instanceof UnaryExpression) { // If
                                                                                                                 // root
                                                                                                                 // is
@@ -314,7 +314,7 @@ public class ExpressionParser {
             rootExpression = binaryExp;
         } else if (rootExpression instanceof BinaryExpression) { // if root is binary, check priority and position
             if (rootExpression instanceof AddExpression || rootExpression instanceof SubtractExpression) {
-                final BinaryExpression tempRoot = (BinaryExpression) rootExpression;
+                final BinaryExpression<Double> tempRoot = (BinaryExpression<Double>) rootExpression;
                 if (tempRoot.getY() != emptyExp) {
                     binaryExp.setX(tempRoot.getY());
 

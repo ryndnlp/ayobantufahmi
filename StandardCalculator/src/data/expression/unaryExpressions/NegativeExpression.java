@@ -2,16 +2,14 @@ package data.expression.unaryExpressions;
 
 import data.expression.Expression;
 
-public class NegativeExpression extends UnaryExpression {
-    //protected String symbol = "-";
-    //protected Expression x;
+public class NegativeExpression extends UnaryExpression<Double> {
 
-    public NegativeExpression(Expression x) {
+    public NegativeExpression(Expression<Double> x) {
         symbol = "-";
         this.x = x;
     }
 
-    public double solve() {
+    public Double solve() {
         return -1 * this.x.solve();
     }
 }
