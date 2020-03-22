@@ -110,6 +110,7 @@ public class CalcForm extends JFrame {
         MCButton.setForeground(new Color(255, 255, 255));
         MCButton.setToolTipText("");
         MCButton.setBorderPainted(false);
+        MCButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
         MCButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 MCButton.onClick(evt, Layar,token);
