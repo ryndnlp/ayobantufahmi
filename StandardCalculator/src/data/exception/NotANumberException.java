@@ -4,7 +4,7 @@ public class NotANumberException extends BaseException{
     public NotANumberException(){
         super();
     }
-    public String PrintMessage(){
+    public String printMessage(){
         this.msg += "NaN";
         return this.msg;
     }

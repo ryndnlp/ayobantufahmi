@@ -17,9 +17,9 @@ public class SinExpressionTest{
         try{        
             System.out.println(ae + " = "+ae.solve());
         }catch(InvalidOperandException err){
-            String error = err.PrintMessage();
+            String error = err.printMessage();
         }catch(NotANumberException err){
-            String error = err.PrintMessage();
+            String error = err.printMessage();
         }catch (Exception err) {
             // TODO Auto-generated catch block
             // err.printStackTrace();

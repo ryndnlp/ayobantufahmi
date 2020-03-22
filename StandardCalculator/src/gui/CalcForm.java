@@ -147,7 +147,7 @@ public class CalcForm extends JFrame {
                     Layar.setText(token.convertToString());
                     
                 }catch(StackException err){
-                    Layar.setText(err.PrintMessage());
+                    Layar.setText(err.printMessage());
                 }
             }
         });
@@ -772,20 +772,20 @@ public class CalcForm extends JFrame {
             
             Layar.setText(token.convertToString());
         }catch(InvalidOperandException err){
-            Layar.setText(err.PrintMessage());
+            Layar.setText(err.printMessage());
         }catch(NotANumberException err){
-            Layar.setText(err.PrintMessage());
+            Layar.setText(err.printMessage());
         }catch(ChainedOpsException err){
-            Layar.setText(err.PrintMessage());
+            Layar.setText(err.printMessage());
         }catch(LackOperandException err){
-            Layar.setText(err.PrintMessage());
+            Layar.setText(err.printMessage());
         }catch(BracketException err){
-            Layar.setText(err.PrintMessage());
+            Layar.setText(err.printMessage());
         }catch(NullExpression err){
-            Layar.setText(err.PrintMessage());
+            Layar.setText(err.printMessage());
         }catch (Exception err) {
             // TODO Auto-generated catch block
-            // err.printStackTrace();
+            
         }
         ans.deleteAll();
         String answer;
