@@ -345,9 +345,7 @@ public class CalcForm extends JFrame {
                     outExp = ed.parse(inString);
                     if (outExp.solve() - (int)Math.round(outExp.solve()) == 0){
                         T.addToToken(Integer.toString((int)Math.round(outExp.solve())));
-                    }else if(outExp.solve() == null){
-                        throw new InvalidOperandException();
-                    }else{
+                    else{
                         T.addToToken(Double.toString(outExp.solve()));
                     }
                     token.setToken(T);
