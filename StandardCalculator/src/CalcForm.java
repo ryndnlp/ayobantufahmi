@@ -113,6 +113,7 @@ public class CalcForm extends javax.swing.JFrame {
         MCButton.setForeground(new java.awt.Color(255, 255, 255));
         MCButton.setToolTipText("");
         MCButton.setBorderPainted(false);
+        MCButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MCButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 MCButton.onClick(evt, Layar,token);
@@ -127,6 +128,7 @@ public class CalcForm extends javax.swing.JFrame {
         MRButton.setForeground(new java.awt.Color(255, 255, 255));
         MRButton.setToolTipText("");
         MRButton.setBorderPainted(false);
+        MRButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MRButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 MRButton.onClick(evt, Layar,token);
