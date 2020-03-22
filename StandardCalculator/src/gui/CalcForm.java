@@ -468,9 +468,17 @@ public class CalcForm extends JFrame {
         AnsButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
         AnsButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
+                try{
                 AnsButton.onClick(evt, Layar, token);
+                if(Layar.getText().equals("")){
+                    throw new NullExpression();
+                }
+                
                 token.addToToken(ans.convertToString());
                 Layar.setText(token.convertToString());
+                }catch(NullExpression err){
+                    Layar.setText(err.printMessage());
+                }
             }
         });
 
