@@ -116,9 +116,7 @@ public class CalcForm extends javax.swing.JFrame {
         MCButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 MCButton.onClick(evt, Layar,token);
-                System.out.println("ans"+ans.toString());
                 MCqueue.add(ans.convertToString());
-                System.out.println("queue"+MCqueue.peek());
             }
         });
 
@@ -344,10 +342,7 @@ public class CalcForm extends javax.swing.JFrame {
                         T.addToToken(Double.toString(outExp.solve()));
                     }
                     token.setToken(T);
-                    if(token.isEmpty() && !ans.isEmpty()){
-                        System.out.println("ans" +ans.convertToString());
-                        token.addToToken(ans.convertToString());
-                    }
+                    
                     Layar.setText(token.convertToString());
                 } catch (Exception err) {
                     // TODO Auto-generated catch block
