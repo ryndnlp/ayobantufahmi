@@ -702,9 +702,7 @@ public class CalcForm extends JFrame {
                         .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(SinButton, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Sin1Button, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)))
-                .addGap(42, 42, 42))
-        );
+                        .addComponent(Sin1Button, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)))));
         MainPanelLayout.setVerticalGroup(
             MainPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(GroupLayout.Alignment.TRAILING, MainPanelLayout.createSequentialGroup()
