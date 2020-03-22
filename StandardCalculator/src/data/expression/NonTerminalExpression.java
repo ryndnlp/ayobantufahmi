@@ -1,6 +1,6 @@
 package data.expression;
 
-public abstract class NonTerminalExpression implements Expression {
+public abstract class NonTerminalExpression<T extends Number> implements Expression<T> {
     //static private String symbol;
     protected String symbol;
     
@@ -12,5 +12,5 @@ public abstract class NonTerminalExpression implements Expression {
     public String getSymbol() {
         return symbol;
     }
-    abstract public double solve();
+    abstract public T solve();
 }

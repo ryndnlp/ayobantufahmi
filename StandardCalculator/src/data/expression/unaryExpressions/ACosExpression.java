@@ -2,15 +2,14 @@ package data.expression.unaryExpressions;
 
 import data.expression.Expression;
 
-public class ACosExpression extends UnaryExpression {
-    //protected String symbol = "-";
+public class ACosExpression extends UnaryExpression<Double> {
 
-    public ACosExpression(Expression x) {
+    public ACosExpression(Expression<Double> x) {
         symbol = "acos";
         this.x = x;
     }
 
-    public double solve() {
+    public Double solve() {
         return (double) Math.acos(x.solve());
     }
 }

@@ -2,16 +2,15 @@ package data.expression.unaryExpressions;
 
 import data.expression.Expression;
 
-public class TanExpression extends UnaryExpression {
-    //protected String symbol = "-";
+public class TanExpression extends UnaryExpression<Double> {
 
 
-    public TanExpression(Expression x) {
+    public TanExpression(Expression<Double> x) {
         symbol = "tan";
         this.x = x;
     }
 
-    public double solve() {
+    public Double solve() {
         return (double) Math.tan(x.solve());
     }
 }

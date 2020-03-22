@@ -2,26 +2,15 @@ package data.expression.binaryExpressions;
 
 import data.expression.Expression;
 
-public class AddExpression extends BinaryExpression {
-    //static private String symbol = "+";
-    //String symbol = "+";
+public class AddExpression extends BinaryExpression<Double> {
 
-    public AddExpression(Expression x, Expression y) {
+    public AddExpression(Expression<Double> x, Expression<Double> y) {
         symbol = "+";
         this.x = x;
         this.y = y;
     }
 
-    /*public boolean checkSymbol(String inputString) {
-        return super.checkSymbol(inputString);
-    }*/
-
-    /*static public boolean checkSymbol(String inputString) {
-        inputString.replaceAll(" ", "");
-        return inputString.equals(symbol) ? true : false;
-    }*/
-
-    public double solve() {
+    public Double solve() {
         return this.x.solve() + this.y.solve();
     }
 }

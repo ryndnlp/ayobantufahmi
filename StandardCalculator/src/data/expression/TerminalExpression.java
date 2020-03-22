@@ -1,6 +1,6 @@
 package data.expression;
 
-public class TerminalExpression implements Expression {
+public class TerminalExpression implements Expression<Double> {
     protected String[] symbol = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
     protected double x;
 
@@ -26,7 +26,7 @@ public class TerminalExpression implements Expression {
         return "1234567890.";
     }
 
-    public double solve() {
+    public Double solve() {
         return this.x;
     }
 

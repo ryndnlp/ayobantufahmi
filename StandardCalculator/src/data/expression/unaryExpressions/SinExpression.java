@@ -2,15 +2,14 @@ package data.expression.unaryExpressions;
 
 import data.expression.Expression;
 
-public class SinExpression extends UnaryExpression {
-    //protected String symbol = "-";
+public class SinExpression extends UnaryExpression<Double> {
 
-    public SinExpression(Expression x) {
+    public SinExpression(Expression<Double> x) {
         symbol = "sin";
         this.x = x;
     }
 
-    public double solve() {
+    public Double solve() {
         return (double) Math.sin(x.solve());
     }
 }

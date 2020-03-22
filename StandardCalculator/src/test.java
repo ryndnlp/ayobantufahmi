@@ -6,7 +6,7 @@ class test {
         //inString = "-10";
         //inString = "1+-5";
 
-        Expression outExp = null;
+        Expression<Double> outExp = null;
         try {
             // outExp = parse("5+2*3/2-3.9");
             ExpressionParser exParser = new ExpressionParser();
