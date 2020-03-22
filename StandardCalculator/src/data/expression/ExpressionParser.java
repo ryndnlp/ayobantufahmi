@@ -48,8 +48,7 @@ public class ExpressionParser {
                 final Expression<Double> parsedSub = subParser.parse(checkSub);
 
                 if (parsedSub == null) {
-                    // TODO invalid subExpression (incomplete expression)
-                    throw new Exception("invalid subExpression (incomplete expression)");
+                    throw new LackOperandException();
                 }
 
                 final Expression<Double> subExpression = new TerminalExpression(parsedSub.solve()); // Gets
@@ -131,7 +130,6 @@ public class ExpressionParser {
         // Checks if the expression ended prematurely
         if ((lastExp instanceof UnaryExpression && ((UnaryExpression<Double>) lastExp).getX() == emptyExp)
                 || (lastExp instanceof BinaryExpression && ((BinaryExpression<Double>) lastExp).getY() == emptyExp)) {
-            // TODO put the premature exception here
             throw new LackOperandException();
         }
 
@@ -182,8 +180,6 @@ public class ExpressionParser {
                                                                 // empty... otherwise...
             final UnaryExpression<Double> tempRoot = (UnaryExpression<Double>) rootExpression;
             tempRoot.setX(termExp);
-        } else {
-            throw new Exception("Uncaught status");
         }
         lastExp = termExp;
     }
@@ -263,7 +259,6 @@ public class ExpressionParser {
         }
 
         if (lastExp instanceof UnaryExpression && ((UnaryExpression<Double>) lastExp).getX() == emptyExp) {
-            // TODO put the premature exception here
             throw new LackOperandException();
         }
 
@@ -287,7 +282,6 @@ public class ExpressionParser {
         }
 
         if (lastExp instanceof UnaryExpression && ((UnaryExpression<Double>) lastExp).getX() == emptyExp) {
-            // TODO put the premature exception here
             throw new LackOperandException();
         }
 

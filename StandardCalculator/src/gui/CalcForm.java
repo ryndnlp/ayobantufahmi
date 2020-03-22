@@ -2,9 +2,9 @@ package gui;
 
 
 import java.awt.event.*;
-import javax.swing.*;
 import java.awt.*;
 
+import javax.swing.*;
 import java.util.*; 
 import java.util.logging.*;
 
@@ -22,6 +22,7 @@ import gui.button.*;
  *
  * @author ASUS
  */
+
 public class CalcForm extends JFrame {
 
     /**
@@ -43,10 +44,10 @@ public class CalcForm extends JFrame {
         JLabel Layar = new JLabel();
         //Del1
         Del1Button DelButton = new Del1Button("del");
-
+        //DellAll
+        DelAllButton ClearButton = new DelAllButton("AC");
         //Do Nothing
         NoPrintButton EvaluateButton = new NoPrintButton("=");
-        NoPrintButton ClearButton = new NoPrintButton("AC");
         NoPrintButton MCButton = new NoPrintButton("MC");
         NoPrintButton AnsButton = new NoPrintButton("ans");
         NoPrintButton MRButton = new NoPrintButton("MR");
@@ -107,7 +108,6 @@ public class CalcForm extends JFrame {
                 while(!MCqueue.isEmpty()){
                     delqueue = MCqueue.poll();
                 }
-                Layar.setText("");
             }
         });
 
@@ -290,7 +290,6 @@ public class CalcForm extends JFrame {
         PlusButton.setBackground(new Color(0, 51, 153));
         PlusButton.setFont(new Font("Segoe UI Semilight", 0, 13));
         PlusButton.setForeground(new Color(255, 255, 255));
-        PlusButton.setText("+");
         PlusButton.setToolTipText("");
         PlusButton.setBorderPainted(false);
         PlusButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
@@ -594,7 +593,6 @@ public class CalcForm extends JFrame {
         LnButton.setBackground(new Color(0, 153, 153));
         LnButton.setFont(new Font("Segoe UI Semilight", 0, 13));
         LnButton.setForeground(new Color(255, 255, 255));
-        LnButton.setText("ln");
         LnButton.setToolTipText("");
         LnButton.setBorderPainted(false);
         LnButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
