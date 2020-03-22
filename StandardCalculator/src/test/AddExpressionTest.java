@@ -1,11 +1,10 @@
 package test;
 
-import src.data.expression.binaryExpressions.*;
-
-import java.beans.Expression;
 import java.util.Scanner;
-import src.data.expression.*;
-import src.data.exception.*;
+import data.expression.*;
+import data.expression.unaryExpressions.*;
+import data.expression.binaryExpressions.*;
+import data.exception.*;
 
 public class AddExpressionTest{
     public static void main(final String args[]) {

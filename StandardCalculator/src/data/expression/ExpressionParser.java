@@ -44,8 +44,15 @@ public class ExpressionParser {
                 checkSub = findSubExpressionString(stringLeft.substring(1), subStart); 
                 // Gets the sub Expression<Double> in parentheses WITHOUT the outer parentheses (allows for recursive sub expression)
 
-                final Expression<Double> subExpression = new TerminalExpression(
-                        new ExpressionParser().parse(checkSub).solve()); // Gets
+                final ExpressionParser subParser = new ExpressionParser();
+                final Expression<Double> parsedSub = subParser.parse(checkSub);
+
+                if (parsedSub == null) {
+                    // TODO invalid subExpression (incomplete expression)
+                    throw new Exception("invalid subExpression (incomplete expression)");
+                }
+
+                final Expression<Double> subExpression = new TerminalExpression(parsedSub.solve()); // Gets
                 // the expression of the sub expression, to prevent order change, the sub expression is turned into a terminal
 
                 putTerminalInTree(subExpression); // Puts the subexpression in the tree
