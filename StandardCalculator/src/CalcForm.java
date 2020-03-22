@@ -1,10 +1,6 @@
 import data.expression.*;
-import data.expression.binaryExpressions.*;
-import data.expression.unaryExpressions.*;
 
-import java.awt.event.ActionListener;
-import javax.swing.JPanel;
-import java.awt.event.ActionEvent;
+import java.awt.event.*;
 import javax.swing.*;
 
 import java.util.LinkedList; 
@@ -79,7 +75,6 @@ public class CalcForm extends javax.swing.JFrame {
         UnaryOpsButton SinButton = new UnaryOpsButton("sin");
         UnaryOpsButton LogButton = new UnaryOpsButton("log");
         UnaryOpsButton LnButton = new UnaryOpsButton("ln");
-        Boolean status;
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculator");
@@ -99,7 +94,7 @@ public class CalcForm extends javax.swing.JFrame {
         ClearButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ClearButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                ClearButton.onClick(evt, Layar,token);
+                ClearButton.onClick(evt, Layar, token);
                 token.deleteAll();
                 while(!MCqueue.isEmpty()){
                     delqueue = MCqueue.poll();
@@ -113,10 +108,9 @@ public class CalcForm extends javax.swing.JFrame {
         MCButton.setForeground(new java.awt.Color(255, 255, 255));
         MCButton.setToolTipText("");
         MCButton.setBorderPainted(false);
-        MCButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MCButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                MCButton.onClick(evt, Layar,token);
+                MCButton.onClick(evt, Layar, token);
                 System.out.println("ans"+ans.toString());
                 MCqueue.add(ans.convertToString());
                 System.out.println("queue"+MCqueue.peek());
@@ -131,7 +125,7 @@ public class CalcForm extends javax.swing.JFrame {
         MRButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MRButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                MRButton.onClick(evt, Layar,token);
+                MRButton.onClick(evt, Layar, token);
                 if (!MCqueue.isEmpty()){
                     delqueue = MCqueue.poll();
                     token.addToToken(delqueue);
@@ -164,7 +158,7 @@ public class CalcForm extends javax.swing.JFrame {
         Num7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Num7.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                Num7.onClick(evt, Layar,token);
+                Num7.onClick(evt, Layar, token);
             }
         });
 
@@ -176,7 +170,7 @@ public class CalcForm extends javax.swing.JFrame {
         Num8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Num8.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                Num8.onClick(evt, Layar,token);
+                Num8.onClick(evt, Layar, token);
             }
         });
 
@@ -188,7 +182,7 @@ public class CalcForm extends javax.swing.JFrame {
         Num9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Num9.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                Num9.onClick(evt, Layar,token);
+                Num9.onClick(evt, Layar, token);
             }
         });
 
@@ -202,7 +196,7 @@ public class CalcForm extends javax.swing.JFrame {
                 if (token.isEmpty() && !ans.isEmpty()){
                     token.addToToken(ans.convertToString());
                 }
-                DivButton.onClick(evt, Layar,token);
+                DivButton.onClick(evt, Layar, token);
             }
         });
 
@@ -213,7 +207,7 @@ public class CalcForm extends javax.swing.JFrame {
         Num4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Num4.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                Num4.onClick(evt, Layar,token);
+                Num4.onClick(evt, Layar, token);
             }
         });
 
@@ -224,7 +218,7 @@ public class CalcForm extends javax.swing.JFrame {
         Num5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Num5.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                Num5.onClick(evt, Layar,token);
+                Num5.onClick(evt, Layar, token);
             }
         });
 
@@ -235,7 +229,7 @@ public class CalcForm extends javax.swing.JFrame {
         Num6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Num6.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                Num6.onClick(evt, Layar,token);
+                Num6.onClick(evt, Layar, token);
             }
         });
 
@@ -249,7 +243,7 @@ public class CalcForm extends javax.swing.JFrame {
                 if (token.isEmpty() && !ans.isEmpty()){
                     token.addToToken(ans.convertToString());
                 }
-                NegButton.onClick(evt, Layar,token);
+                NegButton.onClick(evt, Layar, token);
             }
         });
 
@@ -260,7 +254,7 @@ public class CalcForm extends javax.swing.JFrame {
         Num1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Num1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                Num1.onClick(evt, Layar,token);
+                Num1.onClick(evt, Layar, token);
             }
         });
 
@@ -271,7 +265,7 @@ public class CalcForm extends javax.swing.JFrame {
         Num2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Num2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                Num2.onClick(evt, Layar,token);
+                Num2.onClick(evt, Layar, token);
             }
         });
 
@@ -282,7 +276,7 @@ public class CalcForm extends javax.swing.JFrame {
         Num3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Num3.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                Num3.onClick(evt, Layar,token);
+                Num3.onClick(evt, Layar, token);
             }
         });
 
@@ -298,7 +292,7 @@ public class CalcForm extends javax.swing.JFrame {
                 if (token.isEmpty() && !ans.isEmpty()){
                     token.addToToken(ans.convertToString());
                 }
-                PlusButton.onClick(evt, Layar,token);
+                PlusButton.onClick(evt, Layar, token);
             }
         });
 
@@ -309,7 +303,7 @@ public class CalcForm extends javax.swing.JFrame {
         DotButton.setPreferredSize(new java.awt.Dimension(39, 29));
         DotButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                DotButton.onClick(evt, Layar,token);
+                DotButton.onClick(evt, Layar, token);
             }
         });
 
@@ -320,7 +314,7 @@ public class CalcForm extends javax.swing.JFrame {
         Num0.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Num0.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                Num0.onClick(evt, Layar,token);
+                Num0.onClick(evt, Layar, token);
             }
         });
 
@@ -331,7 +325,7 @@ public class CalcForm extends javax.swing.JFrame {
         EvaluateButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         EvaluateButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                EvaluateButton.onClick(evt, Layar,token);
+                EvaluateButton.onClick(evt, Layar, token);
                 Token T = new Token();
                 String inString;
                 inString = token.convertToString();
@@ -370,7 +364,7 @@ public class CalcForm extends javax.swing.JFrame {
         CosButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         CosButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                CosButton.onClick(evt, Layar,token);
+                CosButton.onClick(evt, Layar, token);
             }
         });
 
@@ -382,7 +376,7 @@ public class CalcForm extends javax.swing.JFrame {
         TanButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         TanButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                TanButton.onClick(evt, Layar,token);
+                TanButton.onClick(evt, Layar, token);
             }
         });
 
@@ -394,7 +388,7 @@ public class CalcForm extends javax.swing.JFrame {
         ModButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ModButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                ModButton.onClick(evt, Layar,token);
+                ModButton.onClick(evt, Layar, token);
             }
         });
 
@@ -406,7 +400,7 @@ public class CalcForm extends javax.swing.JFrame {
         LBracketButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         LBracketButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                LBracketButton.onClick(evt, Layar,token);
+                LBracketButton.onClick(evt, Layar, token);
             }
         });
 
@@ -418,7 +412,7 @@ public class CalcForm extends javax.swing.JFrame {
         RBracketButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         RBracketButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                RBracketButton.onClick(evt, Layar,token);
+                RBracketButton.onClick(evt, Layar, token);
             }
         });
 
@@ -433,7 +427,7 @@ public class CalcForm extends javax.swing.JFrame {
         SqrtButton.setPreferredSize(new java.awt.Dimension(53, 33));
         SqrtButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                SqrtButton.onClick(evt, Layar,token);
+                SqrtButton.onClick(evt, Layar, token);
             }
         });
 
@@ -448,7 +442,7 @@ public class CalcForm extends javax.swing.JFrame {
         SquareButton.setPreferredSize(new java.awt.Dimension(53, 33));
         SquareButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                SquareButton.onClick(evt, Layar,token);
+                SquareButton.onClick(evt, Layar, token);
             }
         });
 
@@ -463,7 +457,7 @@ public class CalcForm extends javax.swing.JFrame {
         PowerButton.setPreferredSize(new java.awt.Dimension(53, 33));
         PowerButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                PowerButton.onClick(evt, Layar,token);
+                PowerButton.onClick(evt, Layar, token);
             }
         });
 
@@ -475,7 +469,7 @@ public class CalcForm extends javax.swing.JFrame {
         AnsButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         AnsButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                AnsButton.onClick(evt, Layar,token);
+                AnsButton.onClick(evt, Layar, token);
                 Layar.setText(token.convertToString() + "Ans");
                 token.addToToken(ans.convertToString());
             }
@@ -489,7 +483,7 @@ public class CalcForm extends javax.swing.JFrame {
         Sin1Button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Sin1Button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                Sin1Button.onClick(evt, Layar,token);
+                Sin1Button.onClick(evt, Layar, token);
             }
         });
 
@@ -504,7 +498,7 @@ public class CalcForm extends javax.swing.JFrame {
         SinButton.setPreferredSize(new java.awt.Dimension(53, 33));
         SinButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                SinButton.onClick(evt, Layar,token);
+                SinButton.onClick(evt, Layar, token);
             }
         });
 
@@ -516,7 +510,7 @@ public class CalcForm extends javax.swing.JFrame {
         Cos1Button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Cos1Button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                Cos1Button.onClick(evt, Layar,token);
+                Cos1Button.onClick(evt, Layar, token);
             }
         });
 
@@ -528,7 +522,7 @@ public class CalcForm extends javax.swing.JFrame {
         Tan1Button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Tan1Button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                Tan1Button.onClick(evt, Layar,token);
+                Tan1Button.onClick(evt, Layar, token);
             }
         });
 
@@ -539,7 +533,7 @@ public class CalcForm extends javax.swing.JFrame {
         DelButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DelButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                DelButton.onClick(evt, Layar,token);
+                DelButton.onClick(evt, Layar, token);
             }
         });
 
@@ -551,7 +545,7 @@ public class CalcForm extends javax.swing.JFrame {
         LogButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         LogButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                LogButton.onClick(evt, Layar,token);
+                LogButton.onClick(evt, Layar, token);
             }
         });
 
@@ -562,7 +556,7 @@ public class CalcForm extends javax.swing.JFrame {
         Num00.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Num00.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                Num00.onClick(evt, Layar,token);
+                Num00.onClick(evt, Layar, token);
             }
         });
 
@@ -575,7 +569,7 @@ public class CalcForm extends javax.swing.JFrame {
         LnButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         LnButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                LnButton.onClick(evt, Layar,token);
+                LnButton.onClick(evt, Layar, token);
             }
         });
 
