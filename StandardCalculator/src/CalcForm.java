@@ -88,7 +88,7 @@ public class CalcForm extends javax.swing.JFrame {
         MainPanel.setPreferredSize(new java.awt.Dimension(348, 452));
 
         ClearButton.setBackground(new java.awt.Color(102, 102, 102));
-        ClearButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        ClearButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         ClearButton.setForeground(new java.awt.Color(255, 255, 255));
         ClearButton.setBorderPainted(false);
         ClearButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -104,7 +104,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         MCButton.setBackground(new java.awt.Color(0, 153, 255));
-        MCButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        MCButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         MCButton.setForeground(new java.awt.Color(255, 255, 255));
         MCButton.setToolTipText("");
         MCButton.setBorderPainted(false);
@@ -118,7 +118,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         MRButton.setBackground(new java.awt.Color(0, 153, 255));
-        MRButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        MRButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         MRButton.setForeground(new java.awt.Color(255, 255, 255));
         MRButton.setToolTipText("");
         MRButton.setBorderPainted(false);
@@ -136,7 +136,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         MulButton.setBackground(new java.awt.Color(0, 51, 153));
-        MulButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        MulButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         MulButton.setForeground(new java.awt.Color(255, 255, 255));
         MulButton.setToolTipText("");
         MulButton.setBorderPainted(false);
@@ -151,7 +151,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         Num7.setBackground(new java.awt.Color(51, 51, 51));
-        Num7.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        Num7.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         Num7.setForeground(new java.awt.Color(255, 255, 255));
         Num7.setToolTipText("");
         Num7.setBorderPainted(false);
@@ -163,7 +163,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         Num8.setBackground(new java.awt.Color(51, 51, 51));
-        Num8.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        Num8.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         Num8.setForeground(new java.awt.Color(255, 255, 255));
         Num8.setToolTipText("");
         Num8.setBorderPainted(false);
@@ -175,7 +175,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         Num9.setBackground(new java.awt.Color(51, 51, 51));
-        Num9.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        Num9.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         Num9.setForeground(new java.awt.Color(255, 255, 255));
         Num9.setToolTipText("");
         Num9.setBorderPainted(false);
@@ -187,7 +187,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         DivButton.setBackground(new java.awt.Color(0, 51, 153));
-        DivButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        DivButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         DivButton.setForeground(new java.awt.Color(255, 255, 255));
         DivButton.setToolTipText("");
         DivButton.setBorderPainted(false);
@@ -201,7 +201,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         Num4.setBackground(new java.awt.Color(51, 51, 51));
-        Num4.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        Num4.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         Num4.setForeground(new java.awt.Color(255, 255, 255));
         Num4.setBorderPainted(false);
         Num4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -212,7 +212,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         Num5.setBackground(new java.awt.Color(51, 51, 51));
-        Num5.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        Num5.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         Num5.setForeground(new java.awt.Color(255, 255, 255));
         Num5.setBorderPainted(false);
         Num5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -223,7 +223,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         Num6.setBackground(new java.awt.Color(51, 51, 51));
-        Num6.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        Num6.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         Num6.setForeground(new java.awt.Color(255, 255, 255));
         Num6.setBorderPainted(false);
         Num6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -234,7 +234,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         NegButton.setBackground(new java.awt.Color(0, 51, 153));
-        NegButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        NegButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         NegButton.setForeground(new java.awt.Color(255, 255, 255));
         NegButton.setToolTipText("");
         NegButton.setBorderPainted(false);
@@ -248,7 +248,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         Num1.setBackground(new java.awt.Color(51, 51, 51));
-        Num1.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        Num1.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         Num1.setForeground(new java.awt.Color(255, 255, 255));
         Num1.setBorderPainted(false);
         Num1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -259,7 +259,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         Num2.setBackground(new java.awt.Color(51, 51, 51));
-        Num2.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        Num2.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         Num2.setForeground(new java.awt.Color(255, 255, 255));
         Num2.setBorderPainted(false);
         Num2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -270,7 +270,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         Num3.setBackground(new java.awt.Color(51, 51, 51));
-        Num3.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
+        Num3.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14));
         Num3.setForeground(new java.awt.Color(255, 255, 255));
         Num3.setBorderPainted(false);
         Num3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -281,7 +281,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         PlusButton.setBackground(new java.awt.Color(0, 51, 153));
-        PlusButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        PlusButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         PlusButton.setForeground(new java.awt.Color(255, 255, 255));
         PlusButton.setText("+");
         PlusButton.setToolTipText("");
@@ -297,7 +297,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         DotButton.setBackground(new java.awt.Color(51, 51, 51));
-        DotButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        DotButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         DotButton.setForeground(new java.awt.Color(255, 255, 255));
         DotButton.setBorderPainted(false);
         DotButton.setPreferredSize(new java.awt.Dimension(39, 29));
@@ -308,7 +308,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         Num0.setBackground(new java.awt.Color(51, 51, 51));
-        Num0.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        Num0.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         Num0.setForeground(new java.awt.Color(255, 255, 255));
         Num0.setBorderPainted(false);
         Num0.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -319,7 +319,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         EvaluateButton.setBackground(new java.awt.Color(255, 102, 0));
-        EvaluateButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        EvaluateButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         EvaluateButton.setForeground(new java.awt.Color(255, 255, 255));
         EvaluateButton.setBorderPainted(false);
         EvaluateButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -357,7 +357,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         CosButton.setBackground(new java.awt.Color(0, 102, 51));
-        CosButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        CosButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         CosButton.setForeground(new java.awt.Color(255, 255, 255));
         CosButton.setToolTipText("");
         CosButton.setBorderPainted(false);
@@ -369,7 +369,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         TanButton.setBackground(new java.awt.Color(0, 102, 51));
-        TanButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        TanButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         TanButton.setForeground(new java.awt.Color(255, 255, 255));
         TanButton.setToolTipText("");
         TanButton.setBorderPainted(false);
@@ -381,7 +381,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         ModButton.setBackground(new java.awt.Color(0, 51, 153));
-        ModButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        ModButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         ModButton.setForeground(new java.awt.Color(255, 255, 255));
         ModButton.setToolTipText("");
         ModButton.setBorderPainted(false);
@@ -393,7 +393,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         LBracketButton.setBackground(new java.awt.Color(0, 153, 153));
-        LBracketButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        LBracketButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         LBracketButton.setForeground(new java.awt.Color(255, 255, 255));
         LBracketButton.setToolTipText("");
         LBracketButton.setBorderPainted(false);
@@ -405,7 +405,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         RBracketButton.setBackground(new java.awt.Color(0, 153, 153));
-        RBracketButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        RBracketButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         RBracketButton.setForeground(new java.awt.Color(255, 255, 255));
         RBracketButton.setToolTipText("");
         RBracketButton.setBorderPainted(false);
@@ -417,7 +417,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         SqrtButton.setBackground(new java.awt.Color(0, 153, 153));
-        SqrtButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        SqrtButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         SqrtButton.setForeground(new java.awt.Color(255, 255, 255));
         SqrtButton.setToolTipText("");
         SqrtButton.setBorderPainted(false);
@@ -432,7 +432,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         SquareButton.setBackground(new java.awt.Color(0, 102, 102));
-        SquareButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        SquareButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         SquareButton.setForeground(new java.awt.Color(255, 255, 255));
         SquareButton.setToolTipText("");
         SquareButton.setBorderPainted(false);
@@ -447,7 +447,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         PowerButton.setBackground(new java.awt.Color(0, 102, 102));
-        PowerButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        PowerButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         PowerButton.setForeground(new java.awt.Color(255, 255, 255));
         PowerButton.setToolTipText("");
         PowerButton.setBorderPainted(false);
@@ -462,7 +462,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         AnsButton.setBackground(new java.awt.Color(102, 102, 102));
-        AnsButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        AnsButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         AnsButton.setForeground(new java.awt.Color(255, 255, 255));
         AnsButton.setToolTipText("");
         AnsButton.setBorderPainted(false);
@@ -476,7 +476,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         Sin1Button.setBackground(new java.awt.Color(0, 102, 51));
-        Sin1Button.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        Sin1Button.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         Sin1Button.setForeground(new java.awt.Color(255, 255, 255));
         Sin1Button.setToolTipText("");
         Sin1Button.setBorderPainted(false);
@@ -488,7 +488,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         SinButton.setBackground(new java.awt.Color(0, 102, 51));
-        SinButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        SinButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         SinButton.setForeground(new java.awt.Color(255, 255, 255));
         SinButton.setToolTipText("");
         SinButton.setBorderPainted(false);
@@ -503,7 +503,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         Cos1Button.setBackground(new java.awt.Color(0, 102, 51));
-        Cos1Button.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        Cos1Button.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         Cos1Button.setForeground(new java.awt.Color(255, 255, 255));
         Cos1Button.setToolTipText("");
         Cos1Button.setBorderPainted(false);
@@ -515,7 +515,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         Tan1Button.setBackground(new java.awt.Color(0, 102, 51));
-        Tan1Button.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        Tan1Button.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         Tan1Button.setForeground(new java.awt.Color(255, 255, 255));
         Tan1Button.setToolTipText("");
         Tan1Button.setBorderPainted(false);
@@ -527,7 +527,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         DelButton.setBackground(new java.awt.Color(102, 102, 102));
-        DelButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        DelButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         DelButton.setForeground(new java.awt.Color(255, 255, 255));
         DelButton.setBorderPainted(false);
         DelButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -538,7 +538,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         LogButton.setBackground(new java.awt.Color(0, 153, 153));
-        LogButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        LogButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         LogButton.setForeground(new java.awt.Color(255, 255, 255));
         LogButton.setToolTipText("");
         LogButton.setBorderPainted(false);
@@ -550,7 +550,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         Num00.setBackground(new java.awt.Color(51, 51, 51));
-        Num00.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        Num00.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         Num00.setForeground(new java.awt.Color(255, 255, 255));
         Num00.setBorderPainted(false);
         Num00.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -561,7 +561,7 @@ public class CalcForm extends javax.swing.JFrame {
         });
 
         LnButton.setBackground(new java.awt.Color(0, 153, 153));
-        LnButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13)); // NOI18N
+        LnButton.setFont(new java.awt.Font("Segoe UI Semilight", 0, 13));
         LnButton.setForeground(new java.awt.Color(255, 255, 255));
         LnButton.setText("ln");
         LnButton.setToolTipText("");
@@ -573,7 +573,7 @@ public class CalcForm extends javax.swing.JFrame {
             }
         });
 
-        Layar.setFont(new java.awt.Font("Segoe UI Semilight", 0, 36)); // NOI18N
+        Layar.setFont(new java.awt.Font("Segoe UI Semilight", 0, 36));
         Layar.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         Layar.setToolTipText("");
         Layar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
@@ -760,16 +760,9 @@ public class CalcForm extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
-    /**
-     * @param args the command line arguments
-     */
+    }
+
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -786,7 +779,6 @@ public class CalcForm extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(CalcForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -795,6 +787,4 @@ public class CalcForm extends javax.swing.JFrame {
             }
         });
     }
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
 }
