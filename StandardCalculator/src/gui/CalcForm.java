@@ -380,9 +380,8 @@ public class CalcForm extends JFrame {
         CosButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
         CosButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                
-                    CosButton.onClick(evt, Layar, token);
-                }
+                CosButton.onClick(evt, Layar, token);
+            }
         });
 
         TanButton.setBackground(new Color(0, 102, 51));
