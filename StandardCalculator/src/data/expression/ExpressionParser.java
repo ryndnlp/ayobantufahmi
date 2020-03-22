@@ -37,39 +37,21 @@ public class ExpressionParser {
 
                 putTerminalInTree(new TerminalExpression(checkSub)); // Puts the terminal where appropriate
 
-            } else if (stringLeft.substring(0, 1).equals("(") || stringLeft.substring(0, 1).equals(")")) { // The next
-                                                                                                           // substring
-                                                                                                           // is a sub
+            } else if (stringLeft.substring(0, 1).equals("(") || stringLeft.substring(0, 1).equals(")")) { 
+                // The next substring is a sub
                 // Expression<Double> (in parentheses)
-                checkSub = findSubExpressionString(stringLeft.substring(1), subStart); // Gets the sub Expression<Double> in
-                                                                                       // parentheses WITHOUT the outer
-                                                                                       // parentheses (allows for
-                                                                                       // recursive sub expression)
+                checkSub = findSubExpressionString(stringLeft.substring(1), subStart); 
+                // Gets the sub Expression<Double> in parentheses WITHOUT the outer parentheses (allows for recursive sub expression)
 
-                final Expression<Double> subExpression = new TerminalExpression(new ExpressionParser().parse(checkSub).solve()); // Gets
-                                                                                                                         // the
-                                                                                                                         // expression
-                                                                                                                         // of
-                                                                                                                         // the
-                                                                                                                         // sub
-                                                                                                                         // expression,
-                                                                                                                         // to
-                                                                                                                         // prevent
-                                                                                                                         // order
-                                                                                                                         // change,
-                                                                                                                         // the
-                                                                                                                         // sub
-                                                                                                                         // expression
-                                                                                                                         // is
-                                                                                                                         // turned
-                                                                                                                         // into
-                                                                                                                         // a
-                                                                                                                         // terminal
+                final Expression<Double> subExpression = new TerminalExpression(
+                        new ExpressionParser().parse(checkSub).solve()); // Gets
+                // the expression of the sub expression, to prevent order change, the sub expression is turned into a terminal
 
                 putTerminalInTree(subExpression); // Puts the subexpression in the tree
                 lastExp = subExpression;
 
-                subEnd = checkSub.length() + 2; // Will skip through the whole sub Expression<Double> as it was processed
+                subEnd = checkSub.length() + 2; // Will skip through the whole sub Expression<Double> as it was
+                                                // processed
                                                 // separately, added 2 for the opening and closing brackets
 
             } else { // It's one of the operator symbols
@@ -78,7 +60,8 @@ public class ExpressionParser {
                  * Checks the negative and substraction operators
                  */
 
-                if (checkFirstSubSymbol(stringLeft, new NegativeExpression(emptyExp))) { // The negative Expression<Double> is a
+                if (checkFirstSubSymbol(stringLeft, new NegativeExpression(emptyExp))) { // The negative
+                                                                                         // Expression<Double> is a
                                                                                          // special case, as it can
                                                                                          // become a subtraction
                                                                                          // expression
@@ -87,7 +70,7 @@ public class ExpressionParser {
                         lastExp = rootExpression;
                     } else if (lastExp instanceof BinaryExpression) {
                         putUnaryInTree(new NegativeExpression(emptyExp));
-                    
+
                     } else {
                         putSimpleBinaryInTree(new SubtractExpression(emptyExp, emptyExp));
                     }
@@ -137,6 +120,13 @@ public class ExpressionParser {
             stringLeft = stringLeft.substring(subEnd); // Continue on with checking the rest of the string
         }
 
+        // Checks if the expression ended prematurely
+        if ((lastExp instanceof UnaryExpression && ((UnaryExpression<Double>) lastExp).getX() == emptyExp)
+                || (lastExp instanceof BinaryExpression && ((BinaryExpression<Double>) lastExp).getY() == emptyExp)) {
+            // TODO put the premature exception here
+            throw new Exception("The expression ended prematurely");
+        }
+
         return rootExpression;
     }
 
@@ -159,17 +149,13 @@ public class ExpressionParser {
     private void putTerminalInTree(final Expression<Double> termExp) throws Exception {
         if (rootExpression == null) { // This is the first expression
             rootExpression = termExp;
-        } else if (lastExp instanceof UnaryExpression && (((UnaryExpression<Double>) lastExp).getX() == emptyExp)) { // The last
-                                                                                                             // expression
-                                                                                                             // is
-                                                                                                             // empty,
-                                                                                                             // might
-                                                                                                             // not be
-                                                                                                             // the root
+        } else if (lastExp instanceof UnaryExpression && (((UnaryExpression<Double>) lastExp).getX() == emptyExp)) { 
+            // The last expression is empty, might not be the root
             ((UnaryExpression<Double>) lastExp).setX(termExp);
         } else if (lastExp instanceof BinaryExpression && ((((BinaryExpression<Double>) lastExp).getX() == emptyExp)
-                || (((BinaryExpression<Double>) lastExp).getY() == emptyExp))) { // The last Expression<Double> has an empty "arm",
-                                                                         // might not be the root
+                || (((BinaryExpression<Double>) lastExp).getY() == emptyExp))) { // The last Expression<Double> has an
+                                                                                 // empty "arm",
+            // might not be the root
             final BinaryExpression<Double> tempLast = (BinaryExpression<Double>) lastExp;
             if (tempLast.getX() == emptyExp) {
                 tempLast.setX(termExp);
@@ -194,41 +180,16 @@ public class ExpressionParser {
         lastExp = termExp;
     }
 
-    private String findSubExpressionString(final String inString, final Integer idxStart) throws Exception { // Finds
-                                                                                                             // the
-                                                                                                             // outermost
-                                                                                                             // sub
-                                                                                                             // expresion
-                                                                                                             // string
-                                                                                                             // inside
-                                                                                                             // the
-                                                                                                             // inString
-                                                                                                             // (one
-                                                                                                             // within
-                                                                                                             // parentheses)
+    private String findSubExpressionString(final String inString, final Integer idxStart) throws Exception { 
+        // Finds the outermost sub expresion string inside the inString (one within parentheses)
 
         int innerBracketCounter = 0; // counts how many subexpression the subexpression has
         final int innerSubStart = subStart;
         int checkCharIdx = innerSubStart;
 
         String checkChar = inString.substring(checkCharIdx, checkCharIdx + 1);
-        while (!(checkChar.equals(")") && (innerBracketCounter == 0)) && checkCharIdx < inString.length()) { // will
-                                                                                                             // only
-                                                                                                             // recognize
-                                                                                                             // as done
-                                                                                                             // ifthe
-                                                                                                             // closing
-                                                                                                             // bracket
-                                                                                                             // is on
-                                                                                                             // the same
-                                                                                                             // level as
-                                                                                                             // the
-                                                                                                             // opening
-                                                                                                             // bracking
-                                                                                                             // that
-                                                                                                             // started
-                                                                                                             // this
-                                                                                                             // function
+        while (!(checkChar.equals(")") && (innerBracketCounter == 0)) && checkCharIdx < inString.length()) { 
+            // will only recognize as done ifthe closing bracket is on the same level as the opening bracking that started this function
 
             if (checkChar.equals("(")) {
                 innerBracketCounter++;
@@ -250,8 +211,8 @@ public class ExpressionParser {
     }
 
     private boolean checkFirstSubSymbol(final String inString, final Expression<Double> expression) { // gets the first
-                                                                                              // substring that matches
-                                                                                              // the expression's symbol
+        // substring that matches
+        // the expression's symbol
         int expSymbolLen = expression.getSymbol().length();
         if (expSymbolLen > inString.length()) {
             expSymbolLen = inString.length();
@@ -277,43 +238,53 @@ public class ExpressionParser {
         lastExp = unaryExp;
     }
 
-    private void putSimpleBinaryInTree(final BinaryExpression<Double> binaryExp) throws Exception { // Puts a simple binary
-                                                                                            // Expression<Double> in the tree
-                                                                                            // (simpe as in... it
-                                                                                            // doesn't need to be done
-                                                                                            // first, just need to see
-                                                                                            // when it occurs to
-                                                                                            // determine its priority)
+    private void putSimpleBinaryInTree(final BinaryExpression<Double> binaryExp) throws Exception { // Puts a simple
+                                                                                                    // binary
+        // Expression<Double> in the tree
+        // (simpe as in... it
+        // doesn't need to be done
+        // first, just need to see
+        // when it occurs to
+        // determine its priority)
         if (rootExpression == null) { // Binary expressions must be in the middle, since we use infix notations
             throw new LackOperatorException();
         }
-        
+
         if (lastExp instanceof BinaryExpression) {
             throw new ChainedOpsException();
         }
+
+        if (lastExp instanceof UnaryExpression && ((UnaryExpression<Double>) lastExp).getX() == emptyExp) {
+            // TODO put the premature exception here
+            throw new Exception("The expression ended prematurely");
+        }
+
         binaryExp.setX(rootExpression);
         rootExpression = binaryExp;
         lastExp = binaryExp;
     }
 
-    private void putStrongBinaryInTree(final BinaryExpression<Double> binaryExp) throws Exception { // Puts a strong binary
-                                                                                            // Expression<Double> in the tree
-                                                                                            // (strong as in... it needs
-                                                                                            // to be done first before
-                                                                                            // the "simple" ones)
+    private void putStrongBinaryInTree(final BinaryExpression<Double> binaryExp) throws Exception { // Puts a strong
+                                                                                                    // binary
+        // Expression<Double> in the tree
+        // (strong as in... it needs
+        // to be done first before
+        // the "simple" ones)
         if (rootExpression == null) { // Binary expressions must be in the middle, since we use infix notations
             throw new Exception("Binary Expression<Double> has no Expression<Double> on left hand side");
-        } else if (rootExpression instanceof TerminalExpression || rootExpression instanceof UnaryExpression) { // If
-                                                                                                                // root
-                                                                                                                // is
-                                                                                                                // terminal
-                                                                                                                // or
-                                                                                                                // unary,
-                                                                                                                // make
-                                                                                                                // this
-                                                                                                                // the
-                                                                                                                // "father"
-                                                                                                                // of it
+        }
+
+        if (lastExp instanceof BinaryExpression) {
+            throw new ChainedOpsException();
+        }
+
+        if (lastExp instanceof UnaryExpression && ((UnaryExpression<Double>) lastExp).getX() == emptyExp) {
+            // TODO put the premature exception here
+            throw new Exception("The expression ended prematurely");
+        }
+
+        if (rootExpression instanceof TerminalExpression || rootExpression instanceof UnaryExpression) {
+            // If root is terminal or unary, make this the "father" of it
             binaryExp.setX(rootExpression);
             rootExpression = binaryExp;
         } else if (rootExpression instanceof BinaryExpression) { // if root is binary, check priority and position

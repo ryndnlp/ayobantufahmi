@@ -1,4 +1,7 @@
+import java.util.Scanner;
+
 import data.expression.*;
+import data.expression.binaryExpressions.AddExpression;
 
 class test {
     public static void main(String[] args) {
@@ -6,10 +9,25 @@ class test {
         //inString = "-10";
         //inString = "1+-5";
         //inString = "atan60";
+        inString = "5 ** 2";
 
+        /*
+        Scanner inScanner = new Scanner(System.in);
+        System.out.printf("X : ");
+        Double x = inScanner.nextDouble();
+        System.out.printf("Y : ");
+        Double y = inScanner.nextDouble();
+
+        TerminalExpression xt = new TerminalExpression(x);
+        TerminalExpression yt = new TerminalExpression(y);
+
+        AddExpression ae = new AddExpression(xt, yt);
+        */
+        
         Expression<Double> outExp = null;
         try {
-            // outExp = parse("5+2*3/2-3.9");
+            //System.out.println(("X + Y = " + ae + " = " + ae.solve()));
+            
             ExpressionParser exParser = new ExpressionParser();
             outExp = exParser.parse(inString);
             System.out.println("outEXP = " + outExp);
