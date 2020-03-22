@@ -327,13 +327,13 @@ public class CalcForm extends JFrame {
                 Token T = new Token();
                 String inString;
                 inString = token.convertToString();
-                Expression outExp = null;
+                Expression<Double> outExp = null;
                 ExpressionParser ed = new ExpressionParser();
                 try {
                     // outExp = parse("5+2*3/2-3.9");
                     outExp = ed.parse(inString);
-                    if (outExp.solve() - (int)outExp.solve() == 0){
-                        T.addToToken(Integer.toString((int)outExp.solve()));
+                    if (outExp.solve() - (int)Math.round(outExp.solve()) == 0){
+                        T.addToToken(Integer.toString((int)Math.round(outExp.solve())));
                     } else{
                         T.addToToken(Double.toString(outExp.solve()));
                     }

@@ -5,6 +5,7 @@ class test {
         String inString = "-3 * 2 + (5 * (19 + 1)) * (11 % 2) + 1 - 10";
         //inString = "-10";
         //inString = "1+-5";
+        //inString = "atan60";
 
         Expression<Double> outExp = null;
         try {
@@ -13,6 +14,8 @@ class test {
             outExp = exParser.parse(inString);
             System.out.println("outEXP = " + outExp);
             System.out.println(inString + " => " + outExp.solve());
+
+
 
         } catch (Exception e) {
             // TODO Auto-generated catch block
