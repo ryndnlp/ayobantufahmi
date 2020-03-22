@@ -41,10 +41,10 @@ public class CalcForm extends JFrame {
         
         DelAllButton EvaluateButton = new DelAllButton("=");//TODO
         Del1Button DelButton = new Del1Button("del");
-        MemoryButton ClearButton = new MemoryButton("AC");
-        MemoryButton MCButton = new MemoryButton("MC");
-        MemoryButton AnsButton = new MemoryButton("ans");
-        MemoryButton MRButton = new MemoryButton("MR");
+        DelAllButton ClearButton = new DelAllButton("AC");
+        DelAllButton MCButton = new DelAllButton("MC");
+        DelAllButton AnsButton = new DelAllButton("ans");
+        DelAllButton MRButton = new DelAllButton("MR");
         //Num Button
         PrintButton DotButton = new PrintButton(".");//TODO
         PrintButton Num00 = new PrintButton("00");
@@ -171,7 +171,7 @@ public class CalcForm extends JFrame {
         Num8.setBorderPainted(false);
         Num8.setCursor(new Cursor(Cursor.HAND_CURSOR));
         Num8.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            public void actionPerformed(ActionEvent evt){
                 Num8.onClick(evt, Layar, token);
             }
         });
@@ -256,7 +256,7 @@ public class CalcForm extends JFrame {
         Num1.setCursor(new Cursor(Cursor.HAND_CURSOR));
         Num1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                Num1.onClick(evt, Layar, token);
+				Num1.onClick(evt, Layar, token);
             }
         });
 
@@ -374,8 +374,9 @@ public class CalcForm extends JFrame {
         CosButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
         CosButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                CosButton.onClick(evt, Layar, token);
-            }
+                
+                    CosButton.onClick(evt, Layar, token);
+                }
         });
 
         TanButton.setBackground(new Color(0, 102, 51));
