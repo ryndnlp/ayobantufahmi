@@ -10,7 +10,22 @@ public class Token {
         return (idx==0);
     }
     public void addToToken(String s){
-        text_set[idx] = s;
+        if (s.equals("<html>x<sup>2</sup></html>")){
+            text_set[idx] = "^";
+            idx++;
+            text_set[idx] = "2";
+        } else if (s.equals("<html>x<sup>y</sup></html>")){
+            text_set[idx] = "^";
+        } else if (s.equals("<html>sin<sup>-1</sup></html>")){
+            text_set[idx] = "asin";
+        } else if (s.equals("<html>cos<sup>-1</sup></html>")){
+            text_set[idx] = "acos";
+        } else if (s.equals("<html>tan<sup>-1</sup></html>")){
+            text_set[idx] = "atan";
+        } else{
+            text_set[idx] = s;
+        }
+
         idx++;
     }
     public String deleteFromBack(){
@@ -27,9 +42,6 @@ public class Token {
         String text = "";
         for (int i = 0; i < idx; i++){
             text += text_set[i];
-            // if (i != idx - 1){
-            //     text += " ";
-            // }
         }
         return text;
     }
