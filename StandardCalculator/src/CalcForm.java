@@ -31,22 +31,23 @@ public class CalcForm extends JFrame {
     // private Token ans;
     private Queue<String> MCqueue = new LinkedList<>();
     private void initComponents() {
-        // Queue<String> MCqueue = new LinkedList<>();
         Token token = new Token();
         Token ans = new Token();
-        //Calc button
+        //Calc acc
         JPanel PanelLayar = new JPanel();
         JPanel MainPanel = new JPanel();
         JLabel Layar = new JLabel();
-        
-        DelAllButton EvaluateButton = new DelAllButton("=");//TODO
+        //Del1
         Del1Button DelButton = new Del1Button("del");
-        DelAllButton ClearButton = new DelAllButton("AC");
-        DelAllButton MCButton = new DelAllButton("MC");
-        DelAllButton AnsButton = new DelAllButton("ans");
-        DelAllButton MRButton = new DelAllButton("MR");
+
+        //Do Nothing
+        NoPrintButton EvaluateButton = new NoPrintButton("=");
+        NoPrintButton ClearButton = new NoPrintButton("AC");
+        NoPrintButton MCButton = new NoPrintButton("MC");
+        NoPrintButton AnsButton = new NoPrintButton("ans");
+        NoPrintButton MRButton = new NoPrintButton("MR");
         //Num Button
-        PrintButton DotButton = new PrintButton(".");//TODO
+        PrintButton DotButton = new PrintButton(".");
         PrintButton Num00 = new PrintButton("00");
         PrintButton Num0 = new PrintButton("0");
         PrintButton Num1 = new PrintButton("1");
