@@ -121,9 +121,6 @@ public class CalcForm extends JFrame {
             public void actionPerformed(ActionEvent evt) {
                 MCButton.onClick(evt, Layar,token);
                 MCqueue.add(ans.convertToString());
-                if(!MCqueue.isEmpty()){
-                    MRButton.setEnabled(true);
-                }
             }
         });
 
@@ -133,15 +130,18 @@ public class CalcForm extends JFrame {
         MRButton.setToolTipText("");
         MRButton.setBorderPainted(false);
         MRButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        MRButton.setEnabled(false);
         MRButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                MRButton.onClick(evt, Layar, token);
-                if (!MCqueue.isEmpty()){
+                try{
+                    MRButton.onClick(evt, Layar, token);
                     delqueue = MCqueue.poll();
+                    if (delqueue == null){
+                        throw new StackException();
+                    }
                     token.addToToken(delqueue);
                     Layar.setText(token.convertToString());
-                    MCqueue.add(delqueue);
+                }catch(StackException err){
+                    Layar.setText(err.PrintMessage());
                 }
             }
         });
@@ -352,20 +352,15 @@ public class CalcForm extends JFrame {
                     
                     Layar.setText(token.convertToString());
                 }catch(InvalidOperandException err){
-                    String error = err.PrintMessage();
-                    Layar.setText(error);
+                    Layar.setText(err.PrintMessage());
                 }catch(NotANumberException err){
-                    String error = err.PrintMessage();
-                    Layar.setText(error);
+                    Layar.setText(err.PrintMessage());
                 }catch(ChainedOpsException err){
-                    String error = err.PrintMessage();
-                    Layar.setText(error);
+                    Layar.setText(err.PrintMessage());
                 }catch(LackOperandException err){
-                    String error = err.PrintMessage();
-                    Layar.setText(error);
+                    Layar.setText(err.PrintMessage());
                 }catch(BracketException err){
-                    String error = err.PrintMessage();
-                    Layar.setText(error);
+                    Layar.setText(err.PrintMessage());
                 }catch (Exception err) {
                     // TODO Auto-generated catch block
                     // err.printStackTrace();
