@@ -102,6 +102,8 @@ public class ExpressionParser {
                     putUnaryInTree(new SquareRootExpression(emptyExp));
                 } else if (checkFirstSubSymbol(stringLeft, new LogarithmicExpression(emptyExp))) {
                     putUnaryInTree(new LogarithmicExpression(emptyExp));
+                } else if (checkFirstSubSymbol(stringLeft, new LnExpression(emptyExp))) {
+                    putUnaryInTree(new LnExpression(emptyExp));
                 }
                 /*
                  * 
