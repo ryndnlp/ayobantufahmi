@@ -19,13 +19,8 @@ public class DivisionExpressionTest{
         DivisionExpression ae = new DivisionExpression(xt,yt);
         try{        
             System.out.println("x/y = " + ae + " = "+ae.solve());
-        }catch(InvalidOperandException err){
-            String error = err.PrintMessage();
-        }catch(NotANumberException err){
-            String error = err.PrintMessage();
         }catch (Exception err) {
-            // TODO Auto-generated catch block
-            // err.printStackTrace();
+            err.printStackTrace();
         }
     }
 }

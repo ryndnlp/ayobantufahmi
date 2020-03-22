@@ -135,6 +135,11 @@ public class ExpressionParser {
             throw new LackOperandException();
         }
 
+        if (rootExpression == null) {
+            // TODO JANGAN RETURN NULL, BAPAK
+            throw new Exception("BAPAK GAK BOLEH NGASIH NULL");
+        }
+
         return rootExpression;
     }
 

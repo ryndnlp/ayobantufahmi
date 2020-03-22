@@ -9,7 +9,7 @@ class test {
         //inString = "-10";
         //inString = "1+-5";
         //inString = "atan60";
-        inString = "(((((((((5)))))))))";
+        //inString = "";
 
         /*
         Scanner inScanner = new Scanner(System.in);

@@ -16,13 +16,9 @@ public class ACosExpressionTest{
         ACosExpression ae = new ACosExpression(xt);
         try{        
             System.out.println(ae + " = "+ae.solve());
-        }catch(InvalidOperandException err){
-            String error = err.PrintMessage();
-        }catch(NotANumberException err){
-            String error = err.PrintMessage();
         }catch (Exception err) {
             // TODO Auto-generated catch block
-            // err.printStackTrace();
+            err.printStackTrace();
         }
     }
 }
