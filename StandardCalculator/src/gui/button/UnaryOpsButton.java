@@ -1,7 +1,11 @@
+package gui.button;
+
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 
-class UnaryOpsButton extends PrintButton{
+import token.*;
+
+public class UnaryOpsButton extends PrintButton{
 
     public UnaryOpsButton(String text) {
         super(text);

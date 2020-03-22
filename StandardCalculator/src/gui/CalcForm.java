@@ -1,4 +1,5 @@
-import data.expression.*;
+package gui;
+
 
 import java.awt.event.*;
 import javax.swing.*;
@@ -7,7 +8,10 @@ import java.awt.*;
 import java.util.*; 
 import java.util.logging.*;
 
+import data.expression.*;
 import data.exception.*;
+import token.*;
+import gui.button.*;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -789,7 +793,7 @@ public class CalcForm extends JFrame {
         pack();
     }
 
-    public static void main(String args[]) {
+    public static void setUITheme() {
         try {
             for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -807,11 +811,13 @@ public class CalcForm extends JFrame {
             Logger.getLogger(CalcForm.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        /* Create and display the form */
+        ///* Create and display the form */
+        /*
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new CalcForm().setVisible(true);
             }
         });
+        */
     }
 }

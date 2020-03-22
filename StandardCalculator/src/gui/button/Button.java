@@ -1,6 +1,9 @@
+package gui.button;
+
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import java.awt.event.ActionEvent;
+import token.*;
 
 abstract class Button extends JButton {
     protected String text;

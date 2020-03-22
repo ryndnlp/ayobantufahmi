@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+package gui;
+import gui.*;
+import java.awt.*;
 /**
  *
  * @author ASUS
@@ -15,6 +17,15 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+
+        CalcForm.setUITheme();
+
+        /* Create and display the form */
+        EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new CalcForm().setVisible(true);
+            }
+        });
     }
     
 }

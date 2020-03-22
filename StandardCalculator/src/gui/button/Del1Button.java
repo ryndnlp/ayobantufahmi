@@ -1,5 +1,9 @@
+package gui.button;
+
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
+
+import token.*;
 
 public class Del1Button extends Button{
 

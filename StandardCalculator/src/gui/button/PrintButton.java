@@ -1,7 +1,11 @@
+package gui.button;
+
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 
-class PrintButton extends Button{
+import token.*;
+
+public class PrintButton extends Button{
 
     public PrintButton(String text) {
         super(text);

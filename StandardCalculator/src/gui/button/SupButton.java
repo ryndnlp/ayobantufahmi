@@ -1,7 +1,11 @@
+package gui.button;
+
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 
-class SupButton extends UnaryOpsButton{
+import token.*;
+
+public class SupButton extends UnaryOpsButton{
 
     public SupButton(String text) {
         super(text);

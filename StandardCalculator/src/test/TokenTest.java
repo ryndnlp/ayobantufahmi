@@ -1,8 +1,7 @@
 package test;
 
 import java.util.Scanner;
-import jdk.nashorn.internal.parser.Token;
-import src.*;
+import token.*;
 
 class TokenTest{
     public static void main(final String args[]) {
@@ -11,7 +10,7 @@ class TokenTest{
         String choose;
         do {
             System.out.println("Masukkan perintah:[add|del|set|delAll]");
-            choose = in.nextLine()    
+            choose = in.nextLine();
         } while (!choose.equals("9"));
         if (choose.equals("add")){
             System.out.println("Masukkan string ke token");
