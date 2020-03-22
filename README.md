@@ -24,16 +24,16 @@ Relatif dari folder repository, semua source code terdapat dalam folder `Standar
 ### Linux
 1. cd ke path folder src. Dari folder git repository:
    ```sh
-cd StandardCalculator/src
-```
+   cd StandardCalculator/src
+   ```
 2. Compile seluruh file .java dalam project:
    ```sh
-find . -name "*.java" -print | xargs javac"
-```
+   find . -name "*.java" -print | xargs javac"
+   ```
 3. Jalankan program:
    ```sh
-java gui.Main
-```
+   java gui.Main
+   ```
 
 ## Screenshot
-![Standard Calculator](screenshot_calculator.png?raw=true "Standard Calculator")
+![Standard Calculator](./screenshot_calculator.png?raw=true "Standard Calculator")
