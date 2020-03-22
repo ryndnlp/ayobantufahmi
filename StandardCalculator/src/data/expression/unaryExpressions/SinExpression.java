@@ -9,7 +9,7 @@ public class SinExpression extends UnaryExpression<Double> {
         this.x = x;
     }
 
-    public Double solve() {
+    public Double solve() throws Exception{
         return (double) Math.sin(x.solve());
     }
 }

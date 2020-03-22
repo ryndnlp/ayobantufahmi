@@ -12,5 +12,5 @@ public abstract class NonTerminalExpression<T extends Number> implements Express
     public String getSymbol() {
         return symbol;
     }
-    abstract public T solve();
+    abstract public T solve() throws Exception;
 }

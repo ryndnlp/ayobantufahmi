@@ -10,7 +10,7 @@ public class AddExpression extends BinaryExpression<Double> {
         this.y = y;
     }
 
-    public Double solve() {
+    public Double solve() throws Exception{
         return this.x.solve() + this.y.solve();
     }
 }

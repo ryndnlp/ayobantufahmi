@@ -1,5 +1,5 @@
 package data.expression.binaryExpressions;
-
+import data.exception.*;
 import data.expression.Expression;
 
 public class DivisionExpression extends BinaryExpression<Double> {
@@ -10,7 +10,12 @@ public class DivisionExpression extends BinaryExpression<Double> {
         this.y = y;
     }
 
-    public Double solve() {
+    public Double solve() throws Exception{
+        if(this.y.solve() == 0){
+            throw new NotANumberException();
+        }
         return this.x.solve() / this.y.solve();
+        
+        
     }
 }

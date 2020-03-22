@@ -9,7 +9,7 @@ public class LogarithmicExpression extends UnaryExpression<Double> {
         this.x = x;
     }
 
-    public Double solve() {
+    public Double solve() throws Exception {
         return (double) Math.log(x.solve());
     }
 }

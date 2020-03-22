@@ -5,7 +5,7 @@ import data.expression.*;
 public abstract class UnaryExpression<T extends Number> extends NonTerminalExpression<T> {
     protected Expression<T> x;
 
-    abstract public T solve();
+    abstract public T solve() throws Exception;
 
     public void setX(Expression<T> expression) {
         this.x = expression;

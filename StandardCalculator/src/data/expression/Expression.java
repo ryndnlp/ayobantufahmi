@@ -7,7 +7,7 @@ public interface Expression<T extends Number> { // Why is Expression Generic? BE
 
     public String getSymbol();
 
-    public T solve();
+    public T solve() throws Exception;
 
     @Override
     public String toString();

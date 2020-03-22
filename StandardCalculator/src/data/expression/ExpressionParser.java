@@ -1,5 +1,7 @@
 package data.expression;
 
+import data.exception.InvalidOperandException;
+
 //import java.util.function.Predicate;
 
 //import javax.swing.CellEditor;
@@ -28,7 +30,7 @@ public class ExpressionParser {
             if (subStart != subEnd) { // there's at least a terminal at the beginning
                 checkSub = stringLeft.substring(subStart, subEnd);
                 if (!emptyExp.checkSymbol(checkSub)) { // checks if there are double "."
-                    throw new Exception("Invalid terminal symbol");
+                    throw new InvalidOperandException();
                 }
 
                 putTerminalInTree(new TerminalExpression(checkSub)); // Puts the terminal where appropriate

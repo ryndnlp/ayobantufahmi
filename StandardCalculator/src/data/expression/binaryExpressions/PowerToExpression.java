@@ -10,7 +10,7 @@ public class PowerToExpression extends BinaryExpression<Double> {
         this.y = y;
     }
 
-    public Double solve() {
+    public Double solve() throws Exception {
         return (double) Math.pow(x.solve(), y.solve());
     }
 }

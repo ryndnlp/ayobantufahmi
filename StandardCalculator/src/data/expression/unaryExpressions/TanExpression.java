@@ -10,7 +10,7 @@ public class TanExpression extends UnaryExpression<Double> {
         this.x = x;
     }
 
-    public Double solve() {
+    public Double solve() throws Exception {
         return (double) Math.tan(x.solve());
     }
 }

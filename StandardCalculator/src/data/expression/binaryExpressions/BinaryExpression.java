@@ -6,7 +6,7 @@ public abstract class BinaryExpression<T extends Number> extends NonTerminalExpr
     protected Expression<T> x;
     protected Expression<T> y;
 
-    abstract public T solve();
+    abstract public T solve() throws Exception;
 
     public void setX(Expression<T> expression) {
         this.x = expression;
