@@ -38,32 +38,32 @@ public class CalcForm extends JFrame {
         JPanel PanelLayar = new JPanel();
         JPanel MainPanel = new JPanel();
         JLabel Layar = new JLabel();
-        NumButton DotButton = new NumButton(".");//TODO
+        
         DelAllButton EvaluateButton = new DelAllButton("=");//TODO
         Del1Button DelButton = new Del1Button("del");
-        //Memory Button
         MemoryButton ClearButton = new MemoryButton("AC");
         MemoryButton MCButton = new MemoryButton("MC");
         MemoryButton AnsButton = new MemoryButton("ans");
         MemoryButton MRButton = new MemoryButton("MR");
         //Num Button
-        NumButton Num00 = new NumButton("00");
-        NumButton Num0 = new NumButton("0");
-        NumButton Num1 = new NumButton("1");
-        NumButton Num2 = new NumButton("2");
-        NumButton Num3 = new NumButton("3");
-        NumButton Num4 = new NumButton("4");
-        NumButton Num5 = new NumButton("5");
-        NumButton Num6 = new NumButton("6");
-        NumButton Num7 = new NumButton("7");
-        NumButton Num8 = new NumButton("8");
-        NumButton Num9 = new NumButton("9");
+        PrintButton DotButton = new PrintButton(".");//TODO
+        PrintButton Num00 = new PrintButton("00");
+        PrintButton Num0 = new PrintButton("0");
+        PrintButton Num1 = new PrintButton("1");
+        PrintButton Num2 = new PrintButton("2");
+        PrintButton Num3 = new PrintButton("3");
+        PrintButton Num4 = new PrintButton("4");
+        PrintButton Num5 = new PrintButton("5");
+        PrintButton Num6 = new PrintButton("6");
+        PrintButton Num7 = new PrintButton("7");
+        PrintButton Num8 = new PrintButton("8");
+        PrintButton Num9 = new PrintButton("9");
         //Operand Button
-        BinaryOpsButton MulButton = new BinaryOpsButton("*");
-        BinaryOpsButton DivButton = new BinaryOpsButton("/");
-        BinaryOpsButton NegButton = new BinaryOpsButton("-");
-        BinaryOpsButton PlusButton = new BinaryOpsButton("+");
-        BinaryOpsButton ModButton = new BinaryOpsButton("%");
+        PrintButton MulButton = new PrintButton("*");
+        PrintButton DivButton = new PrintButton("/");
+        PrintButton NegButton = new PrintButton("-");
+        PrintButton PlusButton = new PrintButton("+");
+        PrintButton ModButton = new PrintButton("%");
         UnaryOpsButton CosButton = new UnaryOpsButton("cos");
         UnaryOpsButton TanButton = new UnaryOpsButton("tan");
         UnaryOpsButton LBracketButton = new UnaryOpsButton("(");
@@ -334,7 +334,6 @@ public class CalcForm extends JFrame {
                 Expression<Double> outExp = null;
                 ExpressionParser ed = new ExpressionParser();
                 try {
-                    // outExp = parse("5+2*3/2-3.9");
                     outExp = ed.parse(inString);
                     if (outExp.solve() - (int)Math.round(outExp.solve()) == 0){
                         T.addToToken(Integer.toString((int)Math.round(outExp.solve())));
@@ -351,6 +350,9 @@ public class CalcForm extends JFrame {
                     String error = err.PrintMessage();
                     Layar.setText(error);
                 }catch(ChainedOpsException err){
+                    String error = err.PrintMessage();
+                    Layar.setText(error);
+                }catch(LackOperatorException err){
                     String error = err.PrintMessage();
                     Layar.setText(error);
                 }catch (Exception err) {
