@@ -1,8 +1,9 @@
 package data.expression;
 
+import data.exception.BracketException;
 import data.exception.ChainedOpsException;
 import data.exception.InvalidOperandException;
-import data.exception.LackOperatorException;
+import data.exception.LackOperandException;
 
 //import java.util.function.Predicate;
 
@@ -124,7 +125,7 @@ public class ExpressionParser {
         if ((lastExp instanceof UnaryExpression && ((UnaryExpression<Double>) lastExp).getX() == emptyExp)
                 || (lastExp instanceof BinaryExpression && ((BinaryExpression<Double>) lastExp).getY() == emptyExp)) {
             // TODO put the premature exception here
-            throw new Exception("The expression ended prematurely");
+            throw new LackOperandException();
         }
 
         return rootExpression;
@@ -203,7 +204,7 @@ public class ExpressionParser {
         }
 
         if (checkCharIdx >= inString.length()) { // The substring is unclosed
-            throw new Exception("Unclosed bracket");
+            throw new BracketException();
         }
 
         subEnd = checkCharIdx + 1;
@@ -247,7 +248,7 @@ public class ExpressionParser {
         // when it occurs to
         // determine its priority)
         if (rootExpression == null) { // Binary expressions must be in the middle, since we use infix notations
-            throw new LackOperatorException();
+            throw new LackOperandException();
         }
 
         if (lastExp instanceof BinaryExpression) {
@@ -256,7 +257,7 @@ public class ExpressionParser {
 
         if (lastExp instanceof UnaryExpression && ((UnaryExpression<Double>) lastExp).getX() == emptyExp) {
             // TODO put the premature exception here
-            throw new Exception("The expression ended prematurely");
+            throw new LackOperandException();
         }
 
         binaryExp.setX(rootExpression);
@@ -271,7 +272,7 @@ public class ExpressionParser {
         // to be done first before
         // the "simple" ones)
         if (rootExpression == null) { // Binary expressions must be in the middle, since we use infix notations
-            throw new Exception("Binary Expression<Double> has no Expression<Double> on left hand side");
+            throw new LackOperandException();
         }
 
         if (lastExp instanceof BinaryExpression) {
@@ -280,7 +281,7 @@ public class ExpressionParser {
 
         if (lastExp instanceof UnaryExpression && ((UnaryExpression<Double>) lastExp).getX() == emptyExp) {
             // TODO put the premature exception here
-            throw new Exception("The expression ended prematurely");
+            throw new LackOperandException();
         }
 
         if (rootExpression instanceof TerminalExpression || rootExpression instanceof UnaryExpression) {

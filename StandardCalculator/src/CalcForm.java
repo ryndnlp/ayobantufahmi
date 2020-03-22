@@ -353,7 +353,10 @@ public class CalcForm extends JFrame {
                 }catch(ChainedOpsException err){
                     String error = err.PrintMessage();
                     Layar.setText(error);
-                }catch(LackOperatorException err){
+                }catch(LackOperandException err){
+                    String error = err.PrintMessage();
+                    Layar.setText(error);
+                }catch(BracketException err){
                     String error = err.PrintMessage();
                     Layar.setText(error);
                 }catch (Exception err) {

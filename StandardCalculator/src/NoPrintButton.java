@@ -8,6 +8,6 @@ public class NoPrintButton extends Button{
     }
         
     public void onClick(ActionEvent e, JLabel Layar,Token token) {
-        //Do nothing to print
+        //Do no update to Layar
     }
 }
