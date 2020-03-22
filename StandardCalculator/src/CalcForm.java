@@ -285,7 +285,6 @@ public class CalcForm extends JFrame {
         PlusButton.setBackground(new Color(0, 51, 153));
         PlusButton.setFont(new Font("Segoe UI Semilight", 0, 13));
         PlusButton.setForeground(new Color(255, 255, 255));
-        PlusButton.setText("+");
         PlusButton.setToolTipText("");
         PlusButton.setBorderPainted(false);
         PlusButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
@@ -589,7 +588,6 @@ public class CalcForm extends JFrame {
         LnButton.setBackground(new Color(0, 153, 153));
         LnButton.setFont(new Font("Segoe UI Semilight", 0, 13));
         LnButton.setForeground(new Color(255, 255, 255));
-        LnButton.setText("ln");
         LnButton.setToolTipText("");
         LnButton.setBorderPainted(false);
         LnButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
