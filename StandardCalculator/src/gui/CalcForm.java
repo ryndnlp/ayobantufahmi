@@ -121,6 +121,9 @@ public class CalcForm extends JFrame {
             public void actionPerformed(ActionEvent evt) {
                 MCButton.onClick(evt, Layar,token);
                 MCqueue.add(ans.convertToString());
+                if(!MCqueue.isEmpty()){
+                    MRButton.setEnabled(true);
+                }
             }
         });
 
@@ -130,6 +133,7 @@ public class CalcForm extends JFrame {
         MRButton.setToolTipText("");
         MRButton.setBorderPainted(false);
         MRButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        MRButton.setEnabled(false);
         MRButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 MRButton.onClick(evt, Layar, token);
