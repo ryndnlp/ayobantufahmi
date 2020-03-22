@@ -345,6 +345,8 @@ public class CalcForm extends JFrame {
                     outExp = ed.parse(inString);
                     if (outExp.solve() - (int)Math.round(outExp.solve()) == 0){
                         T.addToToken(Integer.toString((int)Math.round(outExp.solve())));
+                    }else if(outExp.solve() == null){
+                        throw new InvalidOperandException();
                     }else{
                         T.addToToken(Double.toString(outExp.solve()));
                     }
@@ -495,8 +497,8 @@ public class CalcForm extends JFrame {
         AnsButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 AnsButton.onClick(evt, Layar, token);
-                Layar.setText(token.convertToString() + "Ans");
                 token.addToToken(ans.convertToString());
+                Layar.setText(token.convertToString());
             }
         });
 
@@ -559,9 +561,6 @@ public class CalcForm extends JFrame {
         DelButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 DelButton.onClick(evt, Layar, token);
-                if (token.isEmpty()){
-                    ans.deleteFromBack();
-                }
             }
         });
 
