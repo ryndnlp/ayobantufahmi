@@ -121,7 +121,11 @@ public class CalcForm extends JFrame {
         MCButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 MCButton.onClick(evt, Layar,token);
-                MCqueue.add(ans.convertToString());
+                Evaluate(Layar);
+                if(Layar.getText().equals("Error: Lack of operand")){
+                    MCqueue.add(ans.convertToString());
+                }
+                
             }
         });
 
@@ -337,7 +341,6 @@ public class CalcForm extends JFrame {
         EvaluateButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 EvaluateButton.onClick(evt, Layar, token);
-
                 Evaluate(Layar);
             }
         });
