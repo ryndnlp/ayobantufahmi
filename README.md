@@ -34,6 +34,19 @@ Relatif dari folder repository, semua source code terdapat dalam folder `Standar
    ```sh
    java gui.Main
    ```
+### Windows
+1. cd ke path folder src. Dari folder git repository:
+   ```sh
+   cd StandardCalculator/src
+   ```
+2. Compile seluruh file .java dalam project:
+   ```sh
+   javac data/exception/*.java data/expression/*.java data/expression/binaryExpressions/*.java data/expression/unaryExpressions/*.java gui/*.java gui/button/*.java token/*.java
+   ```
+3. Jalankan program:
+   ```sh
+   java gui.Main
+   ```
 
 ## Screenshot
 ![Standard Calculator](./screenshot_calculator.png?raw=true "Standard Calculator")
