@@ -13,6 +13,7 @@ public class Del1Button extends Button{
         
     public void onClick(ActionEvent e, JLabel Layar, Token token) {
         String s = Layar.getText();
+        token.deleteFromBack();
         if(s.length()>0){
             Layar.setText(token.convertToString());
         }
